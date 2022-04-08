@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master.master.cs" Inherits="Master" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  <title>Supply Chain Management System</title>
+  <%--
+  <link type="text/css" rel="Stylesheet" href='<%= this.ResolveUrl("~/styles/main.css") %>' />
+
+  <script src='<%= this.ResolveUrl("~/scripts/simpleutils.js") %>' type="text/javascript" language="javascript"></script>
+  --%>
+  <asp:ContentPlaceHolder ID="cphHead" runat="server" />
+</head>
+<body>
+  <%--<ext:ResourceManager ID="rsrcMgr" runat="server" Locale="id" RemoveViewState="true" 
+    HideInDesign="true" ManageEventsViewState="true" ScriptMode="Debug" 
+    ShowWarningOnAjaxFailure="true" SourceFormatting="true" Theme="Slate">
+  </ext:ResourceManager>--%>
+  <%--<ext:ResourceManager ID="rsrcMgr" runat="server" HideInDesign="true" DisableViewState="true" 
+    ManageEventsViewState="true" ScriptMode="Release" ShowWarningOnAjaxFailure="true"
+    SourceFormatting="false" Theme="Slate" GZip="true" Locale="en">
+    <Listeners>
+      <DocumentReady Handler="Ext.get(window.document).on('contextmenu', function (e) {
+                    if(e.button == '2'){
+                      e.preventDefault();
+                      return false;
+                    }
+                });" />
+    </Listeners>
+  </ext:ResourceManager>--%>  
+  <ext:ResourceManager ID="rsrcMgr" runat="server" HideInDesign="true">
+    <Listeners>
+      <DocumentReady Handler="Ext.get(window.document).on('contextmenu', function (e) {
+                    if(e.button == '2'){
+                      e.preventDefault();
+                      return false;
+                    }
+                });" />
+    </Listeners>
+  </ext:ResourceManager>
+  <form id="form1" runat="server">
+  <asp:ContentPlaceHolder ID="cphContent" runat="server" />
+  </form>
+</body>
+</html>

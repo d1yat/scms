@@ -1,0 +1,60 @@
+D:\Rudi\AmsSource\Scms\ScmsModel\bin\Debug\ScmsModel.dll
+D:\Rudi\AmsSource\Scms\ScmsModel\bin\Debug\ScmsModel.pdb
+D:\Rudi\AmsSource\Scms\ScmsModel\obj\Debug\ResolveAssemblyReference.cache
+D:\Rudi\AmsSource\Scms\ScmsModel\obj\Debug\ScmsModel.dll
+D:\Rudi\AmsSource\Scms\ScmsModel\obj\Debug\ScmsModel.pdb
+D:\Rudi\AmsSource\Scms\ScmsModel\bin\Debug\ScmsModel.dll.config
+D:\svn\SCMS Update\ScmsModel\bin\Debug\ScmsModel.dll.config
+D:\svn\SCMS Update\ScmsModel\bin\Debug\ScmsModel.dll
+D:\svn\SCMS Update\ScmsModel\bin\Debug\ScmsModel.pdb
+D:\svn\SCMS Update\ScmsModel\obj\Debug\ResolveAssemblyReference.cache
+D:\svn\SCMS Update\ScmsModel\obj\Debug\ScmsModel.dll
+D:\svn\SCMS Update\ScmsModel\obj\Debug\ScmsModel.pdb
+D:\svn\SCMS Commit\ScmsModel\bin\Debug\ScmsModel.dll.config
+D:\svn\SCMS Commit\ScmsModel\bin\Debug\ScmsModel.dll
+D:\svn\SCMS Commit\ScmsModel\bin\Debug\ScmsModel.pdb
+D:\svn\SCMS Commit\ScmsModel\obj\Debug\ResolveAssemblyReference.cache
+D:\svn\SCMS Commit\ScmsModel\obj\Debug\ScmsModel.dll
+D:\svn\SCMS Commit\ScmsModel\obj\Debug\ScmsModel.pdb
+D:\Project\SCMS Commit\SCMS Commit\ScmsModel\bin\Debug\ScmsModel.dll.config
+D:\Project\SCMS Commit\SCMS Commit\ScmsModel\bin\Debug\ScmsModel.dll
+D:\Project\SCMS Commit\SCMS Commit\ScmsModel\bin\Debug\ScmsModel.pdb
+D:\Project\SCMS Commit\SCMS Commit\ScmsModel\obj\Debug\ResolveAssemblyReference.cache
+D:\Project\SCMS Commit\SCMS Commit\ScmsModel\obj\Debug\ScmsModel.dll
+D:\Project\SCMS Commit\SCMS Commit\ScmsModel\obj\Debug\ScmsModel.pdb
+D:\Data\Data-User\Akhmad.perdana\d\Project\SCMS Commit\SCMS Commit\ScmsModel\bin\Debug\ScmsModel.dll.config
+D:\Data\Data-User\Akhmad.perdana\d\Project\SCMS Commit\SCMS Commit\ScmsModel\bin\Debug\ScmsModel.dll
+D:\Data\Data-User\Akhmad.perdana\d\Project\SCMS Commit\SCMS Commit\ScmsModel\bin\Debug\ScmsModel.pdb
+D:\Data\Data-User\Akhmad.perdana\d\Project\SCMS Commit\SCMS Commit\ScmsModel\obj\Debug\ResolveAssemblyReference.cache
+D:\Data\Data-User\Akhmad.perdana\d\Project\SCMS Commit\SCMS Commit\ScmsModel\obj\Debug\ScmsModel.dll
+D:\Data\Data-User\Akhmad.perdana\d\Project\SCMS Commit\SCMS Commit\ScmsModel\obj\Debug\ScmsModel.pdb
+E:\HDD Lama\Data\Data-User\Akhmad.perdana\d\Project\SCMS Commit\SCMS Commit\ScmsModel\bin\Debug\ScmsModel.dll.config
+E:\HDD Lama\Data\Data-User\Akhmad.perdana\d\Project\SCMS Commit\SCMS Commit\ScmsModel\bin\Debug\ScmsModel.dll
+E:\HDD Lama\Data\Data-User\Akhmad.perdana\d\Project\SCMS Commit\SCMS Commit\ScmsModel\bin\Debug\ScmsModel.pdb
+E:\HDD Lama\Data\Data-User\Akhmad.perdana\d\Project\SCMS Commit\SCMS Commit\ScmsModel\obj\Debug\ResolveAssemblyReference.cache
+E:\HDD Lama\Data\Data-User\Akhmad.perdana\d\Project\SCMS Commit\SCMS Commit\ScmsModel\obj\Debug\ScmsModel.dll
+E:\HDD Lama\Data\Data-User\Akhmad.perdana\d\Project\SCMS Commit\SCMS Commit\ScmsModel\obj\Debug\ScmsModel.pdb
+H:\Project\SCMS Prod\newscms_prod\ScmsModel\bin\Debug\ScmsModel.dll.config
+H:\Project\SCMS Prod\newscms_prod\ScmsModel\bin\Debug\ScmsModel.dll
+H:\Project\SCMS Prod\newscms_prod\ScmsModel\bin\Debug\ScmsModel.pdb
+H:\Project\SCMS Prod\newscms_prod\ScmsModel\obj\Debug\ResolveAssemblyReference.cache
+H:\Project\SCMS Prod\newscms_prod\ScmsModel\obj\Debug\ScmsModel.dll
+H:\Project\SCMS Prod\newscms_prod\ScmsModel\obj\Debug\ScmsModel.pdb
+F:\Project\SCMS Prod\newscms_prod\ScmsModel\bin\Debug\ScmsModel.dll.config
+F:\Project\SCMS Prod\newscms_prod\ScmsModel\bin\Debug\ScmsModel.dll
+F:\Project\SCMS Prod\newscms_prod\ScmsModel\bin\Debug\ScmsModel.pdb
+F:\Project\SCMS Prod\newscms_prod\ScmsModel\obj\Debug\ResolveAssemblyReference.cache
+F:\Project\SCMS Prod\newscms_prod\ScmsModel\obj\Debug\ScmsModel.dll
+F:\Project\SCMS Prod\newscms_prod\ScmsModel\obj\Debug\ScmsModel.pdb
+D:\backup harddisk satu nya lagi coy\D\Project\SCMS Prod\newscms_prod\ScmsModel\bin\Debug\ScmsModel.dll.config
+D:\backup harddisk satu nya lagi coy\D\Project\SCMS Prod\newscms_prod\ScmsModel\bin\Debug\ScmsModel.dll
+D:\backup harddisk satu nya lagi coy\D\Project\SCMS Prod\newscms_prod\ScmsModel\bin\Debug\ScmsModel.pdb
+D:\backup harddisk satu nya lagi coy\D\Project\SCMS Prod\newscms_prod\ScmsModel\obj\Debug\ResolveAssemblyReference.cache
+D:\backup harddisk satu nya lagi coy\D\Project\SCMS Prod\newscms_prod\ScmsModel\obj\Debug\ScmsModel.dll
+D:\backup harddisk satu nya lagi coy\D\Project\SCMS Prod\newscms_prod\ScmsModel\obj\Debug\ScmsModel.pdb
+D:\Projects\Scms\ScmsModel\bin\Debug\ScmsModel.dll.config
+D:\Projects\Scms\ScmsModel\bin\Debug\ScmsModel.dll
+D:\Projects\Scms\ScmsModel\bin\Debug\ScmsModel.pdb
+D:\Projects\Scms\ScmsModel\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\Scms\ScmsModel\obj\Debug\ScmsModel.dll
+D:\Projects\Scms\ScmsModel\obj\Debug\ScmsModel.pdb

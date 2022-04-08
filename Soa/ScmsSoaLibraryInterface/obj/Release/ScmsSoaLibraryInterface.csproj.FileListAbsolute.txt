@@ -1,0 +1,11 @@
+D:\Projects\Scms\ScmsSoaLibraryInterface\bin\Release\ScmsSoaLibraryInterface.dll
+D:\Projects\Scms\ScmsSoaLibraryInterface\bin\Release\ScmsSoaLibraryInterface.pdb
+D:\Projects\Scms\ScmsSoaLibraryInterface\bin\Release\Ext.Net.dll
+D:\Projects\Scms\ScmsSoaLibraryInterface\bin\Release\Newtonsoft.Json.dll
+D:\Projects\Scms\ScmsSoaLibraryInterface\bin\Release\Ext.Net.Utilities.dll
+D:\Projects\Scms\ScmsSoaLibraryInterface\bin\Release\Ext.Net.pdb
+D:\Projects\Scms\ScmsSoaLibraryInterface\bin\Release\Ext.Net.xml
+D:\Projects\Scms\ScmsSoaLibraryInterface\bin\Release\Ext.Net.Utilities.xml
+D:\Projects\Scms\ScmsSoaLibraryInterface\obj\Release\ResolveAssemblyReference.cache
+D:\Projects\Scms\ScmsSoaLibraryInterface\obj\Release\ScmsSoaLibraryInterface.dll
+D:\Projects\Scms\ScmsSoaLibraryInterface\obj\Release\ScmsSoaLibraryInterface.pdb

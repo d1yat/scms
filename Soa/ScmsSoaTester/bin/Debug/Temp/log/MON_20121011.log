@@ -1,0 +1,26 @@
+Run @ 11-10-2012 15:58:51
+Start -> AutoMonitoring
+ScmsSoaLibrary.Core.Schedule.AutoRunning:AutoHistory Insert_Delete - Value cannot be null.
+Parameter name: At least one element in the specified array was null.
+   at System.Threading.WaitHandle.WaitAll(WaitHandle[] waitHandles, Int32 millisecondsTimeout, Boolean exitContext)
+   at System.Threading.WaitHandle.WaitAll(WaitHandle[] waitHandles)
+   at ScmsSoaLibrary.Core.Schedule.AutoRunning.AutoMonitoring(Config cfg, DateTime date) in D:\svn\SCMS Commit\ScmsSoaLibrary\Core\Schedule\AutoRunning.cs:line 6196
+
+
+Done...
+
+End -> AutoMonitoring
+
+Run @ 11-10-2012 16:01:37
+Start -> AutoMonitoring
+ScmsSoaLibrary.Core.Schedule.AutoRunning:AutoHistory Insert_Delete - Value cannot be null.
+Parameter name: At least one element in the specified array was null.
+   at System.Threading.WaitHandle.WaitAll(WaitHandle[] waitHandles, Int32 millisecondsTimeout, Boolean exitContext)
+   at System.Threading.WaitHandle.WaitAll(WaitHandle[] waitHandles)
+   at ScmsSoaLibrary.Core.Schedule.AutoRunning.AutoMonitoring(Config cfg, DateTime date) in D:\svn\SCMS Commit\ScmsSoaLibrary\Core\Schedule\AutoRunning.cs:line 6196
+
+
+Done...
+
+End -> AutoMonitoring
+

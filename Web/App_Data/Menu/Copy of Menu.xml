@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Config>
+  <![CDATA[function showWindowX(app, ownConfig){
+      if((typeof app === 'undefined') || (typeof ownConfig === 'undefined'))
+        return;
+      
+      var desk = app.getDesktop();
+      if(typeof desk !== 'undefined') {
+        var win = desk.getWindow(ownConfig.id);
+        if(!win){
+          win = desk.createWindow(ownConfig);
+        }
+        win.show();
+      }
+  }]]>
+  <Items>
+    <Module id="penjualan" autoRun="false">
+      <Launcher text="Penjualan">
+        <Items short="PackingList.aspx" query="">
+          <![CDATA[showWindowX(appScms, {
+            id: 'PackingList',
+            title: 'Packing List',            
+            widhth: 800,
+            height: 600,
+            iconCls: 'application'
+            autoLoad: {
+              url: 'transaksi/penjualan/PackingList.aspx',
+              mode:'iframe',
+              showMask: true
+            }
+          });]]>
+        </Items>
+        <Items short="PackingListConfirm.aspx" query="">
+          <![CDATA[showWindowX(appScms, {
+            id: 'PackingListConfirm',
+            title: 'Packing List Confirm',            
+            widhth: 800,
+            height: 600,
+            iconCls: 'application'
+            autoLoad: {
+              url: 'transaksi/penjualan/PackingListConfirm.aspx',
+              mode:'iframe',
+              showMask: true
+            }
+          });]]>
+        </Items>
+      </Launcher>
+    </Module>
+    <Module id="penjualanX" autoRun="false">
+      <Launcher text="Penjualan Baru" short="PackingListConfirm.aspx" query="">
+        <![CDATA[showWindowX(appScms, {
+            id: 'PackingList',
+            title: 'Packing List',            
+            widhth: 800,
+            height: 600,
+            iconCls: 'application'
+            autoLoad: {
+              url: 'transaksi/penjualan/PackingList.aspx',
+              mode:'iframe',
+              showMask: true
+            }
+          });]]>
+      </Launcher>
+    </Module>
+  </Items>
+</Config>

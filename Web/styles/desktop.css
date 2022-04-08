@@ -1,0 +1,39 @@
+﻿.start-button
+{
+  background-image: url('../images/vista_start_button.gif') !important;
+}
+.shortcut-icon
+{
+  width: 48px;
+  height: 48px;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/window.png', sizingMethod='scale');
+}
+.icon-grid48
+{
+  background-image: url('../images/grid48x48.png') !important;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/grid48x48.png', sizingMethod='scale');
+}
+.icon-user48
+{
+  background-image: url('../images/user48x48.png') !important;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/user48x48.png', sizingMethod='scale');
+}
+.icon-window48
+{
+  background-image: url('../images/window48x48.png') !important;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/window48x48.png', sizingMethod='scale');
+}
+.icon-folder48
+{
+  background-image: url('../images/Open_Folder_Full48.png') !important;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/Open_Folder_Full48.png', sizingMethod='scale');
+}
+.icon-linechart48
+{
+  background-image: url('../images/Line_chart48.png') !important;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/Line_chart48.png', sizingMethod='scale');
+}
+.desktopEl
+{
+  position: absolute !important;
+}

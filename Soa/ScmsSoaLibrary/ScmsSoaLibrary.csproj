@@ -1,0 +1,1163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{602D3FA9-EA3C-467C-A2C8-3A7DAA1485A7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ScmsSoaLibrary</RootNamespace>
+    <AssemblyName>ScmsSoaLibrary</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bytescout.BarCode, Version=2.3.0.436, Culture=neutral, PublicKeyToken=f7dd1bd9d40a50eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLs\Bytescout.BarCode.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.76.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLLs\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLLs\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Excel, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\DLLs\Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Ext.Net, Version=1.5.0.0, Culture=neutral, PublicKeyToken=2e12ce3d0176cd87, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Web\Bin\Ext.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Ext.Net.Utilities, Version=1.3.0.39155, Culture=neutral, PublicKeyToken=2c34ac34702a3c23, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Web\Bin\Ext.Net.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLs\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.0.8.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bussiness\AdjustFaktur.cs" />
+    <Compile Include="Bussiness\AdjustStock.cs" />
+    <Compile Include="Bussiness\Auto.cs" />
+    <Compile Include="Bussiness\Closing.cs" />
+    <Compile Include="Bussiness\Commons.cs" />
+    <Compile Include="Bussiness\EmailSender.cs" />
+    <Compile Include="Bussiness\Pemusnahan.cs" />
+    <Compile Include="Bussiness\Master.cs" />
+    <Compile Include="Bussiness\Faktur.cs" />
+    <Compile Include="Bussiness\Memo.cs" />
+    <Compile Include="Bussiness\MK.cs" />
+    <Compile Include="Bussiness\PembayaranVoucher.cs" />
+    <Compile Include="Bussiness\Pembelian.cs" />
+    <Compile Include="Bussiness\Penjualan.cs" />
+    <Compile Include="Bussiness\Proses.cs" />
+    <Compile Include="Bussiness\Retur.cs" />
+    <Compile Include="Bussiness\SavingStock.cs" />
+    <Compile Include="Bussiness\SinkronData.cs" />
+    <Compile Include="Bussiness\WaktuPelayanan.cs" />
+    <Compile Include="Commons\Extensions.cs" />
+    <Compile Include="Core\Reports\Module\Financial.cs" />
+    <Compile Include="Core\Reports\Module\History.cs" />
+    <Compile Include="Core\Reports\Module\Konsolidasi.cs" />
+    <Compile Include="Core\Reports\Module\ListTransaksi.cs" />
+    <Compile Include="Core\Reports\Module\Master.cs" />
+    <Compile Include="Core\Reports\Module\Monitoring.cs" />
+    <Compile Include="Core\Reports\Module\Pending.cs" />
+    <Compile Include="Bussiness\Reporting.cs" />
+    <Compile Include="Bussiness\RightManagement.cs" />
+    <Compile Include="Bussiness\Peminjaman.cs" />
+    <Compile Include="Bussiness\Transfer.cs" />
+    <Compile Include="Commons\Config.cs" />
+    <Compile Include="Commons\Constant.cs" />
+    <Compile Include="Commons\Functionals.cs" />
+    <Compile Include="Core\Converter\MyJsonConverter.cs" />
+    <Compile Include="Core\Reports\Module\Inventory.cs" />
+    <Compile Include="Core\Reports\Module\Proses.cs" />
+    <Compile Include="Core\Reports\Module\Transaksi.cs" />
+    <Compile Include="Core\Reports\Module\Transfer.cs" />
+    <Compile Include="Core\Reports\Module\WaktuPelayanan.cs" />
+    <Compile Include="Core\Reports\ReportCaller.cs" />
+    <Compile Include="Core\Reports\ReportDatasetBind.cs" />
+    <Compile Include="Core\Reports\ReportEngine.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\Schedule\AutoRunning.cs" />
+    <Compile Include="Core\Threading\Running.cs" />
+    <Compile Include="Core\Response\DiscoreResponse.cs" />
+    <Compile Include="Modules\BasicRN.cs" />
+    <Compile Include="Modules\CommonQuery.cs" />
+    <Compile Include="Modules\CommonQueryBrige.cs" />
+    <Compile Include="Modules\CommonQueryMulti.cs" />
+    <Compile Include="Modules\CommonQueryProcess.cs" />
+    <Compile Include="Modules\CommonQuerySP.cs" />
+    <Compile Include="Modules\CommonQueryTesting.cs" />
+    <Compile Include="Modules\CommonUploadedQuery.cs" />
+    <Compile Include="Modules\GlobalQuery.cs" />
+    <Compile Include="Modules\ViewParser.cs" />
+    <Compile Include="Parser\Class\AdjFaktur.cs" />
+    <Compile Include="Parser\Class\AdjustStock.cs" />
+    <Compile Include="Parser\Class\AdjustTrans.cs" />
+    <Compile Include="Parser\Class\Auto.cs" />
+    <Compile Include="Parser\Class\ClaimBonusAcc.cs" />
+    <Compile Include="Parser\Class\MovementStock.cs" />
+    <Compile Include="Parser\Class\ProdukKosong.cs" />
+    <Compile Include="Parser\Class\ReturRS.cs" />
+    <Compile Include="Parser\Class\DOPharmanet.cs" />
+    <Compile Include="Parser\Class\Closing.cs" />
+    <Compile Include="Parser\Class\Pemusnahan.cs" />
+    <Compile Include="Parser\Class\Master.cs" />
+    <Compile Include="Parser\Class\Faktur.cs" />
+    <Compile Include="Parser\Class\PackingListAuto.cs" />
+    <Compile Include="Parser\Class\PembayaranVch.cs" />
+    <Compile Include="Parser\Class\ReturIn.cs" />
+    <Compile Include="Parser\Class\SinkronData.cs" />
+    <Compile Include="Parser\Class\StockOpname.cs" />
+    <Compile Include="Parser\Class\SuratPesanan.cs" />
+    <Compile Include="Parser\Class\Expedisi.cs" />
+    <Compile Include="Parser\Class\OrderRequest.cs" />
+    <Compile Include="Parser\Class\DoPL.cs" />
+    <Compile Include="Parser\Class\PackingList.cs" />
+    <Compile Include="Parser\Class\PurchaseOrder.cs" />
+    <Compile Include="Parser\Class\ReceiveNote.cs" />
+    <Compile Include="Parser\Class\STT.cs" />
+    <Compile Include="Parser\Class\TransferGudang.cs" />
+    <Compile Include="Parser\Class\Memo.cs" />
+    <Compile Include="Parser\Class\UserGroupAccess.cs" />
+    <Compile Include="Parser\Class\WaktuPelayanan.cs" />
+    <Compile Include="Parser\MyAssembly.cs" />
+    <Compile Include="Parser\Parser.cs" />
+    <Compile Include="Parser\ParserDisCore.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\History\LG_Recall_Detail.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LG_Recall_Detail.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ListTransaksi\LG_PO_OKT_New.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LG_PO_OKT_New.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ListTransaksi\LG_PO_OOT_New.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LG_PO_OOT_New.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ListTransaksi\LG_PO_PREKURSOR_New.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LG_PO_PREKURSOR_New.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ListTransaksi\ReportOktPrekursorBulanan1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportOktPrekursorBulanan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Proses\LG_AdjustSO.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LG_AdjustSO.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Proses\LG_BlankFormSO.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LG_BlankFormSO.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Proses\LG_FormSO.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LG_FormSO.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Proses\LG_FormSOPdf.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LG_FormSOPdf.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Proses\LG_HasilSO.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LG_HasilSO.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Transaksi\LG_ProsesPharmanet_New2.cs">
+      <DependentUpon>LG_ProsesPharmanet_New2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\WaktuPelayanan\LG_ANALISA_WP_DETAIL.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LG_ANALISA_WP_DETAIL.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\WaktuPelayanan\LG_ANALISA_WP_SUM.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LG_ANALISA_WP_SUM.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Services\Reporting.cs" />
+    <Compile Include="Services\Service.cs" />
+    <Compile Include="Bussiness\ClaimBonusSupplier.cs" />
+    <Compile Include="Parser\Class\ClaimBonus.cs" />
+    <Compile Include="Parser\Class\ReturCustomer.cs" />
+    <Compile Include="Parser\Class\ReturSupplierPembelian.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ScmsModel\ScmsModel.csproj">
+      <Project>{9BDECADA-1211-43B9-9188-C559A9ABC90D}</Project>
+      <Name>ScmsModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ScmsSoaLibraryInterface\ScmsSoaLibraryInterface.csproj">
+      <Project>{B8793B4F-84CD-4626-943C-A1E0A0709DC8}</Project>
+      <Name>ScmsSoaLibraryInterface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Reports\Inventory\LG_StockGudangBatch.rpt">
+      <LastGenOutput>LG_StockGudangBatch.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inventory\LG_StockGudangTotal.rpt">
+      <LastGenOutput>LG_StockGudangTotal.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inventory\LG_StockNasionalBatch.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inventory\LG_StockNasionalTotal.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inventory\LG_KartuBarangGudangBatch.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inventory\LG_KartuBarangGudangTotal.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inventory\LG_KartuBarangNasionalBatch.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inventory\LG_KartuBarangNasionalTotal.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inventory\LG_OpnameBatchBad.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inventory\LG_OpnameBatchGood.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inventory\LG_OpnameTotalBad.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inventory\LG_OpnameTotalGood.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inventory\LG_UmurStock1.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inventory\LG_UmurStock2.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inventory\LG_UmurStock3.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inventory\LG_UmurStock4.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inventory\LG_IndexStock.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_PLDOExp.rpt">
+      <LastGenOutput>LG_PLDOExp.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_HistoryPO.rpt">
+      <LastGenOutput>LG_HistoryPO.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_POLimit1.rpt">
+      <LastGenOutput>LG_POLimit1.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_POLimit2.rpt">
+      <LastGenOutput>LG_POLimit2.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_HistorySP.rpt">
+      <LastGenOutput>LG_HistorySP.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_HistorySPG.rpt">
+      <LastGenOutput>LG_HistorySPG.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_HistorySTT.rpt">
+      <LastGenOutput>LG_HistorySTT.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_ReportSPBatal.rpt">
+      <LastGenOutput>LG_ReportSPBatal.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_ReportHistoryItemBlock.rpt">
+      <LastGenOutput>LG_ReportHistoryItemBlock1.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_HistoryCombo.rpt">
+      <LastGenOutput>LG_HistoryCombo.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_HistoryItemBatch1.rpt">
+      <LastGenOutput>LG_HistoryItemBatch1.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_HistoryItemBatch2.rpt">
+      <LastGenOutput>LG_HistoryItemBatch2.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_ReportExpHoCab.rpt">
+      <LastGenOutput>LG_ReportExpHoCab.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Konsolidasi\LG_BDP.rpt">
+      <LastGenOutput>LG_BDP_1.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Konsolidasi\LG_ListBDP.rpt">
+      <LastGenOutput>LG_ListBDP.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Konsolidasi\LG_RDP.rpt">
+      <LastGenOutput>LG_RDP_1.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Konsolidasi\LG_RptStockNas1.rpt">
+      <LastGenOutput>LG_RptStockNas1.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Konsolidasi\LG_RptStockNas2.rpt">
+      <LastGenOutput>LG_RptStockNas2.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Transaksi\LG_STT.rpt">
+      <LastGenOutput>LG_STT.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Transaksi\LG_DO1.rpt">
+      <LastGenOutput>LG_DO1.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Transaksi\LG_DO2.rpt">
+      <LastGenOutput>LG_DO2.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\WaktuPelayanan\LG_ReportSupplierCabang.rpt">
+      <LastGenOutput>LG_ReportSupplierCabang.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\WaktuPelayanan\LG_WP1.rpt">
+      <LastGenOutput>LG_WP1.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\WaktuPelayanan\LG_WP2.rpt">
+      <LastGenOutput>LG_WP2.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\WaktuPelayanan\LG_WP3.rpt">
+      <LastGenOutput>LG_WP3.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\WaktuPelayanan\LG_WP_Supplier1.rpt">
+      <LastGenOutput>LG_WP_Supplier1.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\WaktuPelayanan\LG_WP_Supplier2.rpt">
+      <LastGenOutput>LG_WP_Supplier2.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\WaktuPelayanan\LG_WP_Supplier3.rpt">
+      <LastGenOutput>LG_WP_Supplier3.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inventory\LG_rptMutasiInv.rpt">
+      <LastGenOutput>LG_rptMutasiInv.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\pending\LG_ListPendDO.rpt">
+      <LastGenOutput>LG_ListPendDO.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\pending\LG_ListPendRC.rpt">
+      <LastGenOutput>LG_ListPendRC.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\pending\LG_ListPendRN.rpt">
+      <LastGenOutput>LG_ListPendRN.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\pending\LG_ListPendRS.rpt">
+      <LastGenOutput>LG_ListPendRS.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\pending\LG_ListPendSTT.rpt">
+      <LastGenOutput>LG_ListPendSTT.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\pending\LG_POPending1.rpt">
+      <LastGenOutput>LG_POPending1.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\pending\LG_POPending2.rpt">
+      <LastGenOutput>LG_POPending2.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\pending\LG_POPPending1.rpt">
+      <LastGenOutput>LG_POPPending1.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\pending\LG_POPPending2.rpt">
+      <LastGenOutput>LG_POPPending2.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\pending\LG_ReportPendingCombo.rpt">
+      <LastGenOutput>LG_ReportPendingCombo.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\pending\LG_ReportPendingPL.rpt">
+      <LastGenOutput>LG_ReportPendingPL.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\pending\LG_ReportPendingSJ.rpt">
+      <LastGenOutput>LG_ReportPendingSJ.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\pending\LG_ReportSPPendingMonth.rpt">
+      <LastGenOutput>LG_ReportSPPendingMonth.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\pending\LG_ReportSPPOPend.rpt">
+      <LastGenOutput>LG_ReportSPPOPend.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\pending\LG_SPPending1.rpt">
+      <LastGenOutput>LG_SPPending1.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\pending\LG_SPPending2.rpt">
+      <LastGenOutput>LG_SPPending2.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\pending\LG_SPPending3.rpt">
+      <LastGenOutput>LG_SPPending3.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\pending\LG_SPPending4.rpt">
+      <LastGenOutput>LG_SPPending4.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\pending\LG_rptSPGPending.rpt">
+      <LastGenOutput>LG_rptSPGPending.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inventory\LG_ListPO1.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ListPODetil.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ListPOTotal.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inventory\LG_ListPO.rpt">
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ListCombo.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ListRN.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ListRC.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ListSTT.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ListRS.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ListPL.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ListSJ.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_POPrincSPCab.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ListSPAccDetil.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ListSPAccPerItem.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ListSPAccPerDivPri.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_QueryDO.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_SPEkspedisi.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ListAdjustStock.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ListAdjPO.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ListAdjSTT.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ListAdjCombo.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ListFBadj.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ListFJadj.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Monitoring\PackingListPrint.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Monitoring\PackingListConf.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Monitoring\PackingListBooked.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Monitoring\DeliveryOrderSend.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Monitoring\ReturCustomerSend.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryClaim.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryFB.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryFBR.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryFJ.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryFJR.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Transaksi\LG_DO1_Full.rpt">
+      <LastGenOutput>LG_DO1_Full.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Transaksi\LG_DO2_Full.rpt">
+      <LastGenOutput>LG_DO2_Full.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Transaksi\LG_Combo.rpt">
+      <LastGenOutput>LG_Combo.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QuerySales.rpt">
+      <LastGenOutput>LG_QuerySales.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_ReportPembayaran.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_ReportJatuhTempo.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ListAdjSP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LG_ListAdjSP.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Transaksi\LG_FJ2.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Transaksi\LG_FJR.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryClaimProduk.rpt">
+      <LastGenOutput>LG_QueryClaimProduk.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Transaksi\LG_AdjSTT.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_rptPBF.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_ListBayarEkspedisi.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_ReportBiayaEkspedisiByDO.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_ReportBiayaEkspedisiByItem.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_ReportBiayaEkspedisiByResi.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_ReportRekapInvoiceEksternal.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_ReportRekapInvoiceInternal.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inventory\LG_CurrentStockED.rpt">
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ReportPBFNonRetur.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ReportPBFRetur.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_ReportPOPending.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_EFaktur.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_EFaktur_FJ.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_EFaktur_FM.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Konsolidasi\LG_CompareSO.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ReportCSLCabangDtl.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ReportCSLCabangHdr.rpt">
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ReportCSLPrincipalDtl.rpt">
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ReportCSLPrincipalHdr.rpt">
+    </None>
+    <None Include="Reports\Inventory\LG_IntegrityDC.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_HistoryRNCabang.rpt">
+    </None>
+    <None Include="Reports\Inventory\LG_IntegrityDCDetail.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inventory\LG_StockAktual.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_HistoryReturSupplier.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_PLDOExp_total.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ListSJ_PendingRN.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inventory\LG_RptMasterItem.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_PO_OOT.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_PO_PREKURSOR.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\COPY OF LG_HISTORYSP.RPT">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ReportEalkesIn.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ReportEalkesInRetur.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ReportEalkesOut.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ReportEalkesOutRetur.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryFB-AMS.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryFB-PRIN.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryFB-RN.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryFBR - Br.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryFBR - Prin.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryFBR-AMS.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryFBR-BR.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryFBR-PRIN.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryFBR_lama.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryFJ- AMS.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryFJ-Nomor.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryFJ-Prin.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryFJR-AMS.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryFJR-Nomor.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryFJR-Prin.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Inventory\LG_rptMutasiInvDetail.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_HistoryPO2.rpt">
+      <LastGenOutput>LG_HistoryPO.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ReportPBFNonRetur2.rpt">
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ReportPBFRetur2.rpt">
+    </None>
+    <None Include="Reports\History\LG_ListBayarEkspedisiNew.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_EKSPEDISI.RPT">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_HistoryRecall_Batch.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_HistoryRecall_GroupBatch.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_CSL_PPIC.rpt" />
+    <None Include="Reports\History\LG_CSL_DC.rpt" />
+    <EmbeddedResource Include="Reports\History\LG_Recall_Detail.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LG_Recall_Detail.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Reports\History\LG_Recall_Header.rpt" />
+    <EmbeddedResource Include="Reports\Inventory\LG_rptMutasiInvDetailNew.rpt">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Inventory\LG_rptMutasiInvNew.rpt">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Inventory\LG_StockAktual_New_Report.rpt">
+    </EmbeddedResource>
+    <None Include="Reports\Konsolidasi\LG_BDP_NEW.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Konsolidasi\LG_RDP_NEW.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="Reports\ListTransaksi\LG_PO_OKT_New.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LG_PO_OKT_New.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ListTransaksi\LG_PO_OOT_New.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LG_PO_OOT_New.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ListTransaksi\LG_PO_PREKURSOR_New.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LG_PO_PREKURSOR_New.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ListTransaksi\LG_ReportPBF_BPOM.rpt">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ListTransaksi\ReportOktPrekursorBulanan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportOktPrekursorBulanan1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Reports\Transaksi\LG_BE.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Transaksi\LG_PM.rpt">
+      <LastGenOutput>LG_Combo.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Transaksi\MK_MP.rpt">
+      <LastGenOutput>LG_Combo.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Transaksi\LG_DO2_Full_HO2.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Monitoring\ProduktifitasDC.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\pending\LG_ReportSPPendingMonthPO.rpt" />
+    <EmbeddedResource Include="Reports\Proses\LG_AdjustSO.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LG_AdjustSO.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Proses\LG_BlankFormSO.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LG_BlankFormSO.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Proses\LG_FormSO.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LG_FormSO.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Proses\LG_FormSOPdf.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LG_FormSOPdf.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Proses\LG_HasilSO.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LG_HasilSO.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Reports\Transaksi\LG_DO_DC3_Full.rpt">
+      <LastGenOutput>LG_DO1_Full.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="Reports\Transaksi\LG_DO_Barcode.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LG_DO_Barcode.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Reports\Transaksi\LG_PL.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Transaksi\20170906 LG_FJ2.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="Reports\Transaksi\LG_PO.rpt">
+      <LastGenOutput>LG_PO.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="Reports\Transaksi\LG_RS.rpt">
+      <LastGenOutput>LG_RS.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_BeliFA1.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_BeliFA2-1.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_BeliFA2-2.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_BeliFA2.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_BeliFA6.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_BeliFA7.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_BeliFA8.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_BeliFA9.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_JualFA1.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_JualFA2-1.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_JualFA2-2.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_JualFA2.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_jUALFA6.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_JualFA7.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_JualFA8.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_JualFA9.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_HPPDivAMS1.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_HPPDivAMS2.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_HPPDivAMS3.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_HPPDivAMS4.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_HPPDivAMS5.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_HPPDivPri1.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_HPPDivPri2.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_HPPDivPri3.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_HPPDivPri4.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryPenjualanSummary.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryPurchase.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryPurchasePerFaktur.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryReturSales.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QuerySales.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QuerySalesPerCabang.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QuerySalesPerFaktur.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryPurchasePerSupplier.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryReturSalesPerCabang.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryReturSalesPerFak.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryReturBeliPerFak.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryReturBeliPerSup.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryReturBeli.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryClaimPerSupplier.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_QueryClaimPerDiv.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_ReportSaldeb.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_ReportSaldebSum.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_ReportSalkred.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\History\LG_ReportSalkredSum.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_BEA.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_BEADiv.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Financial\LG_BEAFaktur.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_ReportFloating.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\ListTransaksi\LG_FloatingStock.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Transaksi\LG_SPCFull.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Transaksi\LG_RS_Upload.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Transaksi\LG_Shipment.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Transaksi\LG_SJ.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Transaksi\LG_SerahTerimaTiket.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Transaksi\LG_TransferGudang.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Transaksi\LG_SerahTerimaPBB.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Transaksi\LG_SerahTerimaPBB_Admin.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="Reports\Transaksi\LG_ProsesPharmanet_New2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LG_ProsesPharmanet_New2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Transaksi\LG_SerahTerima.rpt">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Transaksi\MovementStock.rpt">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\WaktuPelayanan\LG_ANALISA_WP_DETAIL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LG_ANALISA_WP_DETAIL.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\WaktuPelayanan\LG_ANALISA_WP_SUM.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LG_ANALISA_WP_SUM.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="Reports\WaktuPelayanan\LG_WPSTFull3.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\WaktuPelayanan\LG_WPSTFull2.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\WaktuPelayanan\LG_WPST1.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\WaktuPelayanan\LG_WPST2.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\WaktuPelayanan\LG_WPST3.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\WaktuPelayanan\LG_WPSTFull1.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\WaktuPelayanan\LG_WPSTGR_BASPB.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\WaktuPelayanan\LG_WPSTGR_CPR.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\WaktuPelayanan\LG_WPSTGR_PBBR.rpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="Rsrc\Parser.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

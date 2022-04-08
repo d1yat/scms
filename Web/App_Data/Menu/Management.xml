@@ -1,0 +1,757 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  Akses
+  1   : Lihat
+  2   : Cetak
+  4   : Tambah
+  8   : Ubah
+  16  : Hapus
+-->
+<Scms>
+  <Application name="Master" id="MASTR">
+    <Module name="Master" id="MSTR">
+      <Item name="Logistik" id="MSTRLOG" node="MSTRLOG" />
+      <Item name="Finansial" id="MSTRFIN" node="MSTRFIN" />
+    </Module>
+  </Application>
+  <Application name="Proses" id="PROCTRX">
+    <Module name="Proses" id="PROCTRX">
+      <Item name="Snapshot" id="PROCTRXSNAPS" node="PROCTRXSNAPS" />
+      <Item name="Closing" id="PROCTRXCLOSE" node="PROCTRXCLOSE" />
+      <Item name="SerahTerima" id="PROCTRXWP" node="PROCTRXWP" />
+      <Item name="ProsesWP" id="PROCWP" node="PROCWP" />
+      <Item name="Proses_Pharmanet" id="PROCTRXPHARMANET" node="PROCTRXPHARMANET" />
+      <Item name="ProsesSO" id="PROCSO" node="PROCSO"/>
+      <Item name="ProsesEmail" id="PROCEMAIL" node="PROCEMAIL"/><!--Indra 20190411FM Penambahan modul produk kosong-->
+    </Module>
+  </Application>
+  <Application name="Transaksi" id="TRX">
+    <Module name="Penjualan" id="SALE">
+      <Item name="Packing List" id="PL" node="PL" />
+      <Item name="Delivery Order" id="DO" node="DO" />
+    </Module>
+    <Module name="Pengiriman" id="SENT">
+      <Item name="Ekspedisi" id="EXPD" node="EXPD" />
+    </Module>
+    <Module name="Pemindahan" id="TRANFS">
+      <Item name="Surat Jalan" id="TRSJ" node="TRSJ" />
+      <Item name="Trasnfer Gudang" id="TRGDG" node="TRGDG" />
+      <Item name="Pemusnahan Barang" id="FUMUSNAH" node="FUMUSNAH" />
+    </Module>
+    <Module name="Pembelian" id="BUYING">
+      <Item name="Surat Pesanan" id="BYSPC" node="BYSPC" />
+      <Item name="Order" id="BYORD" node="BYORD" />
+      <Item name="Purchase Order" id="BYPOP" node="BYPOP" />
+    </Module>
+    <Module name="Penerimaan" id="GETTING">
+      <Item name="Receive Note" id="GTRN" node="GTRN" />
+      <Item name="Relokasi Ulujami" id="GTRNULUJAMI" node="GTRNULUJAMI" />
+    </Module>
+    <Module name="Memo" id="MEMO">
+      <Item name="Combo" id="TRMMCB" node="TRMMCB" />
+      <Item name="Surat Tanda Terima (STT)" id="TRSTT" node="TRSTT" />
+    </Module>
+    <Module name="Pengembalian " id="RETUR">
+      <Item name="Cabang" id="TRRSCABANG" node="TRRSCABANG" />
+      <Item name="Pemasok" id="TRRSSUPL" node="TRRSSUPL" />
+    </Module>
+    <Module name="Klaim" id="CLAIM">
+      <Item name="Pembuatan" id="TRCLAIMREG" node="TRCLAIMREG" />
+      <Item name="Pengesahan" id="TRCLAIMSTT" node="TRCLAIMSTT" />
+			<Item name="CurrentPending" id="TRCLAIMCS" node="TRCLAIMCS" />
+    </Module>
+    <Module name="Penyesuaian" id="ADJUSTX">
+      <Item name="Gudang" id="TRADJGDG" node="TRADJGDG" />
+      <Item name="Finansial" id="TRADJFIN" node="TRADJFIN" />
+    </Module>
+    <Module name="Umum" id="FUNCUMUM">
+      <Item name="Otomatis" id="FUOTO" node="FUOTO" />
+    </Module>      
+  </Application>
+  <Application name="Laporan" id="RPT">
+    <Module name="Inventory" id="IVT">
+      <Item name="Stok" id="RPTIVTSTK" node="RPTIVTSTK" />
+      <Item name="Kartu" id="RPTIVTKRT" node="RPTIVTKRT" />
+      <Item name="Monitoring ED" id="RPTIVMONED" node="RPTIVMONED" />
+    </Module>
+    <Module name="History" id="HST">
+      <Item name="Asuransi" id="RPTHSTASRN" node="RPTHSTASRN" />
+      <Item name="Ekspedisi" id="RPTHEKSPEDISI" node="RPTHEKSPEDISI" />
+      <Item name="Purchase Order" id="RPTHSTPO" node="RPTHSTPO" />
+      <Item name="Surat Pesanan" id="RPTHSTSP" node="RPTHSTSP" />
+      <Item name="Memo" id="RPTHSTMEMO" node="RPTHSTMEMO" />
+      <Item name="Status Produk" id="RPTHSTITBL" node="RPTHSTITBL" />
+      <Item name="Item Batch" id="RPTHSTITBT" node="RPTHSTITBT" />
+      <Item name="Query" id="RPTHSTQRY" node="RPTHSTQRY" />
+      <Item name="Pemusnahan" id="RPTHSTPEMUSNAHAN" node="RPTHSTPEMUSNAHAN" />
+      <Item name="Retur Supplier" id="RPTHSTRETUSSUPPLIER" node="RPTHSTRETUSSUPPLIER" />
+      <Item name="Recall" id="RPTHSTRECALL" node="RPTHSTRECALL" />
+      
+    </Module>
+    <Module name="Konsolidasi" id="KLDS">
+      <Item name="Dalam Perjalanan" id="RPTKLDSDP" node="RPTKLDSDP" />
+      <Item name="Stok" id="RPTKLDSSTK" node="RPTKLDSSTK" />
+    </Module>
+    <Module name="Waktu Pelayanan" id="WPRPT">
+      <Item name="Cabang" id="RPTWPRPTCAB" node="RPTWPRPTCAB" />
+      <Item name="Pemasok" id="RPTWPRPTSUPL" node="RPTWPRPTSUPL" />
+      <Item name="Lainnya" id="RPTWPRPTLAIN" node="RPTWPRPTLAIN" />
+      <Item name="SerahTerima" id="RPTWPSERAHTERIMA" node="RPTWPSERAHTERIMA" />
+      <Item name="SP - PL CONFIRM" id="RPTWPSPPLCONFIRM" node="RPTWPSPPLCONFIRM" />
+    </Module>
+    <Module name="Pending" id="PNDG">
+      <Item name="Logistik" id="RPTPNDGLOG" node="RPTPNDGLOG" />
+      <Item name="Finance" id="RPTPNDGFA" node="RPTPNDGFA" />
+    </Module>
+    <Module name="Finansial" id="FINAN">
+      <Item name="Account Payable (AP)" id="RPTFINANAPFA" node="RPTFINANAPFA" />
+      <Item name="Account Receiveable (AR)" id="RPTFINANARFA" node="RPTFINANARFA" />
+      <Item name="Bea" id="RPTFINANBEAFA" node="RPTFINANBEAFA" />
+      <Item name="Harga Pokok Penjualan (HPP)" id="RPTFINANHPPFA" node="RPTFINANHPPFA" />
+      <Item name="Pembayaran" id="RPTFINANBAYARFA" node="RPTFINANBAYARFA" />
+      <Item name="Claim" id="RPTFINANCLAIMFA" node="RPTFINANCLAIMFA" />
+      <Item name="Claim Acc" id="RPTFINANCLAIMACCFA" node="RPTFINANCLAIMACCFA" />
+      <Item name="Faktur" id="RPTFINANFAKTURFA" node="RPTFINANFAKTURFA" />
+    </Module>
+    <Module name="List Transaksi" id="TRANS">
+      <Item name="Umum" id="RPTTRNS" node="RPTTRNS" />
+      <Item name="Adjustment" id="RPTTRNSADJ" node="RPTTRNSADJ" />
+      <Item name="Surat Pesanan" id="RPTTRNSSP" node="RPTTRNSSP" />
+      <Item name="Penerimaan" id="RPTTRNSRCV" node="RPTTRNSRCV" />
+      <Item name="Pengembalian" id="RPTTRNSRETUR" node="RPTTRNSRETUR" />
+      <Item name="Pemindahan" id="RPTTRNSTRNSGDG" node="RPTTRNSTRNSGDG" />
+      <Item name="Penjualan" id="RPTTRNSTRNSJUAL" node="RPTTRNSTRNSJUAL" />
+      <Item name="APJ" id="RPTOKTPREKURSOR" node="RPTOKTPREKURSOR" />
+    </Module>
+    <Module name="Monitoring" id="MONIT">
+      <Item name="Pengiriman Gudang - Cabang" id="MONITEXPDGC" node="MONITEXPDGC" />
+      <Item name="Pengiriman Antar Gudang" id="MONITEXPDAG" node="MONITEXPDAG" />
+      <Item name="Data PL" id="MONITEXPL" node="MONITEXPL" />
+      <Item name="Ekspedisi Pending DO/SJ" id="MONITEXPDPEND" node="MONITEXPDPEND" />
+      <Item name="Monitoring Penerimaan PO" id="MONITPORECEIVE" node="MONITPORECEIVE" />
+      <Item name="Sales dan Stok Nasional" id="MONISLSNAS" node="MONISLSNAS" />
+      <Item name="Monitoring Pending Integrity" id="MONITPENDINT" node="MONITPENDINT" />
+      <!--hafizh-->
+      <Item name="Monitoring Produktifitas DC" id="MONITPRODDC" node="MONITPRODDC" />
+      <Item name="Monitoring Forecast" id="MONITFORECAST" node="MONITFORECAST"/>
+      <!--<Item name="Monitoring Forecast_New" id="MONITFORECAST_NEW" node="MONITFORECAST_NEW"/>-->
+      <Item name="Monitoring PL" id="MONITPL" node="MONITPL" /><!--Indra Monitoring Process 20180523FM-->
+      
+    </Module>
+    
+    <!--service-->
+
+    <Module name="ServiceLevel" id="SL">
+        <Item name="Service Level" id="RPTHSTSERVICELEVEL" node="RPTHSTSERVICELEVEL" />
+
+    </Module>
+  </Application>
+  <Application name="Finansial" id="Fin">
+    <Module name="Faktur" id="FAKTR">
+      <Item name="Faktur Pembelian" id="FB" node="FB" />
+      <Item name="Faktur Penjualan" id="FJ" node="FJ" />
+    </Module>
+    <Module name="Pembayaran" id="VBAYAR">
+      <Item name="Voucher" id="VCP" node="VCP" />
+    </Module>
+  </Application>
+  <Application name="Memo" id="MEM">
+    <Module name="Memo Sales" id="MEMOSLSCB">
+      <Item name="Combo" id="MMEMCB" node="MMEMCB" />
+      <Item name="Surat Tanda Terima (STT)" id="STTCB" node="STTCB" />
+      <Item name="Pemusnahan" id="MMEMP" node="MMEMP" />
+      <Item name="BASPB" id="MEMOBASPB" node="MEMOBASPB" />
+    </Module>
+  </Application>
+  <Items>
+    <!-- Start Proses -->
+    <!-- Snapshot -->
+    <PROCTRXSNAPS>
+      <Page name="BDP / RDP" access="5" url="/web/proses/snapshot/bdprdp.aspx" />
+      <Page name="Closing PO" access="5" url="/web/proses/snapshot/closingpo.aspx" />
+    </PROCTRXSNAPS>
+		<!-- Closing -->
+		<PROCTRXCLOSE>
+			<Page name="Closing Logistik" access="5" url="/web/proses/closing/ClosingStock.aspx" />
+		</PROCTRXCLOSE>
+		<PROCTRXWP>
+      <Page name="Serah Terima Picker" access="21" url="/web/transaksi/wp/SerahTerima.aspx?mode=picker" />
+      <Page name="Serah Terima InkJet" access="21" url="/web/transaksi/wp/SerahTerima.aspx?mode=inkjet" />
+      <Page name="Serah Terima Checker" access="21" url="/web/transaksi/wp/SerahTerima.aspx?mode=checker" />
+      <Page name="Serah Terima Packer" access="21" url="/web/transaksi/wp/SerahTerima.aspx?mode=packer" />
+      <Page name="Serah Terima Transportasi" access="21" url="/web/transaksi/wp/SerahTerima.aspx?mode=transportasi" />
+      <Page name="Serah Terima Gudang PBB/R" access="23" url="/web/transaksi/wp/SerahTerima.aspx?mode=rc" />
+      <Page name="Serah Terima Admin PBB/R" access="23" url="/web/transaksi/wp/SerahTerima.aspx?mode=pbbr" />
+      <Page name="Serah Terima Gudang BASPB" access="21" url="/web/transaksi/wp/SerahTerima.aspx?mode=baspbGdg" />
+      <Page name="Serah Terima Admin BASPB" access="21" url="/web/transaksi/wp/SerahTerima.aspx?mode=baspbAdm" />
+      <Page name="Serah Terima CPR" access="21" url="/web/transaksi/wp/SerahTerima.aspx?mode=cpr" />
+      <Page name="Tiket Antrian" access="7" url="/web/transaksi/wp/SerahTerimaTiket.aspx" />
+      <Page name="Serah Terima Tiket" access="21" url="/web/transaksi/wp/SerahTerimaPO.aspx" />
+    </PROCTRXWP>
+    <!-- Proses data -->
+    <PROCWP>
+      <Page name="Proses Waktu Pelayanan" access="5" url="/web/proses/process_data/ProsesWP.aspx" />
+
+      <Page name="Proses Avg Sales " access="5" url="/web/proses/process_data/AvgSales.aspx" />
+
+      <Page name="Proses FJR " access="5" url="/web/proses/process_data/ProsesFJR.aspx" />
+
+      <Page name="Proses Discount Claim " access="5" url="/web/proses/process_data/ProsesDisClaim.aspx" />
+      
+    </PROCWP>
+    <!-- Proses Pharmanet -->
+    <PROCTRXPHARMANET>
+       <Page name="Pharmanet" access="5" url="/web/proses/process_data/Proses_Pharmanet.aspx" />
+    </PROCTRXPHARMANET>
+        <!-- Stock Opname Indra 20171103-->
+    <PROCSO>
+      <Page name="Proses Stock Opname" access="5" url="/web/proses/stock_opname/ProsesStockOpname.aspx" />
+      <Page name="Stock Opname" access="5" url="/web/proses/stock_opname/StockOpname.aspx" />
+    </PROCSO>
+    <!--Indra 20190411FM Penambahan modul produk kosong-->
+    <PROCEMAIL>
+      <Page name="Email Produk Kosong" access="31" url="/web/proses/process_data/ProsesEmailProdukKosong.aspx" />
+    </PROCEMAIL>
+    <!-- End Master -->
+    
+    <!-- Start Master -->
+    <!-- Logisitik -->
+    <MSTRLOG>
+      <Page name="Gudang" access="13" url="/web/master/gudang/Gudang.aspx" />
+      <Page name="Barang" access="11" url="/web/master/item/MasterItem.aspx" />
+      <Page name="Kategori Barang" access="29" url="/web/master/item/MasterItemCategory.aspx" />
+      <Page name="Lantai Barang" access="29" url="/web/master/item/MasterItemLantai.aspx" />
+      <Page name="Batch" access="13" url="/web/master/batch/Batch.aspx" />
+      <Page name="Cabang" access="13" url="/web/master/pelanggan/MasterPelanggan.aspx" />
+      <Page name="Ekspedisi" access="13" url="/web/master/expedisi/MasterExpedisi.aspx" />
+
+      <Page name="Mstrcabanghari" access="13" url="/web/master/expedisi/MasterCabangHari.aspx" />
+      
+      <Page name="Estimasi Ekspedisi" access="13" url="/web/master/expedisi/MasterEstimasiExpedisi.aspx" />
+      <Page name="Combo" access="29" url="/web/master/item/MasterCombo.aspx" />
+      <Page name="Via" access="29" url="/web/master/item/MasterItemVia.aspx" />
+      <Page name="Estimasi Biaya Ekspedisi" access="29" url="/web/master/expedisi/MasterEstimasiCostExp.aspx" />
+      <Page name="Driver" access="29" url="/web/master/expedisi/MasterDriver.aspx" />
+      <Page name="Pin Delivery Order" access="1" url="/web/master/pin/DOPin.aspx" />
+      <Page name="Pin Surat Jalan" access="1" url="/web/master/pin/SJPin.aspx" />
+      <Page name="User APJ" access="13" url="/web/master/ams/MasterUserAPJ.aspx" />
+    </MSTRLOG>
+    <!-- Finansial -->
+    <MSTRFIN>
+      <Page name="Discount" access="29" url="/web/master/discount/Discount.aspx" />
+      <Page name="Anggaran" access="13" url="/web/master/budget/Limit.aspx" />
+      <Page name="Kurs" access="13" url="/web/master/kurs/Kurs.aspx" />
+      <Page name="Pemasok" access="13" url="/web/master/prinsipal/MasterPrinsipal.aspx" />
+      <Page name="Divisi Pemasok" access="13" url="/web/master/prinsipal/MasterDivisiPrinsipal.aspx" />
+      <Page name="Divisi AMS" access="31" url="/web/master/ams/MasterDivisiAMS.aspx" />
+      <Page name="Bank" access="31" url="/web/master/bank/MasterBank.aspx" />
+      <Page name="PKP" access="13" url="/web/master/prinsipal/MasterPKP.aspx" />
+      <Page name="Nomor Pajak" access="13" url="/web/master/prinsipal/MasterNomorPajak.aspx" />
+    </MSTRFIN>
+    <!-- End Master -->
+
+    <!-- Start Finansial -->
+    <!-- Faktur -->
+    <FJ>
+      <Page name="Jual" access="31" url="/web/keuangan/faktur/FakturJual.aspx" />
+      <Page name="Proses Retur" access="5" url="/web/keuangan/faktur/FakturJualReturProses.aspx" />
+      <Page name="Retur" access="27" url="/web/keuangan/faktur/FakturJualRetur.aspx" />
+      <Page name="Faktur Manual" access="31" url="/web/keuangan/faktur/FakturManual.aspx" />
+    </FJ>
+    <FB>
+      <Page name="Beli" access="31" url="/web/keuangan/faktur/FakturBeli.aspx" />
+      <Page name="Upload Beli" access="5" url="/web/keuangan/faktur/FakturBeliProses.aspx" />
+      <Page name="Proses Retur" access="5" url="/web/keuangan/faktur/FakturBeliReturProses.aspx" />
+      <Page name="Retur" access="27" url="/web/keuangan/faktur/FakturBeliRetur.aspx" />
+    </FB>
+    <!-- Pembayaran -->
+    <VCP>
+      <Page name="Pembelian" access="31" url="/web/keuangan/pembayaran/Voucher.aspx?mode=debit" />
+      <Page name="Penjualan" access="31" url="/web/keuangan/pembayaran/Voucher.aspx?mode=kredit" />
+    </VCP>
+    <!-- End Finansial -->
+
+    <!-- Start Transaksi -->
+    <!-- Otomatis -->
+    <FUOTO>
+      <Page name="Manual DO Pemasok" access="21" url="/web/transaksi/auto/DOPrinsipal.aspx" />
+      <Page name="Surat Pesanan Upload" access="5" url="/web/transaksi/auto/SuratPesananUpload.aspx" />
+      <Page name="Pembayaran Voucher Upload" access="5" url="/web/transaksi/auto/PembayaranVoucherUpload.aspx" />
+      <Page name="SO Upload" access="31" url="/web/transaksi/auto/SOUpload.aspx" />
+      <Page name="Input User Batch" access="31" url="/web/transaksi/auto/PenginputanUserUpload.aspx" /> <!--Indra D. 20170315-->
+    </FUOTO>
+    <!-- Pemusnahan -->
+    <FUMUSNAH>
+      <Page name="Pemusnahan Barang" access="31" url="/web/transaksi/pemusnahan/PM.aspx" />
+    </FUMUSNAH>
+    <!-- Penjualan -->
+    <PL>
+      <Page name="Packing List" access="31" url="/web/transaksi/penjualan/PackingList.aspx" />
+      <Page name="Packing List Confirm" access="15" url="/web/transaksi/penjualan/PackingList.aspx?mode=confirm" />
+      <Page name="Packing List Auto" access="31" url="/web/transaksi/penjualan/PackingList.aspx?mode=auto" />
+	    <Page name="Packing List Master Box" access="31" url="/web/transaksi/penjualan/PackingList.aspx?mode=box" />
+	    <Page name="Packing List Auto Number" access="31" url="/web/transaksi/penjualan/PackingList.aspx?mode=autogen" />
+      <Page name="Packing List Gudang 3" access="31" url="/web/transaksi/penjualan/PackingListGd3.aspx" />
+      <Page name="Packing List Confirm Gudang 3" access="15" url="/web/transaksi/penjualan/PackingListGd3.aspx?mode=confirm" />
+      <Page name="Packing List Auto Gudang 3" access="31" url="/web/transaksi/penjualan/PackingListGd3.aspx?mode=auto" />
+      <Page name="Packing List Master Box Gudang 3" access="31" url="/web/transaksi/penjualan/PackingListGd3.aspx?mode=box" />
+    </PL>
+    <DO>
+      <Page name="Delivery Order PL" access="31" url="/web/transaksi/penjualan/DeliveryOrder.aspx?mode=pl" />
+      <Page name="Delivery Order Send" access="31" url="/web/transaksi/penjualan/DOSend.aspx" />
+      <Page name="Delivery Order STT" access="31" url="/web/transaksi/penjualan/DeliveryOrder.aspx?mode=stt" />
+      <Page name="Delivery Order Send Batch" access="31" url="/web/transaksi/penjualan/DOSendBatch.aspx" /> <!--Indra D. 20170714-->
+    </DO>
+    <!-- Pengiriman -->
+    <EXPD>
+      <Page name="Ekspedisi Antar Gudang" access="31" url="/web/transaksi/pengiriman/EkspedisiGudang.aspx" />
+			<Page name="Ekspedisi Gudang - Cabang" access="31" url="/web/transaksi/pengiriman/Ekspedisi.aspx" />
+      <Page name="Ekspedisi Waktu Cabang" access="9" url="/web/transaksi/pengiriman/EkspedisiCabang.aspx" />
+      <Page name="Upload Ekspedisi Waktu Cabang" access="5" url="/web/transaksi/pengiriman/ProsesEkspedisiCabang.aspx" />
+      <Page name="Invoice Ekspedisi Eksternal" access="31" url="/web/transaksi/pengiriman/InvoiceEkspedisiEksternal.aspx" />
+      <Page name="Invoice Ekspedisi Internal" access="31" url="/web/transaksi/pengiriman/InvoiceEkspedisiInternal.aspx" />
+      <Page name="Faktur Ekspedisi" access="31" url="/web/transaksi/pengiriman/FakturEkspedisi.aspx" />
+      <Page name="Return DO" access="31" url="/web/transaksi/pengiriman/ReturnDO.aspx" />
+      <Page name="Ekspedisi Gudang - Principal" access="31" url="/web/transaksi/pengiriman/EkspedisiPrincipal.aspx" />
+    </EXPD>
+    <!-- Pemindahan -->
+    <TRSJ>
+      <Page name="Surat Jalan" access="31" url="/web/transaksi/transfer/Transfer.aspx" />
+      <Page name="Surat Jalan Confirm" access="27" url="/web/transaksi/transfer/Transfer.aspx?mode=confirm" />
+			<Page name="Surat Jalan Auto" access="5" url="/web/transaksi/transfer/Transfer.aspx?mode=Auto" />
+      <Page name="Surat Jalan Gudang 3" access="31" url="/web/transaksi/transfer/Transfergd3.aspx" />
+    </TRSJ>
+    <TRGDG>
+      <Page name="Transfer Gudang" access="31" url="/web/transaksi/transfer/TransferGudangRepack.aspx" />
+      <Page name="Transfer Gudang Confirm" access="27" url="/web/transaksi/transfer/TransferGudangRepack.aspx?mode=confirm" />
+      <Page name="Transfer Gudang-Karantina" access="31" url="/web/transaksi/transfer/TransferGudangKarantina.aspx" />
+      <Page name="Transfer Gudang-Karantina Confirm" access="27" url="/web/transaksi/transfer/TransferGudangKarantina.aspx?mode=confirm" />
+      <Page name="Transfer Karantina-Gudang" access="31" url="/web/transaksi/transfer/TransferKarantinaGudang.aspx" />
+      <Page name="Transfer Karantina-Gudang Confirm" access="27" url="/web/transaksi/transfer/TransferKarantinaGudang.aspx?mode=confirm" />
+      <Page name="Transfer Gudang-Pemusnahan" access="31" url="/web/transaksi/transfer/TransferGudangPemusnahan.aspx" />
+      <Page name="Transfer Gudang-Pemusnahan Confirm" access="27" url="/web/transaksi/transfer/TransferGudangPemusnahan.aspx?mode=confirm" />
+    </TRGDG>
+    <!-- Pembelian -->
+    <BYSPC>
+      <Page name="Surat Pesanan" access="31" url="/web/transaksi/pembelian/SuratPesanan.aspx" />
+      <Page name="Surat Pesanan Manual" access="31" url="/web/transaksi/pembelian/SuratPesananManual.aspx" />     
+    </BYSPC>
+    <BYORD>
+      <Page name="Order Principal" access="29" url="/web/transaksi/pembelian/OrderRequestPrincipal.aspx" />
+      <Page name="Proses Order Principal" access="29" url="/web/transaksi/pembelian/OrderRequestPrincipal.aspx?mode=process" />
+      <Page name="Order Gudang" access="29" url="/web/transaksi/pembelian/OrderRequestGudang.aspx" />
+      <Page name="Proses Order Gudang" access="29" url="/web/transaksi/pembelian/OrderRequestGudang.aspx?mode=process" />
+    </BYORD>
+    <BYPOP>
+      <Page name="Purchase Order" access="27" url="/web/transaksi/pembelian/PurchaseOrder.aspx" />
+      <Page name="Purchase Order OKT" access="27" url="/web/transaksi/pembelian/PO_Apoteker.aspx?mode=okt" />
+      <Page name="Purchase Order Prekursor" access="27" url="/web/transaksi/pembelian/PO_Apoteker.aspx?mode=prekursor" />
+      <Page name="Purchase Order OOT" access="27" url="/web/transaksi/pembelian/PO_Apoteker.aspx?mode=oot" />
+      <Page name="Limit PO Principal" access="31" url="/web/transaksi/pembelian/LimitPOPrincipal.aspx" />
+      <Page name="Limit PO Divisi Principal" access="31" url="/web/transaksi/pembelian/LimitPODivPri.aspx" />
+      <Page name="Limit PO Item" access="31" url="/web/transaksi/pembelian/LimitPOItem.aspx" />
+    </BYPOP>
+    <!-- Penerimaaan -->
+    <GTRN>
+      <Page name="Pembelian" access="31" url="/web/transaksi/penerimaan/ReceiveNote.aspx?mode=pembelian" />
+      <Page name="Khusus" access="31" url="/web/transaksi/penerimaan/ReceiveNote.aspx?mode=khusus" />
+      <Page name="Retur" access="31" url="/web/transaksi/penerimaan/ReceiveNote.aspx?mode=retur" />
+      <Page name="Claim" access="31" url="/web/transaksi/penerimaan/ReceiveNote.aspx?mode=claim" />
+      <Page name="Repack" access="31" url="/web/transaksi/penerimaan/ReceiveNote.aspx?mode=repack" />
+      <Page name="Gudang" access="31" url="/web/transaksi/penerimaan/ReceiveNoteGudang.aspx" />
+    </GTRN>
+
+
+    <!-- Penerimaaan Ulujami -->
+    <GTRNULUJAMI>
+      <Page name="Relokasi Pembelian Ulujami" access="31" url="/web/transaksi/penerimaanulujami/ReceiveNoteUlujami.aspx?mode=pembelianulujami" />
+      <Page name="Reloaksi Khusus Ulujami" access="31" url="/web/transaksi/penerimaanulujami/ReceiveNoteUlujami.aspx?mode=khususulujami" />
+      <Page name="Relokasi Retur Ulujami" access="31" url="/web/transaksi/penerimaanulujami/ReceiveNoteUlujami.aspx?mode=returulujami" />
+      <Page name="Relokasi Claim Ulujami" access="31" url="/web/transaksi/penerimaanulujami/ReceiveNoteUlujami.aspx?mode=claimulujami" />
+      <Page name="Relokasi Repack Ulujami" access="31" url="/web/transaksi/penerimaanulujami/ReceiveNoteUlujami.aspx?mode=repackulujami" />
+      <Page name="Relokasi Gudang Ulujami" access="31" url="/web/transaksi/penerimaanulujami/ReceiveNoteGudangUlujami.aspx" />
+    </GTRNULUJAMI>
+
+
+    <!-- Memo -->
+    <TRMMCB>
+      <Page name="Combo" access="31" url="/web/transaksi/memo/MemoCombo.aspx" />
+    </TRMMCB>
+    <TRSTT>
+      <Page name="Surat Tanda Terima (Donasi)" access="31" url="/web/transaksi/stt/STT.aspx?mode=stt" />
+      <Page name="Surat Tanda Terima (Sample)" access="31" url="/web/transaksi/stt/STT.aspx?mode=sample" />
+    </TRSTT>
+    <!-- Pengembalian (Retur) -->
+    <TRRSCABANG>
+      <Page name="Pembelian Good" access="31" url="/web/transaksi/retur/ReturCustomer.aspx?mode=standard" />
+      <Page name="Pembelian Bad" access="31" url="/web/transaksi/retur/ReturCustomer.aspx?mode=stdbad" />
+      <Page name="Pembelian Auto" access="31" url="/web/transaksi/retur/ReturCustomer.aspx?mode=auto" />
+      <Page name="Pembelian ReSend" access="31" url="/web/transaksi/retur/ReturCustomerResend.aspx" />
+      <Page name="Movement Stock" access="31" url="/web/transaksi/retur/SerahTerimaGood.aspx" />
+    </TRRSCABANG>
+    <TRRSSUPL>
+      <Page name="Pembelian" access="31" url="/web/transaksi/retur/ReturSupplier.aspx?mode=pembelian" />
+      <Page name="Repack" access="31" url="/web/transaksi/retur/ReturSupplier.aspx?mode=repack" />
+      <Page name="Konfirmasi Pembelian" access="31" url="/web/transaksi/retur/ReturSupplierConf.aspx" />
+    </TRRSSUPL>
+    <!-- Claim -->
+    <TRCLAIMREG>
+      <Page name="Umum" access="31" url="/web/transaksi/bonus/ClaimBonus.aspx?mode=regular" />
+      <Page name="Surat Tanda Terima" access="31" url="/web/transaksi/bonus/ClaimBonus.aspx?mode=stt" />
+      <Page name="Proses" access="31" url="/web/transaksi/bonus/ClaimBonus.aspx?mode=process" />
+    </TRCLAIMREG>
+    <TRCLAIMSTT>
+      <Page name="Umum" access="31" url="/web/transaksi/bonus/ClaimBonusAcc.aspx?mode=regular" />
+      <Page name="Surat Tanda Terima" access="31" url="/web/transaksi/bonus/ClaimBonusAcc.aspx?mode=stt" />
+    </TRCLAIMSTT>
+		<TRCLAIMCS>
+			<Page name="Current Claim" access="1" url="/web/transaksi/bonus/ClaimCurrentOutStanding.aspx" />
+		</TRCLAIMCS>	
+    <!-- Adjustment -->
+    <TRADJGDG>
+      <Page name="Stock" access="31" url="/web/transaksi/penyesuaian/AdjustStock.aspx?mode=stok" />
+      <Page name="Good Bad" access="31" url="/web/transaksi/penyesuaian/AdjustStock.aspx?mode=goodbad" />
+      <Page name="Batch" access="31" url="/web/transaksi/penyesuaian/AdjustStock.aspx?mode=batch" />
+      <Page name="STT Sample" access="31" url="/web/transaksi/penyesuaian/AdjustSTT.aspx?mode=adjsttsample" />
+      <Page name="STT Donasi" access="31" url="/web/transaksi/penyesuaian/AdjustSTT.aspx?mode=adjsttdonasi" />
+      <Page name="Adjust Stock" access="31" url="/web/transaksi/penyesuaian/AdjustTrans.aspx?mode=adjpo" />
+    </TRADJGDG>
+    <TRADJFIN>
+      <Page name="Faktur Jual" access="31" url="/web/transaksi/penyesuaian/AdjustFaktur.aspx?mode=adjfj" />
+      <Page name="Faktur Beli" access="31" url="/web/transaksi/penyesuaian/AdjustFaktur.aspx?mode=adjfb" />
+      <Page name="Voucher Debit" access="31" url="/web/transaksi/penyesuaian/AdjustVoucher.aspx?mode=adjvoucherdebit" />
+      <Page name="Voucher Credit" access="31" url="/web/transaksi/penyesuaian/AdjustVoucher.aspx?mode=adjvouchercredit" />
+    </TRADJFIN>
+    <!-- End Transaksi -->
+
+    <!-- Start Memo -->
+    <!-- Memo -->
+    <MMEMCB>
+      <Page name="Memo" access="31" url="/web/memo/combo/MemoCombo.aspx" />
+    </MMEMCB>
+    <!-- STT -->
+    <STTCB>
+      <Page name="Sample" access="31" url="/web/memo/stt/MemoSTT.aspx?mode=sample" />
+      <Page name="Donasi" access="31" url="/web/memo/stt/MemoSTT.aspx?mode=donasi" />
+    </STTCB>
+    <MMEMP>
+      <Page name="Pemusnahan" access="31" url="/web/memo/pemusnahan/MemoPemusnahan.aspx" />
+    </MMEMP>
+    <MEMOBASPB>
+      <Page name="BASPB" access="31" url="/web/memo/BASPB/MemoBASPB.aspx" />
+    </MEMOBASPB>
+    <!-- End Memo -->
+
+    <!-- Start Laporan -->
+    <!-- Laporan Inventory -->
+    <RPTIVTSTK>
+      <Page name="Gudang" access="5" url="/web/reporting/inventory/Default.aspx?mode=stockgudang" />
+      <Page name="Nasional" access="5" url="/web/reporting/inventory/Default.aspx?mode=stocknasional" />
+      <Page name="Index" access="5" url="/web/reporting/inventory/Default.aspx?mode=indekstock" />
+      <Page name="Umur" access="5" url="/web/reporting/inventory/Default.aspx?mode=umurstock" />
+      <Page name="Mutasi" access="5" url="/web/reporting/inventory/Default.aspx?mode=mutasiinventori" />
+      <Page name="Opname" access="5" url="/web/reporting/inventory/Default.aspx?mode=stockopname" />
+      <Page name="Aktual" access="5" url="/web/reporting/inventory/Default.aspx?mode=currentstock" />
+      <Page name="Expire Batch" access="5" url="/web/reporting/inventory/Default.aspx?mode=expirebatch" />
+      <Page name="Current Stock ED" access="5" url="/web/reporting/inventory/Default.aspx?mode=currentstocked" />
+      <Page name="Integrity" access="5" url="/web/reporting/inventory/Default.aspx?mode=stockintegrity" />
+      <Page name="SPPLDO" access="5" url="/web/reporting/inventory/Default.aspx?mode=SPPLDO"/>
+    </RPTIVTSTK>
+    <RPTIVTKRT>
+      <Page name="Gudang" access="5" url="/web/reporting/inventory/Default.aspx?mode=kartubaranggudang" />
+      <Page name="Nasional" access="5" url="/web/reporting/inventory/Default.aspx?mode=kartubarangnasional" />
+    </RPTIVTKRT>
+
+    <RPTIVMONED>
+      <Page name="Nearly Expired" access="7" url="/web/reporting/inventory/Default.aspx?mode=monitoringexpired" />
+      <Page name="Expired" access="7" url="/web/reporting/inventory/Default.aspx?mode=monitoringexpiredctrl" />
+    </RPTIVMONED>
+    
+    <!-- End Inventory -->
+
+    <!-- Laporan History -->
+    <RPTHSTASRN>
+      <Page name="Asuransi" access="5" url="/web/reporting/history/Default.aspx?mode=asuransi" />
+    </RPTHSTASRN>
+    <RPTHEKSPEDISI>
+      <Page name="Expedisi" access="5" url="/web/reporting/history/Default.aspx?mode=expedisi" />
+      <Page name="Resi Ekspedisi" access="5" url="/web/reporting/history/Default.aspx?mode=resiekspedisi" />
+      <Page name="Resi Ekspedisi DO SJ" access="5" url="/web/reporting/history/Default.aspx?mode=resiekspedisidosj" />
+      <Page name="Shipment" access="5" url="/web/reporting/history/Default.aspx?mode=shipment" />
+      <Page name="Biaya Ekspedisi" access="5" url="/web/reporting/history/Default.aspx?mode=biayaekspedisi" />
+      <Page name="Biaya Invoice Vs Resi" access="5" url="/web/reporting/history/Default.aspx?mode=biayainvoicevsresi" />
+      <Page name="Rekap Invoice" access="5" url="/web/reporting/history/Default.aspx?mode=rekapinvoice" />
+      <Page name="List Pembayaran Ekspedisi" access="5" url="/web/reporting/history/Default.aspx?mode=listpembayaranep" />
+    </RPTHEKSPEDISI>
+    <RPTHSTPO>
+      <Page name="Transaksi" access="5" url="/web/reporting/history/Default.aspx?mode=potransaksi" />
+      <Page name="Budget Limit" access="5" url="/web/reporting/history/Default.aspx?mode=polimit" />
+      <Page name="PO Pending" access="5" url="/web/reporting/history/Default.aspx?mode=popending" />
+    </RPTHSTPO>
+    <RPTHSTSP>
+      <Page name="Transaksi" access="5" url="/web/reporting/history/Default.aspx?mode=sptransaksi" />
+      <Page name="Gudang" access="5" url="/web/reporting/history/Default.aspx?mode=spgudang" />
+      <Page name="Batal" access="5" url="/web/reporting/history/Default.aspx?mode=spbatal" />
+      <Page name="RN Cabang" access="5" url="/web/reporting/history/Default.aspx?mode=rncabang" />
+    </RPTHSTSP>
+    <RPTHSTMEMO>
+      <Page name="Surat Tanda Terima" access="5" url="/web/reporting/history/Default.aspx?mode=memostt" />
+      <Page name="Combo" access="5" url="/web/reporting/history/Default.aspx?mode=memocombo" />
+    </RPTHSTMEMO>
+    <RPTHSTITBL>
+      <Page name="Status Produk" access="5" url="/web/reporting/history/Default.aspx?mode=itemblock" />
+    </RPTHSTITBL>
+    <RPTHSTITBT>
+      <Page name="Gudang" access="5" url="/web/reporting/history/Default.aspx?mode=itembatchgudang" />
+      <Page name="Nasional" access="5" url="/web/reporting/history/Default.aspx?mode=itembatchnasional" />
+    </RPTHSTITBT>
+    <RPTHSTQRY>
+      <Page name="Pembelian" access="5" url="/web/reporting/history/Default.aspx?mode=querypembelian" />
+      <Page name="Penjualan" access="5" url="/web/reporting/history/Default.aspx?mode=querypenjualan" />
+      <Page name="Saldo" access="5" url="/web/reporting/history/Default.aspx?mode=querysaldo" />
+      <Page name="Rincian Pembelian" access="5" url="/web/reporting/history/Default.aspx?mode=querypurchase" />
+      <Page name="Rincian Penjualan" access="5" url="/web/reporting/history/Default.aspx?mode=querysales" />
+      <Page name="Claim" access="5" url="/web/reporting/history/Default.aspx?mode=queryclaim" />
+    </RPTHSTQRY>
+    <RPTHSTPEMUSNAHAN>
+      <Page name="Pemusnahan" access="5" url="/web/reporting/history/Default.aspx?mode=pemusnahan" />
+    </RPTHSTPEMUSNAHAN>
+    <RPTHSTRETUSSUPPLIER>
+      <Page name="Retur Supplier" access="5" url="/web/reporting/history/Default.aspx?mode=historyretursupplier" />
+    </RPTHSTRETUSSUPPLIER>
+
+    <RPTHSTRECALL>
+      <Page name="Recall" access="5" url="/web/reporting/recall/Default.aspx?mode=recall" />
+    </RPTHSTRECALL>    
+
+
+    <!-- End History -->
+
+    <!-- Laporan Konsolidasi -->
+    <RPTKLDSDP>
+      <Page name="Barang Dalam Perjalanan (BDP)" access="5" url="/web/reporting/konsolidasi/Default.aspx?mode=bdp" />
+      <Page name="Retur Dalam Perjalanan (RDP)" access="5" url="/web/reporting/konsolidasi/Default.aspx?mode=rdp" />
+      <Page name="Barang Dalam Perjalanan (BDP) Pharos Group" access="5" url="/web/reporting/konsolidasi/Default.aspx?mode=bdppharos" />
+    </RPTKLDSDP>
+    <RPTKLDSSTK>
+      <Page name="Nasional" access="5" url="/web/reporting/konsolidasi/Default.aspx?mode=stoknasional" />
+    </RPTKLDSSTK>
+    <!-- End Konsolidasi -->
+
+    <!-- Laporan Waktu Pelayanan -->
+    <RPTWPRPTCAB>
+      <Page name="Cabang" access="5" url="/web/reporting/waktupelayanan/Default.aspx?mode=cabang" />
+    </RPTWPRPTCAB>
+    <RPTWPRPTSUPL>
+      <Page name="Pemasok" access="5" url="/web/reporting/waktupelayanan/Default.aspx?mode=suplier" />
+    </RPTWPRPTSUPL>
+    <RPTWPRPTLAIN>
+      <Page name="Pemasok - Cabang" access="5" url="/web/reporting/waktupelayanan/Default.aspx?mode=supliercabang" />
+    </RPTWPRPTLAIN>
+    <RPTWPSERAHTERIMA>
+      <Page name="Serah Terima" access="5" url="/web/reporting/waktupelayanan/Default.aspx?mode=serahterima" />
+      <Page name="Serah Terima Gudang Retur" access="5" url="/web/reporting/waktupelayanan/Default.aspx?mode=gdgretur" />
+    </RPTWPSERAHTERIMA>
+    <RPTWPSPPLCONFIRM>
+      <Page name="SP - PL Confirm" access="5" url="/web/reporting/waktupelayanan/Default.aspx?mode=spplconfirm" />
+    </RPTWPSPPLCONFIRM>
+    <!-- End Waktu Pelayanan -->
+
+    <!-- Laporan Pending -->
+    <RPTPNDGLOG>
+      <Page name="Surat Pesanan" access="5" url="/web/reporting/pending/Default.aspx?mode=sptransaksi" />
+      <Page name="Surat Pesanan Gudang" access="5" url="/web/reporting/pending/Default.aspx?mode=spgudang" />
+      <Page name="Surat Pesanan vs Purchase Order" access="5" url="/web/reporting/pending/Default.aspx?mode=sptransaksipo" />
+      <Page name="Purchase Order" access="5" url="/web/reporting/pending/Default.aspx?mode=potransaksilog" />
+      <Page name="Delivery Order" access="5" url="/web/reporting/pending/Default.aspx?mode=dotransaksi" />
+      <Page name="Return Suplier" access="5" url="/web/reporting/pending/Default.aspx?mode=rctransaksi" />
+      <Page name="Receive Note" access="5" url="/web/reporting/pending/Default.aspx?mode=rntransaksi" />
+      <Page name="Retur Suplier" access="5" url="/web/reporting/pending/Default.aspx?mode=rstransaksi" />
+      <Page name="Memo Surat Tanda Terima" access="5" url="/web/reporting/pending/Default.aspx?mode=memostttransaksi" />
+      <Page name="Packing List" access="5" url="/web/reporting/pending/Default.aspx?mode=pltransaksi" />
+      <Page name="Combo" access="5" url="/web/reporting/pending/Default.aspx?mode=combotransaksi" />
+      <Page name="Surat Jalan" access="5" url="/web/reporting/pending/Default.aspx?mode=sjtransaksi" />
+      <Page name="PO Periodik" access="5" url="/web/reporting/pending/Default.aspx?mode=poperiodik" />
+      <Page name="DO Principle Belum RN" access="5" url="/web/reporting/pending/Default.aspx?mode=dobelumrn" /> <!--Indra D. 20170312-->
+    </RPTPNDGLOG>
+    <RPTPNDGFA>
+      <Page name="Purchase Order" access="5" url="/web/reporting/pending/Default.aspx?mode=potransaksifa" />
+    </RPTPNDGFA>
+    <!-- End Pending -->
+
+    <!-- Start Finansial AP -->
+    <RPTFINANAPFA>
+      <Page name="Faktur Pending AP" access="5" url="/web/reporting/financial/Default.aspx?mode=apfakturpending" />
+      <Page name="General Ledger AP" access="5" url="/web/reporting/financial/Default.aspx?mode=apgl" />
+      <Page name="List AP" access="5" url="/web/reporting/financial/Default.aspx?mode=aplist" />
+      <Page name="List Bayar AP" access="5" url="/web/reporting/financial/Default.aspx?mode=aplistbayar" />
+    </RPTFINANAPFA>
+    <!-- End Finansial AP -->
+
+    <!-- Start Finansial AR -->
+    <RPTFINANARFA>
+      <Page name="Faktur Pending AR" access="5" url="/web/reporting/financial/Default.aspx?mode=arfakturpending" />
+      <Page name="General Ledger AR" access="5" url="/web/reporting/financial/Default.aspx?mode=argl" />
+      <Page name="List AR" access="5" url="/web/reporting/financial/Default.aspx?mode=arlist" />
+      <Page name="List Bayar AR" access="5" url="/web/reporting/financial/Default.aspx?mode=arlistbayar" />
+    </RPTFINANARFA>
+    <!-- End Finansial AR -->
+
+    <!-- Start Finansial Bea -->
+    <RPTFINANBEAFA>
+      <Page name="Bea Kirim" access="5" url="/web/reporting/financial/Default.aspx?mode=beakirim" />
+    </RPTFINANBEAFA>
+    <!-- End Finansial Bea -->
+
+    <!-- Start Finansial Faktur -->
+    <RPTFINANFAKTURFA>
+      <Page name="E-Faktur" access="5" url="/web/reporting/financial/Default.aspx?mode=efaktur" />
+      <Page name="Faktur Manual" access="5" url="/web/reporting/financial/Default.aspx?mode=fakturmanual" />
+    </RPTFINANFAKTURFA>
+    <!-- End Finansial Faktur -->
+    
+    <!-- Start Finansial Claim -->
+    <RPTFINANCLAIMFA>
+      <Page name="Claim" access="5" url="/web/reporting/financial/Default.aspx?mode=claim" />
+    </RPTFINANCLAIMFA>
+    <RPTFINANCLAIMACCFA>
+      <Page name="Claim Acc" access="5" url="/web/reporting/financial/Default.aspx?mode=claimacc" />
+    </RPTFINANCLAIMACCFA>
+
+    <!-- End Finansial Claim -->
+
+    <!-- Start Finansial HPP -->
+    <RPTFINANHPPFA>
+      <Page name="HPP Divisi AMS" access="5" url="/web/reporting/financial/Default.aspx?mode=hppdivams" />
+      <Page name="HPP Divisi AMS (Extra Discount)" access="5" url="/web/reporting/financial/Default.aspx?mode=hppdivamsextdisc" />
+      <Page name="HPP Divisi Prinsipal" access="5" url="/web/reporting/financial/Default.aspx?mode=hppdivprins" />
+    </RPTFINANHPPFA>
+    <!-- End Finansial HPP -->
+
+    <!-- Start Finansial Pembayaran -->
+    <RPTFINANBAYARFA>
+      <Page name="Jatuh Tempo" access="5" url="/web/reporting/financial/Default.aspx?mode=jtempo" />
+      <Page name="Pembayaran" access="5" url="/web/reporting/financial/Default.aspx?mode=pembayaran" />
+    </RPTFINANBAYARFA>
+    <!-- End Finansial Pembayaran -->
+
+    <!-- Start List Transaksi Umum -->
+    <RPTTRNS>
+      <Page name="Purchase Order" access="5" url="/web/reporting/Transaksi/Default.aspx?mode=purchaseorder" />
+      <Page name="Transaksi STT" access="5" url="/web/reporting/Transaksi/Default.aspx?mode=liststt" />
+      <Page name="Transaksi Combo" access="5" url="/web/reporting/Transaksi/Default.aspx?mode=combo" />
+      <Page name="Transaksi Pembelian" access="5" url="/web/reporting/Transaksi/Default.aspx?mode=listpembelian" />
+      <Page name="Transaksi CSL" access="5" url="/web/reporting/Transaksi/Default.aspx?mode=csl" />
+    </RPTTRNS>
+    <!-- End List Transaksi Umum -->
+
+    <!-- Start List Transaksi Adjust-->
+    <RPTTRNSADJ>
+      <Page name="Adjust Stock" access="5" url="/web/reporting/Transaksi/Default.aspx?mode=adjuststock" />
+      <Page name="Adjust Surat Pesanan" access="5" url="/web/reporting/Transaksi/Default.aspx?mode=adjustsp" />
+      <Page name="Adjust Purchase Order" access="5" url="/web/reporting/Transaksi/Default.aspx?mode=adjustpo" />
+      <Page name="Adjust Surat TT" access="5" url="/web/reporting/Transaksi/Default.aspx?mode=adjuststt" />
+      <Page name="Adjust Combo" access="5" url="/web/reporting/Transaksi/Default.aspx?mode=adjustcombo" />
+      <Page name="Adjust Faktur Beli" access="5" url="/web/reporting/Transaksi/Default.aspx?mode=adjustfb" />
+      <Page name="Adjust Faktur Jual" access="5" url="/web/reporting/Transaksi/Default.aspx?mode=adjustfj" />
+    </RPTTRNSADJ>
+    <!-- End List Transaksi Adjust -->
+
+    <!-- Start List Transaksi SP -->
+    <RPTTRNSSP>
+      <Page name="SP - PO Khusus" access="5" url="/web/reporting/Transaksi/Default.aspx?mode=pokhusus" />
+      <Page name="SP - Packing List" access="5" url="/web/reporting/Transaksi/Default.aspx?mode=sppackinglist" />
+      <Page name="SP - Expedisi" access="5" url="/web/reporting/Transaksi/Default.aspx?mode=spekspedisi" />
+      <Page name="List SP" access="5" url="/web/reporting/Transaksi/Default.aspx?mode=listsp" />
+    </RPTTRNSSP>
+    <!-- End List Transaksi SP -->
+
+    <!-- Start List Penerimaan -->
+    <RPTTRNSRCV>
+      <Page name="Receive Note" access="5" url="/web/reporting/Transaksi/Default.aspx?mode=receivenote" />
+      <Page name="Receive Note Floating" access="5" url="/web/reporting/Transaksi/Default.aspx?mode=floating" />
+    </RPTTRNSRCV>
+    <!-- End List Penerimaan -->
+
+    <!-- Start List Retur -->
+    <RPTTRNSRETUR>
+      <Page name="Retur Customer" access="5" url="/web/reporting/Transaksi/Default.aspx?mode=returcustomer" />
+      <Page name="Retur Supplier" access="5" url="/web/reporting/Transaksi/Default.aspx?mode=retursupplier" />
+    </RPTTRNSRETUR>
+    <!-- End List Retur -->
+
+    <!-- Start List Transfer Gudang-->
+    <RPTTRNSTRNSGDG>
+      <Page name="Transfer Gudang" access="5" url="/web/reporting/Transaksi/Default.aspx?mode=suratjalan" />
+    </RPTTRNSTRNSGDG>
+    <!-- End List Transfer Gudang -->
+
+    <!-- Start List Transfer Gudang--> <!--Indra 20170803 tambah return DO-->
+    <RPTTRNSTRNSJUAL>
+      <Page name="Penjualan" access="5" url="/web/reporting/Transaksi/Default.aspx?mode=penjualan" />
+      <Page name="ReturnDO" access="5" url="/web/reporting/Transaksi/Default.aspx?mode=returndo" /> 
+    </RPTTRNSTRNSJUAL>
+    <!-- End List Transfer Gudang -->
+    
+    <!-- Start List Transaksi Okt Prekursor -->
+    <RPTOKTPREKURSOR>
+      <Page name="Laporan Bulanan OKT dan Prekursor" access="5" url="/web/reporting/Transaksi/Default.aspx?mode=oktprekursor" />
+      <Page name="Laporan E-Napza" access="5" url="/web/reporting/Transaksi/Default.aspx?mode=enapza" />
+      <Page name="Laporan OKT" access="5" url="/web/reporting/Transaksi/Default.aspx?mode=okt" />
+      <Page name="PO OKT" access="27" url="/web/reporting/Transaksi/POOKT.aspx" />
+      <Page name="Laporan E-Alkes" access="5" url="/web/reporting/Transaksi/Default.aspx?mode=ealkes" />
+      <Page name="Perusahaan Besar Farmasi (PBF)" access="5" url="/web/reporting/Transaksi/Default.aspx?mode=pbf" />
+      <Page name="Perusahaan Besar Farmasi (PBF) OKT,Prekursor,OOT" access="5" url="/web/reporting/Transaksi/Default.aspx?mode=pbfnew" />
+      <Page name="Perusahaan Besar Farmasi (PBF) - BPOM" access="5" url="/web/reporting/Transaksi/Default.aspx?mode=pbfbpom" />
+    </RPTOKTPREKURSOR>
+    <!-- End List Transaksi Okt Prekursor -->
+
+
+    
+    <!-- Monitoring -->
+    <MONITEXPDGC>
+      <Page name="Pemindahan Gudang - Cabang" access="1" url="/web/reporting/monitoring/EkspedisiView.aspx" />
+    </MONITEXPDGC>
+    <MONITEXPDAG>
+      <Page name="Pemindahan Antar Gudang" access="1" url="/web/reporting/monitoring/EkspedisiGudangView.aspx" />
+    </MONITEXPDAG>
+    <MONITEXPL>
+      <Page name="Data PL" access="5" url="/web/reporting/monitoring/Default.aspx?mode=pl" />
+    </MONITEXPL>
+    <MONITEXPDPEND>
+      <Page name="Ekspedisi Pending DO/SJ" access="1" url="/web/reporting/monitoring/DOPendingEkspedisi.aspx" />
+    </MONITEXPDPEND>
+    <MONITPORECEIVE>
+      <Page name="Monitoring Penerimaan PO" access="1" url="/web/transaksi/wp/MonitoringPO.aspx" />
+    </MONITPORECEIVE>
+    <MONISLSNAS>
+      <Page name="Sales dan Stok Nasional" access="5" url="/web/reporting/monitoring/Default.aspx?mode=salesnasional" />
+    </MONISLSNAS>
+    <MONITPENDINT>
+      <Page name="Monitoring Pending Integrity" access="5" url="/web/reporting/monitoring/Default.aspx?mode=pendingintegrity" />
+    </MONITPENDINT>
+    <!--HAFIZH-->
+    <MONITPRODDC>
+      <Page name="Monitoring Produktifitas DC" access="5" url="/web/reporting/monitoring/Default.aspx?mode=produktifitasdc" />
+    </MONITPRODDC>
+    <!--SUWANDI-->
+    <MONITFORECAST>
+      <Page name="Monitoring Forecast" access="1" url="/web/reporting/monitoring/Default.aspx?mode=forecast" />
+    </MONITFORECAST>
+    <!--Indra Monitoring Process 20180523FM-->
+    <MONITPL> 
+      <Page name="Monitoring Penerimaan PL" access="6" url="/web/transaksi/wp/MonitoringPL.aspx" />
+    </MONITPL>
+    
+    <!-- End Monitoring -->
+    <!-- Service Level -->
+    <RPTHSTSERVICELEVEL>
+      <Page name="Service Level Supplier" access="5" url="/web/reporting/ServiceLevel/Default.aspx?mode=servicelevelpo" />
+      <Page name="Service Level Cabang" access="5" url="/web/reporting/ServiceLevel/Default.aspx?mode=servicelevelcbg" />
+    </RPTHSTSERVICELEVEL>
+    <!-- End Monitoring -->
+
+
+
+  </Items>
+</Scms>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Structure>
+  <Config>
+    <Name name="User">User</Name>
+    <Name name="Group">Group</Name>
+    <Name name="Reporting">Reporting</Name>
+    <Name name="MasterGudang">Gudang</Name>
+    <Name name="MasterKurs">Kurs</Name>
+  </Config>
+  <List>
+    <User class="SCMS_USER">
+      <Field name="Nip" parser="c_nip" type="System.String" Len="15" IsNotNull="true" IsAdd="true" />
+      <Field name="GdgCus" parser="c_gdg" type="System.String" Len="4" IsAdd="true" IsUpdate="true" />
+      <Field name="Aktif" parser="l_aktif" type="System.Boolean" IsAdd="true" IsUpdate="true" />
+      <Field name="Nama" parser="v_username" type="System.String" Len="100" IsAdd="true" IsUpdate="true" />
+      <Field name="Password" parser="v_password" type="System.String" Len="50" IsAdd="true" IsUpdate="true" />
+      <Field name="User" parser="c_entry" type="System.String" Len="15" IsAdd="true" />
+      <Field parser="d_entry" type="System.DateTime" IsAdd="true" />
+      <Field name="User" parser="c_update" type="System.String" Len="15" IsAdd="true" />
+      <Field parser="d_update" type="System.DateTime" IsAdd="true" IsUpdate="true" />
+      <Field parser="x_hash" type="System.String" Len="100" IsAdd="true" IsUpdate="true" />
+      <Field parser="v_imgfile" type="System.String" Len="50" IsAdd="true" IsUpdate="true" />
+      <Field parser="v_wallpaper" type="System.String" Len="50" IsAdd="true" IsUpdate="true" />
+      <Field name="NoSupl" parser="c_nosup" type="System.String" Len="5" IsAdd="true" IsUpdate="true" />
+      <Field name="NoDivPri" parser="c_kddivpri" type="System.String" Len="3" IsAdd="true" IsUpdate="true" />
+    </User>
+    <Group class="SCMS_GROUP">
+      <Field name="Group" parser="c_group" type="System.String" Len="15" IsNotNull="true" IsAdd="true" />
+      <Field name="Description" parser="v_group_desc" type="System.String" Len="50" IsAdd="true" IsUpdate="true" />
+      <Field name="Aktif" parser="l_aktif" type="System.Boolean" IsAdd="true" IsUpdate="true" />
+      <Field name="Akses" parser="v_akses" type="System.String" Len="2147483647" IsAdd="true" IsUpdate="true" />
+      <Field name="User" parser="c_entry" type="System.String" Len="15" IsAdd="true" />
+      <Field parser="d_entry" type="System.DateTime" IsAdd="true" />
+      <Field name="User" parser="c_update" type="System.String" Len="15" IsAdd="true" />
+      <Field parser="d_update" type="System.DateTime" IsAdd="true" IsUpdate="true" />
+    </Group>
+    <Reporting class="SCMS_Report">
+      <Field name="Idx" parser="Idx" type="System.Int32" IsNotNull="true" IsAdd="true" />
+      <Field name="Name" parser="v_reportname" type="System.String" Len="8000" IsAdd="true" />
+      <Field name="Type" parser="c_type" type="System.String" Len="2" IsAdd="true" />
+      <Field name="Report" parser="v_report" type="System.String" IsAdd="true" />
+      <Field name="FileType" parser="v_filetype" type="System.String" Len="5" IsAdd="true" />
+      <Field name="Size" parser="v_size" type="System.String" Len="20" IsAdd="true" />
+      <Field name="User" parser="c_entry" type="System.String" Len="15" IsAdd="true" />
+      <Field parser="d_entry" type="System.DateTime" IsAdd="true" />
+      <Field parser="l_compress" type="System.Boolean" IsAdd="true" />
+      <Field name="Downloaded" parser="l_download" type="System.Byte" IsAdd="true" IsUpdate="true" />
+      <Field name="UserDefinedName" parser="v_reportusername" type="System.String" Len="8000" IsAdd="true" />
+      <Field name="Shared" parser="l_share" type="System.Boolean" IsAdd="true" />
+    </Reporting>
+    <Gudang class="LG_MsGudang">
+      <Field name="Gudang" parser="c_gdg" type="System.Char" Len="1" IsNotNull="true" IsAdd="true" />
+      <Field name="Deskripsi" parser="v_gdgdesc" type="System.String" Len="20" IsAdd="true" IsUpdate="true" />
+      <Field name="Nama" parser="v_nama" type="System.String" Len="50" IsAdd="true" IsUpdate="true" />
+      <Field name="Alamat" parser="v_alamat" type="System.String" Len="50" IsAdd="true" IsUpdate="true" />
+      <Field name="Rt" parser="c_rt" type="System.String" Len="50" IsAdd="true" IsUpdate="true" />
+      <Field name="Rw" parser="c_rw" type="System.String" Len="50" IsAdd="true" IsUpdate="true"  />
+      <Field name="Lurah" parser="v_lurah" type="System.String" Len="50" IsAdd="true" IsUpdate="true" />
+      <Field name="Camat" parser="v_camat" type="System.String" Len="50" IsAdd="true" IsUpdate="true"  />
+      <Field name="Kota" parser="c_kota" type="System.String" Len="3" IsAdd="true" IsUpdate="true" />
+      <Field name="Kodepos" parser="c_kodepos" type="System.String" Len="5" IsAdd="true" IsUpdate="true" />
+      <Field name="Telpon" parser="v_telp" type="System.String" Len="1" IsAdd="true" IsUpdate="true" />
+      <Field name="Aktif" parser="l_aktif" type="System.Boolean" IsAdd="true" IsUpdate="true" />
+      <Field name="User" parser="c_entry" type="System.String" Len="15" IsAdd="true" />
+      <Field parser="d_entry" type="System.DateTime" IsAdd="true" />
+      <Field name="User" parser="c_update" type="System.String" Len="15" IsAdd="true" IsUpdate="true" />
+      <Field parser="d_update" type="System.DateTime" IsAdd="true" IsUpdate="true" />
+    </Gudang>
+    <Kurs class="FA_Kurs">
+      <Field name="Kurs" parser="c_kurs" type="System.String" Len="15" IsNotNull="true" IsAdd="true" />
+      <Field name="Simbol" parser="c_symbol" type="System.String" Len="4" IsAdd="true" IsUpdate="true" />
+      <Field name="Deskripsi" parser="c_desc" type="System.String" IsAdd="true" IsUpdate="true" />
+      <Field name="DeskripsiFull" parser="v_desc" type="System.String" Len="100" IsAdd="true" IsUpdate="true" />
+      <Field name="Pecahan" parser="n_currency" type="System.Decimal" Len="50" IsAdd="true" IsUpdate="true" />
+      <Field name="Aktif" parser="l_aktif" type="System.Boolean" Len="15" IsAdd="true" IsUpdate="true" />
+      <Field name="User" parser="c_entry" type="System.String" Len="15" IsAdd="true" />
+      <Field parser="d_entry" type="System.DateTime" IsAdd="true" />
+      <Field name="User" parser="c_update" type="System.String" Len="15" IsAdd="true" IsUpdate="true" />
+      <Field parser="d_update" type="System.DateTime" IsAdd="true" IsUpdate="true" />
+    </Kurs>
+  </List>
+</Structure>

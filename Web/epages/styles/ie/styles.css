@@ -1,0 +1,170 @@
+@font-face {
+	font-family: Droid Custom;
+	src:url(../../fonts/DroidSerif-Regular.ttf) format("truetype");
+}
+@font-face {
+	font-family: Droid Custom;
+	src:url(../../fonts/DroidSerif-Bold.ttf) format("truetype");
+}
+BODY {
+	FONT: 13px/17px Helvetica, Arial, sans-serif; BACKGROUND: url(../../images/template/bg.jpg) #000 repeat-x; COLOR: #646464
+}
+#wrapper {
+	POSITION: relative; MARGIN: 50px auto 0px; WIDTH: 734px
+}
+#bg-top {
+	BACKGROUND: url(../../images/template/container-top-bg.png) no-repeat; HEIGHT: 31px
+}
+#bg-bottom {
+	BACKGROUND: url(../../images/template/container-bottom-bg.png) no-repeat; HEIGHT: 31px
+}
+#contentWrap {
+	PADDING-BOTTOM: 14px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND: url(../../images/template/container-bg-repeat.png) repeat-y; PADDING-TOP: 14px
+}
+#content {
+	POSITION: relative; WIDTH: 700px; MARGIN-BOTTOM: -56px; BACKGROUND: url(../../images/template/content-gradient-bg.png) no-repeat; TOP: -28px; LEFT: 17px
+}
+#leftColumn {
+	Z-INDEX: 1; POSITION: relative; WIDTH: 240px; BACKGROUND: url(../../images/template/divider-shadow.png) no-repeat right 0px
+}
+#rightColumn {
+	WIDTH: 321px; BACKGROUND: url(../../images/template/divider.gif) repeat-y; MARGIN-LEFT: -1px
+}
+#leftColumn {
+	PADDING-BOTTOM: 35px; PADDING-LEFT: 35px; PADDING-RIGHT: 35px; FLOAT: left; HEIGHT: 380px; PADDING-TOP: 35px
+}
+#rightColumn {
+	PADDING-BOTTOM: 35px; PADDING-LEFT: 35px; PADDING-RIGHT: 35px; FLOAT: left; HEIGHT: 380px; PADDING-TOP: 35px
+}
+#logo {
+	MARGIN: -9px auto 0px; DISPLAY: block
+}
+#nav {
+	MARGIN: 20px 0px 0px 20px
+}
+#nav UL {
+	PADDING-BOTTOM: 10px; LIST-STYLE-TYPE: none; PADDING-LEFT: 25px; PADDING-RIGHT: 0px; BACKGROUND: url(../../images/template/menu-divider.png) no-repeat; MARGIN-LEFT: 65px; FONT-WEIGHT: normal; PADDING-TOP: 15px
+}
+#nav LI {
+	PADDING-LEFT: 35px; HEIGHT: 34px; CURSOR: pointer; opacity: .5
+}
+#nav LI:hover {
+	opacity: 1
+}
+#nav LI A {
+	LINE-HEIGHT: 26px; COLOR: #666; FONT-SIZE: 16px; TEXT-DECORATION: none
+}
+#nav LI:hover A {
+	COLOR: #a62e2e
+}
+#nav LI.home {
+	BACKGROUND: url(../../images/template/icons/home-icon.png) no-repeat
+}
+#nav LI.about {
+	BACKGROUND: url(../../images/template/icons/about-icon.png) no-repeat
+}
+#nav LI.contact {
+	BACKGROUND: url(../../images/template/icons/contact-icon.png) no-repeat
+}
+#nav SPAN {
+	TEXT-ALIGN: right; DISPLAY: block; FONT: 16px "Droid Custom", Georgia, Garamond, serif; FLOAT: left; HEIGHT: 50px; PADDING-TOP: 50px
+}
+FORM {
+	MARGIN: 25px auto 0px; WIDTH: 210px
+}
+INPUT {
+	FLOAT: left
+}
+INPUT[type='text'] {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 5px; PADDING-LEFT: 11px; WIDTH: 158px; PADDING-RIGHT: 11px; BACKGROUND: url(../../images/template/search-input-bg.png) no-repeat; HEIGHT: 17px; COLOR: #666; BORDER-TOP: 0px; BORDER-RIGHT: 0px; PADDING-TOP: 8px
+}
+INPUT[type='submit'] {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 28px; BACKGROUND: url(../../images/template/search-btn.png) no-repeat; HEIGHT: 29px; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+INPUT[type='submit']:hover {
+	BACKGROUND-POSITION: 0px -30px
+}
+#close {
+	POSITION: absolute; LINE-HEIGHT: 26px; WIDTH: 60px; BOTTOM: 18px; DISPLAY: block; BACKGROUND: url(../../images/template/close-btn.png) no-repeat right 0px; HEIGHT: 24px; COLOR: #999; CURSOR: pointer; RIGHT: 20px; TEXT-DECORATION: none
+}
+#close:hover {
+	BACKGROUND-POSITION: right -24px; COLOR: #666
+}
+.clear {
+	CLEAR: both
+}
+H1 {
+	FONT-FAMILY: "Droid Custom", Georgia, Garamond, serif; COLOR: #2d2d2d; FONT-WEIGHT: normal
+}
+H2 {
+	FONT-FAMILY: "Droid Custom", Georgia, Garamond, serif; COLOR: #2d2d2d; FONT-WEIGHT: normal
+}
+H3 {
+	FONT-FAMILY: "Droid Custom", Georgia, Garamond, serif; COLOR: #2d2d2d; FONT-WEIGHT: normal
+}
+H4 {
+	FONT-FAMILY: "Droid Custom", Georgia, Garamond, serif; COLOR: #2d2d2d; FONT-WEIGHT: normal
+}
+H5 {
+	FONT-FAMILY: "Droid Custom", Georgia, Garamond, serif; COLOR: #2d2d2d; FONT-WEIGHT: normal
+}
+H6 {
+	FONT-FAMILY: "Droid Custom", Georgia, Garamond, serif; COLOR: #2d2d2d; FONT-WEIGHT: normal
+}
+H1 {
+	POSITION: absolute; LINE-HEIGHT: 128px; WIDTH: 240px; LETTER-SPACING: -5px; COLOR: #000; FONT-SIZE: 128px; TOP: 265px; opacity: .04
+}
+H1:hover {
+	opacity: .1
+}
+H1 SPAN {
+	TEXT-ALIGN: right; LINE-HEIGHT: 28px; TEXT-TRANSFORM: uppercase; MARGIN-TOP: -20px; DISPLAY: block; LETTER-SPACING: -1px; FONT-SIZE: 28px; FONT-WEIGHT: bold
+}
+H2 {
+	LINE-HEIGHT: 31px; MARGIN: 7px 0px 20px; LETTER-SPACING: -1px; COLOR: #454545; FONT-SIZE: 27px
+}
+H3 {
+	LINE-HEIGHT: 1; MARGIN-BOTTOM: 1em; COLOR: #616161; FONT-SIZE: 18px
+}
+H4 {
+	LINE-HEIGHT: 17px; MARGIN-BOTTOM: 1em; COLOR: #616161; FONT-SIZE: 14px
+}
+H3.regular {
+	FONT-FAMILY: Helvetica, Arial, sans-serif
+}
+H4.regular {
+	FONT-FAMILY: Helvetica, Arial, sans-serif
+}
+P {
+	MARGIN: 0px 0px 1.5em
+}
+A:focus {
+	COLOR: #3b4761; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #3b4761; TEXT-DECORATION: none
+}
+A {
+	COLOR: #a62e2e; TEXT-DECORATION: underline
+}
+STRONG {
+	FONT-WEIGHT: bold
+}
+EM {
+	FONT-STYLE: italic
+}
+UL {
+	LINE-HEIGHT: 20px; MARGIN: 0px 20px 20px 40px; COLOR: #a62e2e; FONT-WEIGHT: bold
+}
+OL {
+	LINE-HEIGHT: 20px; MARGIN: 0px 20px 20px 40px; COLOR: #a62e2e; FONT-WEIGHT: bold
+}
+OL SPAN {
+	COLOR: #646464; FONT-WEIGHT: normal
+}
+UL {
+	LIST-STYLE-TYPE: disc
+}
+OL {
+	LIST-STYLE-TYPE: decimal
+}

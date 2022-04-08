@@ -1,0 +1,54 @@
+.boxContent
+{
+    BORDER-RIGHT: #4b0082 1px solid;
+    BORDER-TOP: #4b0082 1px solid;
+    BORDER-LEFT: #4b0082 1px solid;
+    BORDER-BOTTOM: #4b0082 1px solid;
+    BACKGROUND-COLOR: #ffffff
+}
+
+.search-item
+{
+		font-family: Arial, Tahoma, Verdana;
+		font-size: 11px;
+		font-weight: normal;
+		color: #000000;
+}
+
+.search-name
+{
+		color: #32449C;
+}
+
+.body-panel {
+ BORDER-RIGHT: #99BBE8 1px solid;
+ BORDER-TOP: #99BBE8 1px solid;
+ BORDER-LEFT: #99BBE8 1px solid;
+ BORDER-BOTTOM: #99BBE8 1px solid;
+ background-color: #DFE8F6;
+ font-weight: normal;
+}
+
+.color-panel {
+ background-color: #DFE8F6;
+ font-weight: normal;
+}
+
+.text-panel {
+		font-family:  Tahoma, Arial,Verdana;
+		font-size: 12px;
+}
+
+.centerHeaderGrid
+{
+}
+
+.line-chart16
+{
+  background-image:url('../images/Line_chart16.png') !important;
+}
+
+.open-folder16
+{
+  background-image:url('../images/Open_Folder_Full16.png') !important;
+}

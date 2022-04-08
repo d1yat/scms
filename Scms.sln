@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Web", "Web\", "{C1A71B5E-33CA-49A5-8123-79FD5305D5CB}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		ProjectReferences = "{B8793B4F-84CD-4626-943C-A1E0A0709DC8}|ScmsSoaLibraryInterface.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/Web"
+		Debug.AspNetCompiler.PhysicalPath = "Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Web\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Web"
+		Release.AspNetCompiler.PhysicalPath = "Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Web\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "2597"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScmsMailLibrary", "Soa\ScmsMailLibrary\ScmsMailLibrary.csproj", "{8E7FDC32-6AA5-4A13-8280-934DC4BF907F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScmsModel", "Soa\ScmsModel\ScmsModel.csproj", "{9BDECADA-1211-43B9-9188-C559A9ABC90D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScmsSoaLibrary", "Soa\ScmsSoaLibrary\ScmsSoaLibrary.csproj", "{602D3FA9-EA3C-467C-A2C8-3A7DAA1485A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScmsSoaLibraryInterface", "Soa\ScmsSoaLibraryInterface\ScmsSoaLibraryInterface.csproj", "{B8793B4F-84CD-4626-943C-A1E0A0709DC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScmsSoaTester", "Soa\ScmsSoaTester\ScmsSoaTester.csproj", "{55C830D5-ABE6-4DBE-A743-4BB909BE5AAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1A71B5E-33CA-49A5-8123-79FD5305D5CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1A71B5E-33CA-49A5-8123-79FD5305D5CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1A71B5E-33CA-49A5-8123-79FD5305D5CB}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1A71B5E-33CA-49A5-8123-79FD5305D5CB}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{8E7FDC32-6AA5-4A13-8280-934DC4BF907F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E7FDC32-6AA5-4A13-8280-934DC4BF907F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E7FDC32-6AA5-4A13-8280-934DC4BF907F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E7FDC32-6AA5-4A13-8280-934DC4BF907F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BDECADA-1211-43B9-9188-C559A9ABC90D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BDECADA-1211-43B9-9188-C559A9ABC90D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BDECADA-1211-43B9-9188-C559A9ABC90D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BDECADA-1211-43B9-9188-C559A9ABC90D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{602D3FA9-EA3C-467C-A2C8-3A7DAA1485A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{602D3FA9-EA3C-467C-A2C8-3A7DAA1485A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{602D3FA9-EA3C-467C-A2C8-3A7DAA1485A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{602D3FA9-EA3C-467C-A2C8-3A7DAA1485A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8793B4F-84CD-4626-943C-A1E0A0709DC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8793B4F-84CD-4626-943C-A1E0A0709DC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8793B4F-84CD-4626-943C-A1E0A0709DC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8793B4F-84CD-4626-943C-A1E0A0709DC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55C830D5-ABE6-4DBE-A743-4BB909BE5AAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55C830D5-ABE6-4DBE-A743-4BB909BE5AAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55C830D5-ABE6-4DBE-A743-4BB909BE5AAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55C830D5-ABE6-4DBE-A743-4BB909BE5AAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,6 @@
+D:\Projects\Scms\ScmsModel\bin\Release\ScmsModel.dll.config
+D:\Projects\Scms\ScmsModel\bin\Release\ScmsModel.dll
+D:\Projects\Scms\ScmsModel\bin\Release\ScmsModel.pdb
+D:\Projects\Scms\ScmsModel\obj\Release\ResolveAssemblyReference.cache
+D:\Projects\Scms\ScmsModel\obj\Release\ScmsModel.dll
+D:\Projects\Scms\ScmsModel\obj\Release\ScmsModel.pdb

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JSON</title> 
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="Chart.min.js"></script>
+	<link rel="stylesheet" href="jquery-ui.css" />
+    <script type="text/javascript" src="jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="jquery-ui.js"></script>
+    
+	<style type="text/css">
+        select {
+	        width:100px;
+	        margin-top:8px;
+	        font-family:arial;
+	        font-size:15px;	
+	        color:#000000;
+        }
+    </style>
+    
+    <script type="text/javascript">
+
+        var currentTime = new Date();
+        var startDateFrom = new Date(currentTime.getFullYear(), currentTime.getMonth() - 1, 1);
+
+        $(function() {
+            $("#start").datepicker({
+                dateFormat: 'yy-mm-dd',
+                showButtonPanel: true,
+                changeMonth: true,
+                changeYear: true,
+                showOn: "button",
+                maxDate: '+0d',
+                minDate: startDateFrom
+            }); ;
+        });
+
+        $(function() {
+            $("#finish").datepicker({
+                dateFormat: 'yy-mm-dd',
+                showButtonPanel: true,
+                changeMonth: true,
+                changeYear: true,
+                showOn: "button",
+                maxDate: '+0d',
+                minDate: startDateFrom
+            }); ;
+        });
+  </script>    
+  
+    <script type="text/javascript">
+		
+		var url1 = "http://10.100.41.30:12345/scms/WebJsonP/GlobalQueryJson?model=0380-h";	
+		var url2 = "&_dc=1547611438962&soaScmsCallback=stcCallback";
+		
+		$(document).ready(function(){
+			$("#click").click(function(){
+			
+			    var gudang 		= "&parameters=gudang%2C" + document.getElementById("gudang").value + "%2C";
+			    var data 		= "&parameters=data%2C" + document.getElementById("data").value + "%2C";
+			    var tglawal 	= "&parameters=tglawal%2C" + document.getElementById("start").value + "%2C";
+			    var tglakhir 	= "&parameters=tglakhir%2C" + document.getElementById("finish").value + "%2C";			
+    			
+			    if(document.getElementById("start").value == "")
+                {
+                    alert('Periode awal kosong, harap diisi.');
+                    return false;
+                }
+                
+                if(document.getElementById("finish").value == "")
+                {
+                    alert('Periode akhir kosong, harap diisi.');
+                    return false;
+                }
+                
+				$.ajax({
+					url: url1 + gudang + data + tglawal + tglakhir + url2,
+					dataType: "jsonp",
+					stcCallback : "stcCallback"
+				});
+			});
+		});
+		
+		function stcCallback(json){
+			loadData(json);
+		}
+	
+		function loadData(myObj){
+		
+			console.log(myObj);
+			
+			var Jam = "";
+			var JumlahSP = "";
+			var JumlahPL = "";
+			var JumlahHO = "";
+			var JumlahPC = "";
+			var JumlahCH = "";
+			var JumlahDO = "";
+			var JumlahPR = "";
+			var JumlahEP = "";
+			var JumlahDP = "";
+			var JumlahAR = "";
+			
+			for (var i = 0; i < myObj.d.totalRows; i++) {
+				
+				if (Jam == "") {
+					    Jam = '"0","' + myObj.d.records[i].JamSP + '"';
+					    
+				    }
+				    else {
+					    Jam = Jam + ',"' + myObj.d.records[i].JamSP + '"';
+				    }
+				    
+				    if(myObj.d.records[i].DOCSP == "SP") {
+				        if (JumlahSP == "") {
+					    JumlahSP = '"0","' + myObj.d.records[i].JMLSP + '"';						    
+				    }
+				    else {
+					    JumlahSP = JumlahSP + ',"' + myObj.d.records[i].JMLSP + '"';
+				    }}
+				    
+				    if(myObj.d.records[i].DOCPL == "PL") {
+				        if (JumlahPL == "") {
+					    JumlahPL = '"0","' + myObj.d.records[i].JMLPL + '"';						    
+				    }
+				    else {
+					    JumlahPL = JumlahPL + ',"' + myObj.d.records[i].JMLPL + '"';
+				    }}
+				    
+				    if(myObj.d.records[i].DOCHO == "HO") {
+				        if (JumlahHO == "") {
+					    JumlahHO = '"0","' + myObj.d.records[i].JMLHO + '"';						    
+				    }
+				    else {
+					    JumlahHO = JumlahHO + ',"' + myObj.d.records[i].JMLHO + '"';
+				    }}
+				    
+				    if(myObj.d.records[i].DOCPC == "PC") {
+				        if (JumlahPC == "") {
+					    JumlahPC = '"0","' + myObj.d.records[i].JMLPC + '"';						    
+				    }
+				    else {
+					    JumlahPC = JumlahPC + ',"' + myObj.d.records[i].JMLPC + '"';
+				    }}
+				    
+				    if(myObj.d.records[i].DOCCH == "CH") {
+				        if (JumlahCH == "") {
+					    JumlahCH = '"0","' + myObj.d.records[i].JMLCH + '"';						    
+				    }
+				    else {
+					    JumlahCH = JumlahCH + ',"' + myObj.d.records[i].JMLCH + '"';
+				    }}
+				    
+				    if(myObj.d.records[i].DOCDO == "DO") {
+				        if (JumlahDO == "") {
+					    JumlahDO = '"0","' + myObj.d.records[i].JMLDO + '"';						    
+				    }
+				    else {
+					    JumlahDO = JumlahDO + ',"' + myObj.d.records[i].JMLDO + '"';
+				    }}
+				    
+				    if(myObj.d.records[i].DOCPR == "PR") {
+				        if (JumlahPR == "") {
+					    JumlahPR = '"0","' + myObj.d.records[i].JMLPR + '"';						    
+				    }
+				    else {
+					    JumlahPR = JumlahPR + ',"' + myObj.d.records[i].JMLPR + '"';
+				    }}
+				    
+				    if(myObj.d.records[i].DOCEP == "EP") {
+				        if (JumlahEP == "") {
+					    JumlahEP = '"0","' + myObj.d.records[i].JMLEP + '"';						    
+				    }
+				    else {
+					    JumlahEP = JumlahEP + ',"' + myObj.d.records[i].JMLEP + '"';
+				    }}
+				    
+				    if(myObj.d.records[i].DOCDP == "DP") {
+				        if (JumlahDP == "") {
+					    JumlahDP = '"0","' + myObj.d.records[i].JMLDP + '"';						    
+				    }
+				    else {
+					    JumlahDP = JumlahDP + ',"' + myObj.d.records[i].JMLDP + '"';
+				    }}
+				    
+				    if(myObj.d.records[i].DOCAR == "AR") {
+				        if (JumlahAR == "") {
+					    JumlahAR = '"0","' + myObj.d.records[i].JMLAR + '"';						    
+				    }
+				    else {
+					    JumlahAR = JumlahAR + ',"' + myObj.d.records[i].JMLAR + '"';
+				    }}													
+			}													
+            
+            
+            Jam = "[" + Jam + "]";
+			JumlahSP = "[" + JumlahSP + "]";
+			JumlahPL = "[" + JumlahPL + "]";
+			JumlahHO = "[" + JumlahHO + "]";
+			JumlahPC = "[" + JumlahPC + "]";
+			JumlahCH = "[" + JumlahCH + "]";
+			JumlahDO = "[" + JumlahDO + "]";
+			JumlahPR = "[" + JumlahPR + "]";
+			JumlahEP = "[" + JumlahEP + "]";
+			JumlahDP = "[" + JumlahDP + "]";
+			JumlahAR = "[" + JumlahAR + "]";
+						
+			var arrayJam    = JSON.parse(Jam);
+			var arraySP     = JSON.parse(JumlahSP);
+			var arrayPL     = JSON.parse(JumlahPL);
+			var arrayHO     = JSON.parse(JumlahHO);
+			var arrayPC     = JSON.parse(JumlahPC);
+			var arrayCH     = JSON.parse(JumlahCH);
+			var arrayDO     = JSON.parse(JumlahDO);
+			var arrayPR     = JSON.parse(JumlahPR);
+			var arrayEP     = JSON.parse(JumlahEP);
+			var arrayDP     = JSON.parse(JumlahDP);
+			var arrayAR     = JSON.parse(JumlahAR);			    
+
+			var lineChartData = {
+			labels: arrayJam,
+			datasets: [
+				{
+                    label: 'SPCAB',
+                    fill: false,
+                    data: arraySP,
+                    borderColor: ['rgba(255,99,132,0.8)'],
+                    backgroundColor: ['rgba(255,99,132,0.8)']
+                },
+                {
+                    label: 'PL',
+                    fill: false,
+                    data: arrayPL,
+                    borderColor: ['rgba(54,162,235,0.8)'],
+                    backgroundColor: ['rgba(54,162,235,0.8)']
+                },
+                {
+                    label: 'H.OVER',
+                    fill: false,
+                    data: arrayHO,
+                    borderColor: ['rgba(153,102,255,0.8)'],
+                    backgroundColor: ['rgba(153,102,255,0.8)']
+                },
+                {
+                    label: 'PICK',
+                    fill: false,
+                    data: arrayPC,
+                    borderColor: ['rgba(58,64,58,0.39)'],
+                    backgroundColor: ['rgba(58,64,58,0.39)']
+                },
+                {
+                    label: 'CHK',
+                    fill: false,
+                    data: arrayCH,
+                    borderColor: ['rgba(38,251,138,1.00)'],
+                    backgroundColor: ['rgba(38,251,138,1.00)']
+                },
+                {
+                    label: 'DO',
+                    fill: false,
+                    data: arrayDO,
+                    borderColor: ['rgba(237,16,12,1.00)'],
+                    backgroundColor: ['rgba(237,16,12,1.00)']
+                },
+                {
+                    label: 'PACK',
+                    fill: false,
+                    data: arrayPR,
+                    borderColor: ['rgba(16,9,220,1.00)'],
+                    backgroundColor: ['rgba(16,9,220,1.00)']
+                },
+                {
+                    label: 'EP(JmlDO)',
+                    fill: false,
+                    data: arrayEP,
+                    borderColor: ['rgba(127,10,123,1.00)'],
+                    backgroundColor: ['rgba(127,10,123,1.00)']
+                },
+                {
+                    label: 'DEPART',
+                    fill: false,
+                    data: arrayDP,
+                    borderColor: ['rgba(58,64,58,0.74)'],
+                    backgroundColor: ['rgba(58,64,58,0.74)']
+                },
+                {
+                    label: 'ARRIVED',
+                    fill: false,
+                    data: arrayAR,
+                    borderColor: ['rgba(5,111,11,1.00)'],
+                    backgroundColor: ['rgba(5,111,11,1.00)']
+                }]
+		    };			
+						
+		    document.getElementById("Chart").innerHTML = '&nbsp;';
+            document.getElementById("Chart").innerHTML = '<canvas id="myChart" width="930px" height="300px"></canvas>';		
+		    var ctx = document.getElementById('myChart').getContext('2d');
+            
+		    var tglawalchart 	= document.getElementById("start").value;
+		    var tglakhirchart	= document.getElementById("finish").value;
+		    var dataresult  	= document.getElementById("data").value;
+			
+			var mychart;
+
+		    mychart = new Chart.Line(ctx, {
+			    data: lineChartData,
+			    options: {
+				    responsive: true,
+				    hoverMode: 'index',
+				    stacked: true,
+				    title: {
+					    display: true,
+					    text: ['Monitoring Process data ' + dataresult + ' ', tglawalchart + ' to ' + tglakhirchart]
+				    },
+				    scales: {
+					    yAxes: [{
+						    type: 'linear',
+						    display: true,
+						    position: 'left',
+						    id: 'y-axis-1',
+					    },],
+				    }
+			    }
+		    });		
+		}
+	
+	</script>
+</head>
+<body>
+	<input type="text" id="start" style="width:80px;" />
+    <input type="text" id="finish" style="width:80px;" />
+    <select id="gudang" style="width:140px;">
+        <option value="Gudang 1">Gudang 1</option>
+        <option value="Gudang 2">Gudang 2</option>
+        <option value="Gudang 6">Gudang Ulujami</option>
+    </select>
+    <select id="data" style="width:60px;">
+        <option value="MAX">MAX</option>
+        <option value="MIN">MIN</option>
+        <option value="AVG">AVG</option>
+    </select>
+	<button id="click" onclick="()">Get Data</button>	
+	<div id="Chart" style="width:930px;height:300px">
+		
+	</div>
+	
+</body>	
+</html>

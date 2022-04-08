@@ -1,0 +1,1882 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Config>
+  <![CDATA[function showWindowX(app, ownConfig){
+      if(Ext.isEmpty(app) || Ext.isEmpty(ownConfig))
+        return;
+      
+      var desk = app.getDesktop();
+      if(typeof desk !== 'undefined') {
+        var win = desk.getWindow(ownConfig.id);
+        if(!win){
+          win = desk.createWindow(ownConfig);
+        }
+        win.show();
+      }
+  }]]>
+  <Items>
+    <Application id="appMstr" text="Master" icon="Application" order="1" windowID="">
+      <Module id="masterLogApp" autoRun="false" order="1">
+        <Launcher id="masterLogLnch" text="Logistik" icon="Folder">
+          <Item ID="mstrGudang" WinID="winMasterGudang"
+            Text="Gudang" Title="Master Gudang" icon="Package"
+            Center="false" Width="640" Height="480"
+            Url="~/master/gudang/Gudang.aspx"
+            short="/web/master/gudang/Gudang.aspx" query="" order="1" />
+          <Item ID="mstrItm" WinID="winMasterItem"
+            Text="Barang" Title="Master Barang" icon="Package"
+            Center="false" Width="640" Height="480"
+            Url="~/master/item/MasterItem.aspx"
+            short="/web/master/item/MasterItem.aspx" query="" order="2" />
+          <Item ID="mstrItmCat" WinID="winMasterItemCategory"
+            Text="Kategori Barang" Title="Master Barang Kategori" icon="Package"
+            Center="false" Width="640" Height="480"
+            Url="~/master/item/MasterItemCategory.aspx"
+            short="/web/master/item/MasterItemCategory.aspx" query="" order="3" />
+          <Item ID="mstrItmLat" WinID="winMasterItemLantai"
+            Text="Lantai Barang" Title="Master Lantai Barang" icon="Package"
+            Center="false" Width="640" Height="480"
+            Url="~/master/item/MasterItemLantai.aspx"
+            short="/web/master/item/MasterItemLantai.aspx" query="" order="4" />
+          <Item ID="mstrBatch" WinID="winMasterBatch"
+            Text="Batch" Title="Master Batch" icon="Package"
+            Center="false" Width="640" Height="480"
+            Url="~/master/batch/Batch.aspx"
+            short="/web/master/batch/Batch.aspx" query="" order="5" />
+          <Item ID="mstrCabang" WinID="winMasterCabang"
+            Text="Cabang" Title="Master Cabang" icon="Package"
+            Center="false" Width="800" Height="600"
+            Url="~/master/pelanggan/MasterPelanggan.aspx"
+            short="/web/master/pelanggan/MasterPelanggan.aspx" query="" order="6" />
+          <Item ID="mstrEkspedisi" WinID="winMasterEkspedisi"
+            Text="Ekspedisi" Title="Master Ekspedisi" icon="Package"
+            Center="false" Width="640" Height="480"
+            Url="~/master/expedisi/MasterExpedisi.aspx"
+            short="/web/master/expedisi/MasterExpedisi.aspx" query="" order="7" />
+
+
+          <Item ID="mstrCabangHari" WinID="winMasterCabangHari"
+            Text="Master Cabang Hari" Title="Master Cabang Hari" icon="Package"
+            Center="false" Width="640" Height="480"
+            Url="~/master/expedisi/MasterCabangHari.aspx"
+            short="/web/master/expedisi/MasterCabangHari.aspx" query="" order="7" />
+          
+          
+          
+          <Item ID="mstrBatchEstiEkspe" WinID="winMasterEstiEkspe"
+            Text="Estimasi ekspedisi" Title="Master Estimasi ekspedisi" icon="Package"
+            Center="false" Width="640" Height="480"
+            Url="~/master/expedisi/MasterEstimasiExpedisi.aspx"
+            short="/web/master/expedisi/MasterEstimasiExpedisi.aspx" query="" order="8" />
+          <Item ID="mstrDriver" WinID="masterDriver"
+            Text="Driver" Title="Master Driver" icon="Package"
+            Center="false" Width="640" Height="480"
+            Url="~/master/expedisi/MasterDriver.aspx"
+            short="/web/master/expedisi/MasterDriver.aspx" query="" order="9" />
+          <Item ID="mstrCmb" WinID="winMasterCombo"
+            Text="Combo" Title="Master Combo" icon="Package"
+            Center="false" Width="640" Height="480"
+            Url="~/master/item/MasterCombo.aspx"
+            short="/web/master/item/MasterCombo.aspx" query="" order="10" />
+          <Item ID="mstrVia" WinID="masterVia"
+            Text="Via" Title="Master Via" icon="Package"
+            Center="false" Width="640" Height="480"
+            Url="~/master/item/MasterItemVia.aspx"
+            short="/web/master/item/MasterItemVia.aspx" query="" order="11" />
+          <Item ID="mstrEksCostEstimasi" WinID="EksCostEstimasi"
+                      Text="Estimasi Biaya Ekspedisi" Title="Master Estimasi Biaya Ekspedisi" icon="Package"
+                      Center="false" Width="640" Height="480"
+                      Url="~/master/expedisi/MasterEstimasiCostExp.aspx"
+                      short="/web/master/expedisi/MasterEstimasiCostExp.aspx" query="" order="11" />
+          <Items id="pinItemMenu" text="Pin" icon="Folder" order="12">
+            <Item ID="doPin" WinID="winDOPin"
+                  Title="P I N - Delivery Order" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/master/pin/DOPin.aspx"
+                  short="/web/master/pin/DOPin.aspx" query="" order="1" />
+            <Separator order="2" />
+            <Item ID="sjPin" WinID="winSJPin"
+                  Title="P I N - Surat Jalan" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/master/pin/SJPin.aspx"
+                  short="/web/master/pin/SJPin.aspx" query="" order="3" />
+          <Item ID="mstrApj" WinID="winMasterApj"
+            Text="Apj" Title="Master User Apj" icon="Package"
+            Center="false" Width="640" Height="480"
+            Url="~/master/ams/MasterUserAPJ.aspx"
+            short="/web/master/ams/MasterUserAPJ.aspx" query="" order="13" />
+          </Items>
+        </Launcher>
+      </Module>
+      <Module id="masterFinApp" autoRun="false" order="2">
+        <Launcher id="masterFinLnch" text="Finansial" icon="Folder">
+          <Item ID="mstrDisct" WinID="winMasterDisct"
+            Text="Potongan harga" Title="Master Potongan harga" icon="Package"
+            Center="false" Width="640" Height="480"
+            Url="~/master/discount/Discount.aspx"
+            short="/web/master/discount/Discount.aspx" query="" order="1" />
+          <Item ID="mstrBudgetLimit" WinID="winMasterBudget"
+            Text="Batas Anggaran" Title="Master Batas Anggaran" icon="Package"
+            Center="false" Width="640" Height="480"
+            Url="~/master/budget/Limit.aspx"
+            short="/web/master/budget/Limit.aspx" query="" order="2" />
+          <Item ID="mstrKurs" WinID="winMasterKurs"
+            Text="Mata uang" Title="Master Mata uang" icon="Package"
+            Center="false" Width="640" Height="480"
+            Url="~/master/kurs/Kurs.aspx"
+            short="/web/master/kurs/Kurs.aspx" query="" order="3" />
+          <Item ID="mstrPemasok" WinID="winMasterPemasok"
+            Text="Pemasok" Title="Master Pemasok" icon="Package"
+            Center="false" Width="640" Height="480"
+            Url="~/master/prinsipal/MasterPrinsipal.aspx"
+            short="/web/master/prinsipal/MasterPrinsipal.aspx" query="" order="4" />
+          <Item ID="mstrDivPemasok" WinID="winMasterDivPemasok"
+            Text="Divisi Pemasok" Title="Master Divisi Pemasok" icon="Package"
+            Center="false" Width="640" Height="480"
+            Url="~/master/prinsipal/MasterDivisiPrinsipal.aspx"
+            short="/web/master/prinsipal/MasterDivisiPrinsipal.aspx" query="" order="5" />
+          <Item ID="mstrDivAMS" WinID="winMasterDivAMS"
+            Text="Divisi AMS" Title="Master Divisi AMS" icon="Package"
+            Center="false" Width="640" Height="480"
+            Url="~/master/ams/MasterDivisiAMS.aspx"
+            short="/web/master/ams/MasterDivisiAMS.aspx" query="" order="6" />
+          <Item ID="mstrDivBank" WinID="winMasterDivBank"
+            Text="Divisi Bank" Title="Master Divisi Bank" icon="Package"
+            Center="false" Width="640" Height="480"
+            Url="~/master/bank/MasterBank.aspx"
+            short="/web/master/bank/MasterBank.aspx" query="" order="7" />
+          <Item ID="mstrPKP" WinID="winMasterPKPBank"
+            Text="Master PKP" Title="Master PKP" icon="Package"
+            Center="false" Width="640" Height="480"
+            Url="~/master/prinsipal/MasterPKP.aspx"
+            short="/web/master/prinsipal/MasterPKP.aspx" query="" order="8" />
+          <Item ID="mstrNoPjk" WinID="winMasterNoPjk"
+            Text="Master Nomor Pajak" Title="Master Nomor Pajak" icon="Package"
+            Center="false" Width="640" Height="480"
+            Url="~/master/prinsipal/MasterNomorPajak.aspx"
+            short="/web/master/prinsipal/MasterNomorPajak.aspx" query="" order="9" />
+        </Launcher>
+      </Module>
+    </Application>
+    <Application id="appTrx" text="Transaksi" icon="Application" order="5" windowID="">
+      <Module id="pembelian" autoRun="false" order="1">
+        <Launcher id="pembelianLnch" text="Pembelian" icon="Folder">
+          <Item ID="spTrxHO" WinID="winSuratPesanan"
+                  Title="Surat Pesanan " icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/pembelian/SuratPesanan.aspx"
+                  short="/web/transaksi/pembelian/SuratPesanan.aspx" query="" order="1" />
+
+          <Item ID="spTrxHOMan" WinID="winSuratPesananMaual"
+               Title="Surat Pesanan Manual" icon="Package"
+               Center="false" Width="640" Height="480"
+               Url="~/transaksi/pembelian/SuratPesananManual.aspx"
+               short="/web/transaksi/pembelian/SuratPesananManual.aspx" query="" order="3" />
+          
+
+          <Items id="orItemMenu" text="Order Request" icon="Folder" order="2">
+            <Item ID="orPrincipal" WinID="winORP"
+                  Title="Order Request Pemasok" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/pembelian/OrderRequestPrincipal.aspx"
+                  short="/web/transaksi/pembelian/OrderRequestPrincipal.aspx" query="" order="1" />
+            <Item ID="orpPrincipal" WinID="winORPP"
+                  Title="Proses - Order Request Pemasok" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/pembelian/OrderRequestPrincipal.aspx?mode=process"
+                  short="/web/transaksi/pembelian/OrderRequestPrincipal.aspx" query="mode=process" order="2" />
+            <Separator order="3" />
+            <Item ID="orGudang" WinID="winORG"
+                  Title="Order Request Gudang" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/pembelian/OrderRequestGudang.aspx"
+                  short="/web/transaksi/pembelian/OrderRequestGudang.aspx" query="" order="4" />
+            <Item ID="orpGudang" WinID="winORGP"
+                  Title="Proses - Order Request Gudang" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/pembelian/OrderRequestGudang.aspx?mode=process"
+                  short="/web/transaksi/pembelian/OrderRequestGudang.aspx" query="mode=process" order="5" />
+          </Items>
+
+         
+
+          <Item ID="poTrxHO" WinID="winPurchaseOrder"
+                  Title="Purchase Order" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/pembelian/PurchaseOrder.aspx"
+                  short="/web/transaksi/pembelian/PurchaseOrder.aspx" query="" order="3" />
+          <Separator order="4" />
+          <Item ID="poOKTHO" WinID="winPurchaseOrderOKT"
+                  Title="Purchase Order OKT" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/pembelian/PO_Apoteker.aspx?mode=okt"
+                  short="/web/transaksi/pembelian/PO_Apoteker.aspx" query="mode=okt" order="5" />
+          <Item ID="poPrekHO" WinID="winPurchaseOrderPrek"
+                  Title="Purchase Order Prekursor" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/pembelian/PO_Apoteker.aspx?mode=prekursor"
+                  short="/web/transaksi/pembelian/PO_Apoteker.aspx" query="mode=prekursor" order="6" />
+          <Item ID="poOOTHO" WinID="winPurchaseOrderOOT"
+                  Title="Purchase Order OOT" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/pembelian/PO_Apoteker.aspx?mode=oot"
+                  short="/web/transaksi/pembelian/PO_Apoteker.aspx" query="mode=oot" order="7" />
+          <Items id="LimitPOMenu" text="Limit PO" icon="Folder" order="8">
+            <Item ID="poLimitPrincHO" WinID="winPOLimitPrinc"
+                  Title="Limit PO Principal" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/pembelian/LimitPOPrincipal.aspx"
+                  short="/web/transaksi/pembelian/LimitPOPrincipal.aspx" query="" order="1" />
+            <Item ID="poLimitDivPriHO" WinID="winPOLimitDivPri"
+                  Title="Limit PO Divisi Principal" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/pembelian/LimitPODivPri.aspx"
+                  short="/web/transaksi/pembelian/LimitPODivPri.aspx" query="" order="2" />
+            <Item ID="poLimitItemHO" WinID="winPOLimitItem"
+                  Title="Limit PO Item" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/pembelian/LimitPOItem.aspx"
+                  short="/web/transaksi/pembelian/LimitPOItem.aspx" query="" order="3" />
+          </Items>
+          
+                   
+        </Launcher>
+      </Module>
+      <Module id="penjualan" autoRun="false" order="2">
+        <Launcher id="penjualLnch" text="Penjualan" icon="Folder">
+          <Items id="plItemMenu" text="Packing List" icon="Folder">
+            <Item ID="packingList" WinID="winPackingList"
+                  Title="Packing List" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/penjualan/PackingList.aspx"
+                  short="/web/transaksi/penjualan/PackingList.aspx" query="" order="1" />
+            <Separator order="2" />
+            <Item ID="packingListConfirm" WinID="winPackingListConfirm"
+                  Title="Packing List Confirm" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/penjualan/PackingList.aspx?mode=confirm"
+                  short="/web/transaksi/penjualan/PackingList.aspx" query="mode=confirm" order="3" />
+            <Separator order="4" />
+            <Item ID="packingListAuto" WinID="winPackingListAuto"
+                  Title="Packing List Auto" icon="PackageLink"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/penjualan/PackingList.aspx?mode=auto"
+                  short="/web/transaksi/penjualan/PackingList.aspx" query="mode=auto" order="5" />
+			      <Separator order="6" />
+			      <Item ID="packingListMasterBox" WinID="winPackingListMasterBox"
+                        Title="Packing List Master Box" icon="PackageLink"
+                        Center="false" Width="640" Height="480"
+                        Url="~/transaksi/penjualan/PackingList.aspx?mode=box"
+                        short="/web/transaksi/penjualan/PackingList.aspx" query="mode=box" order="7" />
+			      <Separator order="8" />
+			      <Item ID="packingListAutoGen" WinID="winPackingListAutoGen"
+                  Title="Packing List Auto Number" icon="PackageLink"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/penjualan/PackingList.aspx?mode=autogen"
+                  short="/web/transaksi/penjualan/PackingList.aspx" query="mode=autogen" order="9" />
+            <Separator order="10"/>
+            <Item ID="packingListGd3" WinID="winPackingListGd3"
+                  Title="Packing List Gudang 3" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/penjualan/PackingListGd3.aspx"
+                  short="/web/transaksi/penjualan/PackingListGd3.aspx" query="" order="11" />
+            <Separator order="12"/>
+            <Item ID="packingListConfirmGd3" WinID="winPackingListConfirmGd3"
+                  Title="Packing List Confirm Gudang 3" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/penjualan/PackingListGd3.aspx?mode=confirm"
+                  short="/web/transaksi/penjualan/PackingListGd3.aspx" query="mode=confirm" order="13" />
+            <Separator order="14"/>
+            <Item ID="packingListAutoGd3" WinID="winPackingListAutoGd3"
+                  Title="Packing List Auto Gudang 3" icon="PackageLink"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/penjualan/PackingListGd3.aspx?mode=auto"
+                  short="/web/transaksi/penjualan/PackingListGd3.aspx" query="mode=auto" order="15" />
+            <Separator order="16" />
+            <Item ID="packingListMasterBoxGd3" WinID="winPackingListMasterBoxGd3"
+                        Title="Packing List Master Box Gudang 3" icon="PackageLink"
+                        Center="false" Width="640" Height="480"
+                        Url="~/transaksi/penjualan/PackingListGd3.aspx?mode=box"
+                        short="/web/transaksi/penjualan/PackingListGd3.aspx" query="mode=box" order="17" />
+
+
+          </Items>
+          <Items id="doItemMenu" text="Delivery Order" icon="Folder">
+            <Item ID="doPL" WinID="winDO"
+                  Title="Delivery Order (Packing List)" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/penjualan/DeliveryOrder.aspx?mode=pl"
+                  short="/web/transaksi/penjualan/DeliveryOrder.aspx" query="mode=pl" order="1" />
+            <Separator order="2" />
+            <Item ID="doSend" WinID="winDO"
+                  Title="Delivery Order (Resend)" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/penjualan/DOSend.aspx"
+                  short="/web/transaksi/penjualan/DOSend.aspx" order="3" />
+            <Separator order="4" />
+            <Item ID="doSTT" WinID="winDOSTT"
+                  Title="Delivery Order (STT)" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/penjualan/DeliveryOrder.aspx?mode=stt"
+                  short="/web/transaksi/penjualan/DeliveryOrder.aspx" query="mode=stt" order="5" />
+            <Separator order="6" />
+            <!--Indra D. 20170714-->
+            <Item ID="doSendBatch" WinID="winDOSTT"
+                  Title="Delivery Order (Resend Batch)" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/penjualan/DOSendBatch.aspx"
+                  short="/web/transaksi/penjualan/DOSendBatch.aspx" query="" order="7" />
+          </Items>
+        </Launcher>
+      </Module>
+      <Module id="pemindahan" autoRun="false" order="3">
+        <Launcher id="pemindahanLnch" text="Pemindahan" icon="Folder">
+          <Items id="sjItemMenu" text="Surat Jalan" icon="Folder">
+            <Item ID="suratJalan" WinID="winSuratJalan"
+                  Title="Surat Jalan" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/transfer/Transfer.aspx"
+                  short="/web/transaksi/transfer/Transfer.aspx" query="" order="1" />
+            <Separator order="2" />
+            <Item ID="suratJalanConfirm" WinID="winSuratJalanConfirm"
+                  Title="Surat Jalan Confirm" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/transfer/Transfer.aspx?mode=confirm"
+                  short="/web/transaksi/transfer/Transfer.aspx" query="mode=confirm" order="3" />
+						<Separator order="4" />
+						<Item ID="suratJalanAuto" WinID="winSuratJalanAuto"
+                  Title="Surat Jalan Auto" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/transfer/Transfer.aspx?mode=Auto"
+                  short="/web/transaksi/transfer/Transfer.aspx" query="mode=auto" order="5" />
+            <Separator order="5" />
+            <Item ID="suratJalangd3" WinID="winSuratJalangd3"
+                  Title="Surat Jalan Gudang 3" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/transfer/Transfergd3.aspx"
+                  short="/web/transaksi/transfer/Transfergd3.aspx" query="" order="7" />
+          </Items>
+          <Items id="tgItemMenu" text="Transfer Gudang" icon="Folder">
+            <Item ID="trnfGudang" WinID="winTG"
+                  Title="Transfer Gudang" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/transfer/TransferGudangRepack.aspx"
+                  short="/web/transaksi/transfer/TransferGudangRepack.aspx" query="" order="1" />
+            <Separator order="2" />
+            <Item ID="trnfGudangConfirm" WinID="winTGC"
+                  Title="Transfer Gudang Confirm" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/transfer/TransferGudangRepack.aspx?mode=confirm"
+                  short="/web/transaksi/transfer/TransferGudangRepack.aspx" query="mode=confirm" order="3" />
+            <Separator order="4" />
+            <Item ID="trnfGudangKarantina" WinID="winTGK"
+                  Title="Transfer Gudang-Karantina" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/transfer/TransferGudangKarantina.aspx"
+                  short="/web/transaksi/transfer/TransferGudangKarantina.aspx" query="" order="5" />
+            <Separator order="6" />
+            <Item ID="trnfGudangKarantinaConfirm" WinID="winTGKC"
+                  Title="Transfer Gudang-Karantina Confirm" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/transfer/TransferGudangKarantina.aspx?mode=confirm"
+                  short="/web/transaksi/transfer/TransferGudangKarantina.aspx" query="mode=confirm" order="7" />
+            <Separator order="8" />
+            <Item ID="trnfKarantinaGudang" WinID="winTKG"
+                  Title="Transfer Karantina-Gudang" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/transfer/TransferKarantinaGudang.aspx"
+                  short="/web/transaksi/transfer/TransferKarantinaGudang.aspx" query="" order="9" />
+            <Separator order="10" />
+            <Item ID="trnfKarantinaGudangConfirm" WinID="winTKGC"
+                  Title="Transfer Karantina-Gudang Confirm" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/transfer/TransferKarantinaGudang.aspx?mode=confirm"
+                  short="/web/transaksi/transfer/TransferKarantinaGudang.aspx" query="mode=confirm" order="11" />
+            <Separator order="12" />
+            <Item ID="trnfGudangPemusnahan" WinID="winTGK"
+                  Title="Transfer Gudang-Pemusnahan" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/transfer/TransferGudangPemusnahan.aspx"
+                  short="/web/transaksi/transfer/TransferGudangPemusnahan.aspx" query="" order="13" />
+            <Separator order="14" />
+            <Item ID="trnfGudangPemusnahanConfirm" WinID="winTGKC"
+                  Title="Transfer Gudang-Pemusnahan Confirm" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/transfer/TransferGudangPemusnahan.aspx?mode=confirm"
+                  short="/web/transaksi/transfer/TransferGudangPemusnahan.aspx" query="mode=confirm" order="15" />
+          </Items>
+          <Item ID="pemusnahanLnch" WinID="winTrxpemusnahanBarang"
+                  Title="Pemusnahan Barang" Text="Pemusnahan Barang" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/pemusnahan/PM.aspx"
+                  short="/web/transaksi/pemusnahan/PM.aspx" query="" order="1" />
+        </Launcher>
+      </Module>
+      <Module id="penerimaan" autoRun="false" order="4">
+        <Launcher id="penerimaanLnch" text="Penerimaan" icon="Folder">
+          <Items id="rnItemMenu" text="Receive Note" icon="Folder" order="2">
+            <Item ID="rnBeli" WinID="winRNBeli"
+                  Title="Pembelian" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/penerimaan/ReceiveNote.aspx?mode=pembelian"
+                  short="/web/transaksi/penerimaan/ReceiveNote.aspx" query="mode=pembelian" order="1" />
+            <Item ID="rnKhusus" WinID="winRNKhusus"
+                  Title="Khusus" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/penerimaan/ReceiveNote.aspx?mode=khusus"
+                  short="/web/transaksi/penerimaan/ReceiveNote.aspx" query="mode=khusus" order="2" />
+            <Item ID="rnRetur" WinID="winRNRetur"
+                  Title="Retur" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/penerimaan/ReceiveNote.aspx?mode=retur"
+                  short="/web/transaksi/penerimaan/ReceiveNote.aspx" query="mode=retur" order="3" />
+            <Item ID="rnClaim" WinID="winRNClaim"
+                  Title="Claim" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/penerimaan/ReceiveNote.aspx?mode=claim"
+                  short="/web/transaksi/penerimaan/ReceiveNote.aspx" query="mode=claim" order="4" />
+            <Item ID="rnRepack" WinID="winRNRepack"
+                  Title="Repack" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/penerimaan/ReceiveNote.aspx?mode=repack"
+                  short="/web/transaksi/penerimaan/ReceiveNote.aspx" query="mode=repack" order="5" />
+            <Item ID="rnGudang" WinID="winRNGudang"
+                  Title="Gudang" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/penerimaan/ReceiveNoteGudang.aspx"
+                  short="/web/transaksi/penerimaan/ReceiveNoteGudang.aspx" query="" order="6" />
+          </Items>
+          
+          <!--RN Gudang 
+          -->
+          <Items id="rnItemMenuUlujami" text="Relokasi Ulujami" icon="Folder" order="2">
+            <Item ID="rnBeliUlujami" WinID="winRNBeliUlujami"
+                  Title="Relokasi Pembelian Ulujami" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/penerimaanulujami/ReceiveNoteUlujami.aspx?mode=pembelianulujami"
+                  short="/web/transaksi/penerimaanulujami/ReceiveNoteUlujami.aspx" query="mode=pembelianulujami" order="1" />
+            <Item ID="rnKhususUlujami" WinID="winRNKhususUlujami"
+                  Title="Reokasi Khusus Ulujami" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/penerimaanulujami/ReceiveNoteUlujami.aspx?mode=khususulujami"
+                  short="/web/transaksi/penerimaanulujami/ReceiveNoteUlujami.aspx" query="mode=khususulujami" order="2" />
+            <Item ID="rnClaimUlujami" WinID="winRNClaimUlujami"
+                  Title="Relokasi Claim Ulujami" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/penerimaanulujami/ReceiveNoteUlujami.aspx?mode=claimulujami"
+                  short="/web/transaksi/penerimaanulujami/ReceiveNoteUlujami.aspx" query="mode=claimulujami" order="3" />
+            <Item ID="rnGudangUlujami" WinID="winRNGudangUlujami"
+                  Title="Gudang Ulujami" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/penerimaanulujami/ReceiveNoteGudangUlujami.aspx"
+                  short="/web/transaksi/penerimaanulujami/ReceiveNoteGudangUlujami.aspx" query="" order="4" />
+
+
+
+          </Items>
+        </Launcher>
+      </Module>
+      <Module id="returTrx" autoRun="false" order="5">
+        <Launcher id="returTrxLnch" text="Pengembalian" icon="Folder">
+          <Items id="rsCabangItemMenu" text="Cabang" icon="Folder" order="1">
+            <Item ID="rsTrxCabangGood" WinID="winRCCabangGood"
+                    Text="Pembelian Good" Title="Pengembalian Pembelian Cabang Good" icon="Package"
+                    Center="false" Width="640" Height="480"
+                    Url="~/transaksi/retur/ReturCustomer.aspx?mode=standard"
+                    short="/web/transaksi/retur/ReturCustomer.aspx" query="mode=standard" order="1" />
+            <Item ID="rsTrxCabangBad" WinID="winRCCabangBad"
+                    Text="Pembelian Bad" Title="Pengembalian Pembelian Cabang Bad" icon="Package"
+                    Center="false" Width="640" Height="480"
+                    Url="~/transaksi/retur/ReturCustomer.aspx?mode=stdbad"
+                    short="/web/transaksi/retur/ReturCustomer.aspx" query="mode=stdbad" order="2" />
+            <Item ID="rsTrxCabangAuto" WinID="winRCCabangAuto"
+                    Text="Pembelian Auto" Title="Pengembalian Pembelian Cabang Auto" icon="Package"
+                    Center="false" Width="640" Height="480"
+                    Url="~/transaksi/retur/ReturCustomer.aspx?mode=auto"
+                    short="/web/transaksi/retur/ReturCustomer.aspx" query="mode=auto" order="3" />
+            <Item ID="rsTrxCabangResend" WinID="winRCCabangResend"
+                   Text="Pembelian Resend" Title="Pengembalian Pembelian Resend" icon="Package"
+                   Center="false" Width="640" Height="480"
+                   Url="~/transaksi/retur/ReturCustomerResend.aspx"
+                   short="/web/transaksi/retur/ReturCustomerResend.aspx" order="4" />
+            <Item ID="rsTrxCabangMS" WinID="winTransaksiMS"
+                   Text="Movement Stock" Title="Movement Stock" icon="Package"
+                   Center="false" Width="640" Height="480"
+                   Url="~/transaksi/retur/SerahTerimaGood.aspx"
+                   short="/web/transaksi/retur/SerahTerimaGood.aspx" order="5" />
+          </Items>
+          <Items id="rsSuplierItemMenu" text="Pemasok" icon="Folder" order="2">
+            <Item ID="rsTrxBeli" WinID="winRSBeli"
+                    Text="Pembelian" Title="Pengembalian Pembelian Pusat" icon="Package"
+                    Center="false" Width="640" Height="480"
+                    Url="~/transaksi/retur/ReturSupplier.aspx?mode=pembelian"
+                    short="/web/transaksi/retur/ReturSupplier.aspx" query="mode=pembelian" order="1" />
+            <Item ID="rsTrxRepack" WinID="winRSRepack"
+                    Text="Repack" Title="Pengembalian Repack Pusat" icon="Package"
+                    Center="false" Width="640" Height="480"
+                    Url="~/transaksi/retur/ReturSupplier.aspx?mode=repack"
+                    short="/web/transaksi/retur/ReturSupplier.aspx" query="mode=repack" order="2" />
+            <Separator order="3" />
+            <Item ID="rsTrxBeliConf" WinID="winRSBeliConf"
+                    Text="Konfirmasi Pembelian" Title="Pengembalian Konfirmasi Pembelian Pusat" icon="Package"
+                    Center="false" Width="640" Height="480"
+                    Url="~/transaksi/retur/ReturSupplierConf.aspx"
+                    short="/web/transaksi/retur/ReturSupplierConf.aspx" query="" order="4" />
+          </Items>
+        </Launcher>
+      </Module>
+      <Module id="claimTrx" autoRun="false" order="6">
+        <Launcher id="claimTrxLnch" text="Klaim" icon="Folder">
+          <Items id="claimCreateItemMenu" text="Pembuatan" icon="Folder" order="1">
+            <Item ID="claimUmum" WinID="winClaimUmum"
+                  Title="Claim Umum" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/bonus/ClaimBonus.aspx?mode=regular"
+                  short="/web/transaksi/bonus/ClaimBonus.aspx" query="mode=regular" order="1" />
+            <Item ID="claimSTT" WinID="winClaimSTT"
+                  Title="Claim Surat Tanda Terima" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/bonus/ClaimBonus.aspx?mode=stt"
+                  short="/web/transaksi/bonus/ClaimBonus.aspx" query="mode=stt" order="2" />
+            <Separator order="3" />
+            <Item ID="claimProses" WinID="winClaimProses"
+                  Title="Claim Proses" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/bonus/ClaimBonus.aspx?mode=process"
+                  short="/web/transaksi/bonus/ClaimBonus.aspx" query="mode=process" order="4" />
+          </Items>
+          <Items id="claimAccItemMenu" text="Pengesahan" icon="Folder" order="2">
+            <Item ID="claimAccUmum" WinID="winClainAccUmum"
+                  Title="Claim Acc Umum" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/bonus/ClaimBonusAcc.aspx?mode=regular"
+                  short="/web/transaksi/bonus/ClaimBonusAcc.aspx" query="mode=regular" order="1" />
+            <Item ID="claimAccSTT" WinID="winClaimAccSTT"
+                  Title="Claim Acc Surat Tanda Terima" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/bonus/ClaimBonusAcc.aspx?mode=stt"
+                  short="/web/transaksi/bonus/ClaimBonusAcc.aspx" query="mode=stt" order="2" />
+          </Items>
+					<Item ID="claimTrxCs" WinID="winClaimTrxCs"
+            Title="Current Pending Claim" icon="Package"
+            Center="false" Width="640" Height="480"
+            Url="~/transaksi/bonus/ClaimCurrentOutStanding.aspx"
+            short="/web/transaksi/bonus/ClaimCurrentOutStanding.aspx" query="" order="3" />
+        </Launcher>
+      </Module>
+      <Module id="memo" autoRun="false" order="7">
+        <Launcher ID="memoLnch" text="Memo" icon="Folder">
+          <Item ID="memoLnch" WinID="winTrxMemoCombo"
+                  Title="Combo" Text="Memo Combo" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/memo/MemoCombo.aspx"
+                  short="/web/transaksi/memo/MemoCombo.aspx" query="" order="1" />
+          <Items id="sttItemMenu" text="STT" icon="Folder" order="2">
+            <Item ID="trnfSTTDonasi" WinID="winSTTDonasi"
+                  Title="Surat Tanda Terima (Donasi)" Text="Memo Surat Tanda Terima (Donasi)" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/stt/STT.aspx?mode=stt"
+                  short="/web/transaksi/stt/STT.aspx" query="mode=stt" order="1" />
+            <Separator order="2" />
+            <Item ID="trnfSTTSampel" WinID="winSTTSampel"
+                  Title="Surat Tanda Terima (Sample)" Text="Memo Surat Tanda Terima (Sample)" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/stt/STT.aspx?mode=sample"
+                  short="/web/transaksi/stt/STT.aspx" query="mode=sample" order="3" />
+          </Items>
+        </Launcher>
+      </Module>
+      <Module id="pengiriman" autoRun="false" order="8">
+        <Launcher id="expPengirimanTrx" text="Pengiriman" icon="Folder">
+          <Item ID="expdTrxHOC" WinID="winExpdTrxHOC"
+                  Text="Gudang - Cabang" Title="Pengiriman Gudang - Cabang" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/pengiriman/Ekspedisi.aspx"
+                  short="/web/transaksi/pengiriman/Ekspedisi.aspx" query="" order="1" />
+					<Item ID="expdTrxHOH" WinID="winExpdTrxHOH"
+                  Text="Antar Gudang" Title="Pengiriman Antar Gudang" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/pengiriman/EkspedisiGudang.aspx"
+                  short="/web/transaksi/pengiriman/EkspedisiGudang.aspx" query="" order="2" />
+					<Items text="Ekspedisi Waktu Cabang" icon="Folder" order="3">
+						<Item ID="expdTrxCab" WinID="winExpdTrxCab"
+                  Text="Waktu Cabang" Title="Pengiriman Waktu Cabang" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/pengiriman/EkspedisiCabang.aspx"
+                  short="/web/transaksi/pengiriman/EkspedisiCabang.aspx" query="" order="1" />
+						<Separator order="2" />
+						<Item ID="expdTrxUploadCab" WinID="winExpdUploadTrxCab"
+                  Text="Upload Waktu Cabang" Title="Upload Pengiriman Waktu Cabang" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/pengiriman/ProsesEkspedisiCabang.aspx"
+                  short="/web/transaksi/pengiriman/ProsesEkspedisiCabang.aspx" query="" order="3" />
+					</Items>
+          <Item ID="InvoiceEkspedisiEksternal" WinID="winInvoiceEkspedisiEksternal"
+                  Text="Invoice Ekspedisi Eksternal" Title="Invoice Ekspedisi Eksternal" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/pengiriman/InvoiceEkspedisiEksternal.aspx"
+                  short="/web/transaksi/pengiriman/InvoiceEkspedisiEksternal.aspx" query="" order="4" />
+          <Item ID="InvoiceEkspedisiInternal" WinID="winInvoiceEkspedisiInternal"
+                  Text="Invoice Ekspedisi Internal" Title="Invoice Ekspedisi Internal" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/pengiriman/InvoiceEkspedisiInternal.aspx"
+                  short="/web/transaksi/pengiriman/InvoiceEkspedisiInternal.aspx" query="" order="5" />
+          <Item ID="fakturExpdTrx" WinID="winfakturExpdTrx"
+                  Text="Faktur Ekspedisi" Title="Faktur Ekspedisi" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/pengiriman/FakturEkspedisi.aspx"
+                  short="/web/transaksi/pengiriman/FakturEkspedisi.aspx" query="" order="6" />
+          <Item ID="ReturnDO" WinID="winReturnDO"
+                  Text="Return DO" Title="Return DO" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/pengiriman/ReturnDO.aspx"
+                  short="/web/transaksi/pengiriman/ReturnDO.aspx" query="" order="7" />
+          <Item ID="expdcRSHOC" WinID="winexpdcRSHOC"
+                  Text="Gudang - Principal" Title="Pengiriman Gudang - Principal" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/pengiriman/EkspedisiPrincipal.aspx"
+                  short="/web/transaksi/pengiriman/EkspedisiPrincipal.aspx" query="" order="8" />
+        </Launcher>
+      </Module>
+      <Module id="modAdjPenyesuaianTrx" autoRun="false" order="9">
+        <Launcher id="adjPenyesuaianTrx" text="Penyesuaian" icon="Folder">
+          <Items id="adjGudangPIC" text="Gudang" icon="Folder" order="1">
+            <Item ID="adjStok" WinID="winAdjStok"
+                  Title="Stok" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/penyesuaian/AdjustStock.aspx?mode=stok"
+                  short="/web/transaksi/penyesuaian/AdjustStock.aspx" query="mode=stok" order="1" />
+            <Item ID="adjGoodbad" WinID="winAdjGoodbad"
+                  Title="Good - Bad" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/penyesuaian/AdjustStock.aspx?mode=goodbad"
+                  short="/web/transaksi/penyesuaian/AdjustStock.aspx" query="mode=goodbad" order="2" />
+            <Item ID="adjBatch" WinID="winAdjBatch"
+                  Title="Batch" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/penyesuaian/AdjustStock.aspx?mode=batch"
+                  short="/web/transaksi/penyesuaian/AdjustStock.aspx" query="mode=batch" order="3" />
+            <Separator order="4" />
+            <Item ID="adjSttSample" WinID="winAdjSttSample"
+                  Title="STT Sample" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/penyesuaian/AdjustSTT.aspx?mode=adjsttsample"
+                  short="/web/transaksi/penyesuaian/AdjustSTT.aspx" query="mode=adjsttsample" order="5" />
+            <Item ID="adjSttDonasi" WinID="winAdjSttDonasi"
+                  Title="STT Donasi" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/penyesuaian/AdjustSTT.aspx?mode=adjsttdonasi"
+                  short="/web/transaksi/penyesuaian/AdjustSTT.aspx" query="mode=adjsttdonasi" order="6" />
+            <Separator order="7" />
+            <Item ID="adjPO" WinID="winAdjPO"
+                  Title="PO" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/penyesuaian/AdjustTrans.aspx?mode=adjpo"
+                  short="/web/transaksi/penyesuaian/AdjustTrans.aspx" query="mode=adjpo" order="8" />
+          </Items>
+          <Items id="adjFinancePIC" text="Finansial" icon="Folder" order="2">
+            <Item ID="adjFakturBeli" WinID="winAdjFakturBeli"
+                  Title="Faktur Beli" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/penyesuaian/AdjustFaktur.aspx?mode=adjfb"
+                  short="/web/transaksi/penyesuaian/AdjustFaktur.aspx" query="mode=adjfb" order="1" />
+            <Item ID="adjFakturJual" WinID="winAdjFakturJual"
+                  Title="Faktur Jual" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/penyesuaian/AdjustFaktur.aspx?mode=adjfj"
+                  short="/web/transaksi/penyesuaian/AdjustFaktur.aspx" query="mode=adjfj" order="2" />
+            <Separator order="4" />
+            <Item ID="adjAdjVcDebit" WinID="winAdjVcDebit"
+                  Title="Voucher Debit" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/penyesuaian/AdjustVoucher.aspx?mode=adjvoucherdebit"
+                  short="/web/transaksi/penyesuaian/AdjustVoucher.aspx" query="mode=adjvoucherdebit" order="5" />
+            <Item ID="adjAdjVcCreadit" WinID="winAdjVcCreadit"
+                  Title="Voucher Credit" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/penyesuaian/AdjustVoucher.aspx?mode=adjvouchercredit"
+                  short="/web/transaksi/penyesuaian/AdjustVoucher.aspx" query="mode=adjvouchercredit" order="6" />
+          </Items>
+        </Launcher>
+      </Module>
+      <!--<Module id="pengiriman" autoRun="false" order="10">
+        <Launcher id="pengirimanLnch" text="Pengiriman" icon="Folder">
+          <Item ID="expdTrxHO" WinID="winExpdHO"
+                  Title="Ekspedisi" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/pengiriman/Ekspedisi.aspx"
+                  short="/web/transaksi/pengiriman/Ekspedisi.aspx" query="" order="1" />
+        </Launcher>
+      </Module>-->
+      <Module id="funcumum" autoRun="false" order="11">
+        <Launcher ID="funcUmumLnch" text="Umum" icon="Folder">
+          <Items id="otoItemMenu" text="Otomatis" icon="Folder" order="1">
+            <Item ID="fuotoManDOAuto" WinID="winFuotoManDOAuto"
+                  Title="Manual DO Prinsipal" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/auto/DOPrinsipal.aspx"
+                  short="/web/transaksi/auto/DOPrinsipal.aspx" query="" order="1" />
+						<Item ID="fuotoUploadSuratPesanan" WinID="winFuotoUploadSuratPesanan"
+                  Title="Upload Surat Pesanan" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/auto/SuratPesananUpload.aspx"
+                  short="/web/transaksi/auto/SuratPesananUpload.aspx" query="" order="2" />
+           <Item ID="fuotoUploadVoucher" WinID="winFuotoUploadVoucher"
+                  Title="Upload Pembayaran Voucher" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/auto/PembayaranVoucherUpload.aspx"
+                  short="/web/transaksi/auto/PembayaranVoucherUpload.aspx" query="" order="3" />
+            <Item ID="fuotoUploadSO" WinID="winFuotoUploadSO"
+                  Title="Upload Stock Opname" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/auto/SOUpload.aspx"
+                  short="/web/transaksi/auto/SOUpload.aspx" query="" order="4" />
+            <!--Indra D. 20170314-->
+            <Item ID="UploaduserBatch" WinID="winUploaduserBatch"
+                  Title="Upload User Batch" icon="PackageGreen"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/auto/PenginputanUserUpload.aspx"
+                  short="/web/transaksi/auto/PenginputanUserUpload.aspx" query="" order="5" />
+          </Items>
+        </Launcher>
+      </Module>
+      <!--<Module id="penjualanX" autoRun="false" order="2">
+      <Launcher text="Penjualan Baru"
+                ID="packingList" WinID="winPackingListRpt" 
+                Title="Packing List" icon="Package"
+                Center="false" Width="640" Height="480"
+                Url="~/transaksi/penjualan/PackingList.aspx"
+                short="PackingList.aspx" query="" direct="true" />
+    </Module>-->
+    </Application>
+    <Application id="appFinance" text="Finansial" icon="Application" order="10">
+      <Module id="modFaktur" autoRun="false" order="40">
+        <Launcher text="Faktur" icon="Folder">
+          <Items text="Pembelian" icon="Folder" order="1">
+            <Item ID="fakturBeli" WinID="winFakturBeli"
+                  Title="Beli" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/keuangan/faktur/FakturBeli.aspx"
+                  short="/web/keuangan/faktur/FakturBeli.aspx" query="" order="1" />
+            <Item ID="fakturUpldBeli" WinID="winFakturUpldBeli"
+                  Title="Upload FB" Text="Upload Faktur Beli" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/keuangan/faktur/FakturBeliProses.aspx"
+                  short="/web/keuangan/faktur/FakturBeliProses.aspx" query="" order="2" />
+            <Separator order="3" />
+            <Item ID="fakturBeliReturProses" WinID="winBeliReturProses"
+                  Title="Proses Retur" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/keuangan/faktur/FakturBeliReturProses.aspx"
+                  short="/web/keuangan/faktur/FakturBeliReturProses.aspx" query="" order="4" />
+            <Separator order="5" />
+            <Item ID="fakturBeliRetur" WinID="winBeliRetur"
+                  Title="Beli Retur" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/keuangan/faktur/FakturBeliRetur.aspx"
+                  short="/web/keuangan/faktur/FakturBeliRetur.aspx" query="" order="6" />
+          </Items>
+          <Items text="Penjualan" icon="Folder" order="2">
+            <Item ID="fakturJual" WinID="winFakturJual"
+                  Title="Jual" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/keuangan/faktur/FakturJual.aspx"
+                  short="/web/keuangan/faktur/FakturJual.aspx" query="" order="1" />
+            <Separator order="2" />
+            <Item ID="fakturJualReturProses" WinID="winJualReturProses"
+                  Title="Proses Retur" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/keuangan/faktur/FakturJualReturProses.aspx"
+                  short="/web/keuangan/faktur/FakturJualReturProses.aspx" query="" order="3" />
+            <Separator order="4" />
+            <Item ID="fakturJualRetur" WinID="winJualRetur"
+                  Title="Jual Retur" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/keuangan/faktur/FakturJualRetur.aspx"
+                  short="/web/keuangan/faktur/FakturJualRetur.aspx" query="" order="5" />
+            <Separator order="6" />
+            <Item ID="fakturManual" WinID="winFakturManualRpt"
+                    Title="Faktur Manual" Text="Faktur Manual" icon="Package"
+                    Center="false" Width="640" Height="480"
+                    Url="~/keuangan/faktur/FakturManual.aspx"
+                    short="/web/keuangan/faktur/FakturManual.aspx" query="" order="7" />
+          </Items>
+        </Launcher>
+      </Module>
+      <Module id="modPembayaran" autoRun="false" order="41">
+        <Launcher id="pembayaranLnch" text="Pembayaran" icon="Folder">
+          <Items id="vcPembayaran" text="Voucher" icon="Folder">
+            <Item ID="vcDebit" WinID="winVCDebit"
+                  Title="Debit" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/keuangan/pembayaran/Voucher.aspx?mode=debit"
+                  short="/web/keuangan/pembayaran/Voucher.aspx" query="mode=debit" order="1" />
+            <Separator order="2" />
+            <Item ID="vcCredit" WinID="winVCCredit"
+                  Title="Credit" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/keuangan/pembayaran/Voucher.aspx?mode=kredit"
+                  short="/web/keuangan/pembayaran/Voucher.aspx" query="mode=kredit" order="3" />
+          </Items>
+        </Launcher>
+      </Module>
+    </Application>
+    <Application id="appMemo" text="Memo" icon="Application" order="20">
+      <Module id="memo" autoRun="false" order="70">
+        <Launcher text="Memo" icon="Folder">
+          <Item ID="memoMemoCombo" WinID="winMemoCombo"
+                Title="Combo" icon="Package"
+                Center="false" Width="640" Height="480"
+                Url="~/memo/combo/MemoCombo.aspx"
+                short="/web/memo/combo/MemoCombo.aspx" query="" order="1" />
+          <Items text="Surat Tanda Terima" icon="Folder" order="2">
+            <Item ID="memoSttSample" WinID="winMemoSttSample"
+                  Title="Sample" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/memo/stt/MemoSTT.aspx?mode=sample"
+                  short="/web/memo/stt/MemoSTT.aspx" query="mode=sample" order="1" />
+            <Separator order="2" />
+            <Item ID="memoSttDonasi" WinID="winMemoSttDonasi"
+                  Title="Donasi" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/memo/stt/MemoSTT.aspx?mode=donasi"
+                  short="/web/memo/stt/MemoSTT.aspx" query="mode=sample" order="3" />
+          </Items>
+          <Item ID="memoMemoPemusnahan" WinID="winMemoPemusnahan"
+               Title="Memo Pemusnahan" icon="Package"
+               Center="false" Width="640" Height="480"
+               Url="~/memo/pemusnahan/MemoPemusnahan.aspx"
+               short="/web/memo/pemusnahan/MemoPemusnahan.aspx" query="" order="3" />
+          <Item ID="memoMemoBASPB" WinID="winMemoBASPB"
+               Title="BASPB" icon="Package"
+               Center="false" Width="640" Height="480"
+               Url="~/memo/BASPB/MemoBASPB.aspx"
+               short="/web/memo/BASPB/MemoBASPB.aspx" query="" order="4" />
+        </Launcher>
+      </Module>
+    </Application>
+    <!--<Application id="appRpt" text="Laporan" icon="Application" order="100">
+      <Module id="reportingInventory" autoRun="false" order="1000">
+        <Launcher text="Laporan" icon="Folder">
+          <Items text="Inventory" icon="Folder">
+            <Item ID="stokGudangRpt" WinID="winStokGudangRpt"
+                  Title="Stok Gudang" icon="Report"
+                  Center="false" Width="640" Height="375"
+                  Resizeable="false" Url="~/reporting/Inventory/Default.aspx"
+                  short="/web/reporting/inventory/Default.aspx" query="mod=SG" order="1" />
+          </Items>
+        </Launcher>
+      </Module>
+    </Application>-->
+    <Application id="appProses" text="Proses" icon="Application" order="30">
+      <Module id="prosesTrxApp" autoRun="false" order="1">
+        <Launcher id="prosesTrxLnch" text="Transaksi" icon="Folder">
+          <Items text="Snapshot" icon="Folder" order="1">
+            <Item ID="snapshotBdpRdp" WinID="winSnapshotBdpRdp"
+                  Text="BDP / RDP" Title="Snapshot BDP / RDP"  icon="Package"
+                  Center="true" Width="400" Height="440" Resizeable="false"
+                  Url="~/proses/snapshot/bdprdp.aspx"
+                  short="/web/proses/snapshot/bdprdp.aspx" query="" order="1" />
+            <Separator order="2" />
+            <Item ID="snapshotClosingPO" WinID="winSnapshotClosingPO"
+                  Text="Closing PO" Title="Snapshot Closing PO"  icon="Package"
+                  Center="true" Width="400" Height="200" Resizeable="false"
+                  Url="~/proses/snapshot/closingpo.aspx"
+                  short="/web/proses/snapshot/closingpo.aspx" query="" order="3" />
+          </Items>
+					<Items text="Closing" icon="Folder" order="2">
+						<Item ID="closingLog" WinID="winClosingLog"
+                  Text="Logistik" Title="Closing Logistik"  icon="Package"
+                  Center="true" Width="400" Height="200" Resizeable="false"
+                  Url="~/proses/closing/ClosingStock.aspx"
+                  short="/web/proses/closing/ClosingStock.aspx" query="" order="1" />
+					</Items>
+					<Items text="SerahTerima" icon="Folder" order="3">
+						<Item ID="SerahTerimaPicker" WinID="winSerahTerimaPicker"
+                  Title="Serah Terima Picker" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/wp/SerahTerima.aspx?mode=picker"
+                  short="/web/transaksi/wp/SerahTerima.aspx" query="mode=picker" order="1" />
+            <Separator order="2" />
+            <Item ID="SerahTerimaInkJet" WinID="winSerahTerimaInkJet"
+                  Title="Serah Terima InkJet" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/wp/SerahTerima.aspx?mode=inkjet"
+                  short="/web/transaksi/wp/SerahTerima.aspx" query="mode=inkjet" order="3" />
+            <Separator order="4" />
+            <Item ID="SerahTerimaChecker" WinID="winSerahTerimaChecker"
+                  Title="Serah Terima Checker" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/wp/SerahTerima.aspx?mode=checker"
+                  short="/web/transaksi/wp/SerahTerima.aspx" query="mode=checker" order="5" />
+            <Separator order="6" />
+            <Item ID="SerahTerimaPacker" WinID="winSerahTerimaPacker"
+                  Title="Serah Terima Packer" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/wp/SerahTerima.aspx?mode=packer"
+                  short="/web/transaksi/wp/SerahTerima.aspx" query="mode=packer" order="7" />
+            <Separator order="8" />
+            <Item ID="SerahTerimaTransportasi" WinID="winSerahTerimaTransportasi"
+                  Title="Serah Terima Transportasi" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/wp/SerahTerima.aspx?mode=transportasi"
+                  short="/web/transaksi/wp/SerahTerima.aspx" query="mode=transportasi" order="9" />
+            <Separator order="10" />
+            <Item ID="SerahTerimaGdgPBBR" WinID="SerahTerimaGdgPBBR"
+                  Title="Serah Terima Gudang PBB/R" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/wp/SerahTerima.aspx?mode=rc"
+                  short="/web/transaksi/wp/SerahTerima.aspx" query="mode=rc" order="11" />
+            <Separator order="12" />
+            <Item ID="SerahTerimaAdmPBBR" WinID="SerahTerimaAdmPBBR"
+                  Title="Serah Terima Admin PBB/R" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/wp/SerahTerima.aspx?mode=pbbr"
+                  short="/web/transaksi/wp/SerahTerima.aspx" query="mode=pbbr" order="13" />
+            <Separator order="14" />
+            <Item ID="SerahTerimaGdgBASPB" WinID="SerahTerimaGdgBASPB"
+                  Title="Serah Terima Gudang BASPB" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/wp/SerahTerima.aspx?mode=baspbGdg"
+                  short="/web/transaksi/wp/SerahTerima.aspx" query="mode=baspbGdg" order="15" />
+            <Separator order="16" />
+            <Item ID="SerahTerimaAdmBASPB" WinID="SerahTerimaAdmBASPB"
+                  Title="Serah Terima Admin BASPB" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/wp/SerahTerima.aspx?mode=baspbAdm"
+                  short="/web/transaksi/wp/SerahTerima.aspx" query="mode=baspbAdm" order="17" />
+            <Separator order="18" />
+            <Item ID="SerahTerimaCPR" WinID="SerahTerimaCPR"
+                  Title="Serah Terima KPR" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/wp/SerahTerima.aspx?mode=cpr"
+                  short="/web/transaksi/wp/SerahTerima.aspx" query="mode=cpr" order="19" />
+            <Separator order="20" />
+            <Item ID="TiketAnrian" WinID="TiketAnrian"
+                  Title="Tiket Antrian" icon="Package"
+                  Center="false" Width="400" Height="160"
+                  Url="~/transaksi/wp/SerahTerimaTiket.aspx"
+                  short="/web/transaksi/wp/SerahTerimaTiket.aspx" query="" order="21" />
+            <Separator order="22" />
+            <Item ID="SerahTerimaTiket" WinID="SerahTerimaTiket"
+                  Title="Serah Terima Tiket" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/transaksi/wp/SerahTerimaPO.aspx"
+                  short="/web/transaksi/wp/SerahTerimaPO.aspx" query="" order="23" />
+          </Items>
+          <Items text="Proses Data" icon="Folder" order="4">
+            <Item ID="WaktuPelayanan" WinID="winWaktuPelayanan"
+                  Title="Waktu Pelayanan" icon="Package"
+                  Center="false" Width="600" Height="200"
+                  Url="~/proses/process_data/ProsesWP.aspx"
+                  short="/web/proses/process_data/ProsesWP.aspx" query="" order="1" />
+            
+            
+            <!--HAFIZH-->
+          
+            <Item ID="AvgSales" WinID="winAvgSales"
+                Title="Proses - Avg Sales" icon="Package"
+                Center="false" Width="300" Height="150"
+                Url="~/proses/process_data/AvgSales.aspx"
+                short="/web/proses/process_data/AvgSales.aspx" query="" order="1" />
+
+
+            <Item ID="ProsesFJR" WinID="winProsesFJR"
+                Title="Proses - FJR" icon="Package"
+                Center="false" Width="300" Height="150"
+                Url="~/proses/process_data/ProsesFJR.aspx"
+                short="/web/proses/process_data/ProsesFJR.aspx" query="" order="1" />
+
+
+            <Item ID="ProsesDisClaim" WinID="winProsesDisClaim"
+             Title="Proses - Discount Claim" icon="Package"
+             Center="false" Width="300" Height="150"
+             Url="~/proses/process_data/ProsesDisClaim.aspx"
+             short="/web/proses/process_data/ProsesDisClaim.aspx" query="" order="1" />
+            
+            
+          </Items>
+          <!--Proses Pharmanet-->
+          <Items text="Proses_Pharmanet" icon="Folder" order="5">
+            <Item ID="Proses_Pharm" WinID="winProses_Pharm"
+                  Text="Pharmanet" Title="Proses Pharmanet"  icon="Package"
+                  Center="true" Width="940" Height="480" Resizeable="true"
+                  Url="~/proses/process_data/Proses_Pharmanet.aspx"
+                  short="/web/proses/process_data/Proses_Pharmanet.aspx" query="" order="1" />
+            <Separator order="2" />
+            
+          </Items>
+          <Items text="Proses Stock Opname" icon="Folder" order="6">
+            <Item ID="ProsesStockOpname" WinID="winProsesStockOpname"
+                  Title="Proses Stock Opname" icon="Package"
+                  Center="false" Width="450" Height="250"
+                  Url="~/proses/stock_opname/ProsesStockOpname.aspx"
+                  short="/web/proses/stock_opname/ProsesStockOpname.aspx" query="" order="1" />
+            <Separator order="2" />
+            <Item ID="StockOpname" WinID="winStockOpname"
+                  Title="Stock Opname" icon="Package"
+                  Center="false" Width="640" Height="480"
+                  Url="~/proses/stock_opname/StockOpname.aspx"
+                  short="/web/proses/stock_opname/StockOpname.aspx" query="" order="3" />
+            <Separator order="4" />
+          </Items>
+<!--Indra 20190411FM Penambahan modul produk kosong-->
+          <Items text="Proses Email" icon="Folder" order="7">
+            <Item ID="Proses_Email" WinID="winProses_Email"
+                  Text="Email Produk Kosong" Title="Email Produk Kosong"  icon="Package"
+                  Center="true" Width="940" Height="480" Resizeable="true"
+                  Url="~/proses/process_data/ProsesEmailProdukKosong.aspx"
+                  short="/web/proses/process_data/ProsesEmailProdukKosong.aspx" query="" order="5" />
+            
+          </Items>
+        </Launcher>
+      </Module>
+    </Application>
+    <Application id="appRpt" text="Laporan" icon="Application" order="100" windowID="">
+      <Module id="reportingInventory" autoRun="false" order="1000">
+        <Launcher id="rptInventoryLnch" text="Inventory" icon="Folder">
+          <Items text="Stok" icon="Folder" order="1">
+            <Item ID="stokGudangRpt" WinID="winStokGudangRpt"
+                  Title="Stok Gudang" Text="Gudang" icon="Report"
+                  Center="false" Width="640" Height="375"
+                  Resizeable="false" Url="~/reporting/Inventory/Default.aspx?mode=stockgudang"
+                  short="/web/reporting/inventory/Default.aspx" query="mode=stockgudang" order="1" />
+            <Item ID="stokGudangNasRpt" WinID="winStokGudangNasRpt"
+                  Title="Stok Nasional" Text="Nasional" icon="Report"
+                  Center="false" Width="640" Height="350"
+                  Resizeable="false" Url="~/reporting/Inventory/Default.aspx?mode=stocknasional"
+                  short="/web/reporting/inventory/Default.aspx" query="mode=stocknasional" order="2" />
+            <Separator order="3" />
+            <Item ID="stokIndexRpt" WinID="winStokIndexRpt"
+                  Title="Index Stok" Text="Index" icon="Report"
+                  Center="false" Width="640" Height="315"
+                  Resizeable="false" Url="~/reporting/Inventory/Default.aspx?mode=indekstock"
+                  short="/web/reporting/inventory/Default.aspx" query="mode=indekstock" order="4" />
+            <Separator order="5" />
+            <Item ID="stokUmurRpt" WinID="winStokUmurRpt"
+                  Title="Umur Stok" Text="Umur" icon="Report"
+                  Center="false" Width="640" Height="520"
+                  Resizeable="false" Url="~/reporting/Inventory/Default.aspx?mode=umurstock"
+                  short="/web/reporting/inventory/Default.aspx" query="mode=umurstock" order="6" />
+            <Separator order="7" />
+            <Item ID="stokMutasiRpt" WinID="winStokMutasiRpt"
+                  Title="Stok Mutasi Inventory" Text="Mutasi" icon="Report"
+                  Center="false" Width="640" Height="350"
+                  Resizeable="false" Url="~/reporting/Inventory/Default.aspx?mode=mutasiinventori"
+                  short="/web/reporting/inventory/Default.aspx" query="mode=mutasiinventori" order="8" />
+            <Separator order="9" />
+            <Item ID="stokOpnameRpt" WinID="winStokOpnameRpt"
+                  Title="Stok Opname" Text="Opname" icon="Report"
+                  Center="false" Width="640" Height="380"
+                  Resizeable="false" Url="~/reporting/Inventory/Default.aspx?mode=stockopname"
+                  short="/web/reporting/inventory/Default.aspx" query="mode=stockopname" order="10" />
+            <Separator order="11" />
+            <Item ID="stokAktualRpt" WinID="winStokAktualRpt"
+                  Title="Stok Aktual" Text="Aktual" icon="Report" CustomIcon="line-chart16"
+                  IsShortcut="true" ShortcutClass="shortcut-icon icon-linechart48"
+                  Center="false" Width="640" Height="480"
+                  Resizeable="true" Url="~/reporting/Inventory/Default.aspx?mode=currentstock"
+                  short="/web/reporting/inventory/Default.aspx" query="mode=currentstock" order="12" />
+            <Separator order="13" />
+            <Item ID="ExpireBatchRpt" WinID="winExpireBatchRpt"
+                  Title="Expire Batch" Text="Expire Batch" icon="Report"
+                  Center="false" Width="640" Height="295"
+                  Resizeable="true" Url="~/reporting/Inventory/Default.aspx?mode=expirebatch"
+                  short="/web/reporting/inventory/Default.aspx" query="mode=expirebatch" order="14" />
+            <Separator order="15" />
+            <Item ID="CurrentStockEDRpt" WinID="winCurrentStockEDRpt"
+                  Title="Current Stock ED" Text="Current Stock ED" icon="Report"
+                  Center="false" Width="640" Height="275"
+                  Resizeable="true" Url="~/reporting/Inventory/Default.aspx?mode=currentstocked"
+                  short="/web/reporting/inventory/Default.aspx" query="mode=currentstocked" order="16" />
+            <Separator order="17" />
+            <Item ID="stokIntegrityRpt" WinID="winStokIntegrityRpt"
+                  Title="Stok Integrity DC" Text="Integrity" icon="Report"
+                  Center="false" Width="640" Height="350"
+                  Resizeable="false" Url="~/reporting/Inventory/Default.aspx?mode=stockintegrity"
+                  short="/web/reporting/inventory/Default.aspx" query="mode=stockintegrity" order="18" />
+            <Separator order="19" />
+            <Item ID="SPPLDO" WinID="winSPPLDO"
+                  Title="Warning SP/PL/DO yang harus segera diproses!!!" Text="Data" icon="Report" IsShortcut="true" ShortcutClass="shortcut-icon icon-linechart48"
+                  Center="false" Width="800" Height="600"
+                  Resizeable="true" Url="~/reporting/Inventory/Default.aspx?mode=SPPLDO"
+                  short="/web/reporting/inventory/Default.aspx" query="mode=SPPLDO" order="20"/>
+          </Items>
+          <Items text="Kartu" icon="Folder" order="2">
+            <Item ID="kartuGudangRpt" WinID="winKartuGudangRpt"
+                  Title="Kartu Gudang" Text="Gudang" icon="Report"
+                  Center="false" Width="640" Height="385"
+                  Resizeable="false" Url="~/reporting/Inventory/Default.aspx?mode=kartubaranggudang"
+                  short="/web/reporting/inventory/Default.aspx" query="mode=kartubaranggudang" order="1" />
+            <Item ID="kartuGudangNasRpt" WinID="winKartuGudangNasRpt"
+                  Title="Kartu Nasional" Text="Nasional" icon="Report"
+                  Center="false" Width="640" Height="385"
+                  Resizeable="false" Url="~/reporting/Inventory/Default.aspx?mode=kartubarangnasional"
+                  short="/web/reporting/inventory/Default.aspx" query="mode=kartubarangnasional" order="2" />
+          </Items>
+          
+          <!--hafizh-->
+          <Items text="Monitoring ED" icon="Folder" order="1">
+            
+            <Item ID="MonExp" WinID="winMonitoringExpired"
+                  Title="Nearly Expired" Text="Nearly Expired"  icon="Report"
+                  Center="false" Width="1280" Height="480"
+                  Resizeable="true" Url="~/reporting/Inventory/Default.aspx?mode=monitoringexpired"
+                  short="/web/reporting/inventory/Default.aspx" query="mode=monitoringexpired" order="1" />
+            
+            
+            <Item ID="MonExpctrl" WinID="winMonitoringExpiredCtrl"
+                  Title="Expired" Text="Expired"  icon="Report"
+                  Center="false" Width="1280" Height="480"
+                  Resizeable="true" Url="~/reporting/Inventory/Default.aspx?mode=monitoringexpiredctrl"
+                  short="/web/reporting/inventory/Default.aspx" query="mode=monitoringexpiredctrl" order="2" />
+            
+          </Items>
+          
+          <!--hafizh end-->
+        </Launcher>
+      </Module>
+      <Module id="reportingHistory" autoRun="false" order="1010">
+        <Launcher id="rptHistoryLnch" text="History" icon="Folder">
+          <Item ID="rtpHistAsuransiRpt" WinID="winHistAsuransiRpt"
+                Title="History Asuransi" Text="Asuransi" icon="Report"
+                Center="false" Width="640" Height="375"
+                Resizeable="false" Url="~/reporting/history/Default.aspx?mode=asuransi"
+                short="/web/reporting/history/Default.aspx" query="mode=asuransi" order="1" />
+          <Items text="Ekspedisi" icon="Folder" order="3">
+            <Item ID="rtpHistExpdRpt" WinID="winHistExpdRpt"
+                Title="History Expedisi" Text="Expedisi" icon="Report"
+                Center="false" Width="640" Height="280"
+                Resizeable="false" Url="~/reporting/history/Default.aspx?mode=expedisi"
+                short="/web/reporting/history/Default.aspx" query="mode=expedisi" order="1" />
+            <Item ID="rptHistEkspedisi" WinID="winHistEkspedisi"
+                Title="Laporan Resi Ekspedisi" Text="Resi Ekspedisi" icon="Report"
+                Center="false" Width="640" Height="250"
+                Resizeable="false" Url="~/reporting/history/Default.aspx?mode=resiekspedisi"
+                short="/web/reporting/history/Default.aspx" query="mode=resiekspedisi" order="2" />
+            <Item ID="rptHistEkspedisiDOSJ" WinID="winHistEkspedisi"
+                Title="Laporan Ekspedisi DO/SJ" Text="Resi Ekspedisi DO/SJ" icon="Report"
+                Center="false" Width="640" Height="325"
+                Resizeable="false" Url="~/reporting/history/Default.aspx?mode=resiekspedisidosj"
+                short="/web/reporting/history/Default.aspx" query="mode=resiekspedisidosj" order="3" />
+            <Item ID="rptHistShipment" WinID="winHistShipment"
+                Title="Laporan Shipment" Text="Shipment" icon="Report"
+                Center="false" Width="640" Height="325"
+                Resizeable="false" Url="~/reporting/history/Default.aspx?mode=shipment"
+                short="/web/reporting/history/Default.aspx" query="mode=shipment" order="4" />
+            <Item ID="rptHistBiayaEkspedisi" WinID="winHistBiayaEkspedisi"
+                Title="Laporan Biaya Ekspedisi" Text="Biaya Ekspedisi" icon="Report"
+                Center="false" Width="640" Height="425"
+                Resizeable="false" Url="~/reporting/history/Default.aspx?mode=biayaekspedisi"
+                short="/web/reporting/history/Default.aspx" query="mode=biayaekspedisi" order="5" />
+            <Item ID="rptHistBiayaInvoiceVsResi" WinID="winHistBiayaInvoiceVsResi"
+                Title="Laporan Biaya Invoice Vs Resi" Text="Biaya Invoice Vs Resi" icon="Report"
+                Center="false" Width="640" Height="310"
+                Resizeable="false" Url="~/reporting/history/Default.aspx?mode=biayainvoicevsresi"
+                short="/web/reporting/history/Default.aspx" query="mode=biayainvoicevsresi" order="6" />
+            <Item ID="rptHistRekapInvoice" WinID="winHistRekapInvoice"
+                Title="Laporan Rekap Invoice" Text="Rekap Invoice" icon="Report"
+                Center="false" Width="640" Height="325"
+                Resizeable="false" Url="~/reporting/history/Default.aspx?mode=rekapinvoice"
+                short="/web/reporting/history/Default.aspx" query="mode=rekapinvoice" order="7" />
+            <Item ID="rptHistListPembayaranEP" WinID="winHistListPembayaranEP"
+                Title="Laporan Pembayaran Ekspedisi" Text="List Pembayaran Ekspedisi" icon="Report"
+                Center="false" Width="640" Height="300"
+                Resizeable="false" Url="~/reporting/history/Default.aspx?mode=listpembayaranep"
+                short="/web/reporting/history/Default.aspx" query="mode=listpembayaranep" order="8" />
+          </Items>
+          <Items text="Purchase Order" icon="Folder" order="4">
+            <Item ID="rptHistPOTransaksiRpt" WinID="winHistPOTransaksiRpt"
+                Title="History Purchase Order (PO) Transaksi" Text="Purchase Order (PO) Transaksi"  icon="Report"
+                Center="false" Width="640" Height="300"
+                Resizeable="false" Url="~/reporting/history/Default.aspx?mode=potransaksi"
+                short="/web/reporting/history/Default.aspx" query="mode=potransaksi" order="1" />
+            <Separator order="2" />
+            <Item ID="rptHistPOLimitRpt" WinID="winHistPOLimitRpt"
+                Title="History Purchase Order (PO) Limit Budget" Text="Anggaran Purchase Order (PO)"  icon="Report"
+                Center="false" Width="640" Height="275"
+                Resizeable="false" Url="~/reporting/history/Default.aspx?mode=polimit"
+                short="/web/reporting/history/Default.aspx" query="mode=polimit" order="3" />
+            <Separator order="4" />
+            <Item ID="rptHistPOPendingRpt" WinID="winHistPOPendingRpt"
+                Title="History PO Pending" Text="History PO Pending"  icon="Report"
+                Center="false" Width="640" Height="305"
+                Resizeable="false" Url="~/reporting/history/Default.aspx?mode=popending"
+                short="/web/reporting/history/Default.aspx" query="mode=popending" order="5" />
+          </Items>
+          <Items text="Surat Pesanan" icon="Folder" order="5">
+            <Item ID="rptHistSPTransaksiRpt" WinID="winHistSPTransaksiRpt"
+                Title="History Surat Pesanan (SP) Transaksi" Text="Transaksi" icon="Report"
+                Center="false" Width="640" Height="335"
+                Resizeable="false" Url="~/reporting/history/Default.aspx?mode=sptransaksi"
+                short="/web/reporting/history/Default.aspx" query="mode=sptransaksi" order="1" />
+            <Item ID="rptHistSPBatalRpt" WinID="winHistSPBatalRpt"
+                Title="History Surat Pesanan (SP) Batal" Text="Batal" icon="Report"
+                Center="false" Width="640" Height="310"
+                Resizeable="false" Url="~/reporting/history/Default.aspx?mode=spbatal"
+                short="/web/reporting/history/Default.aspx" query="mode=spbatal" order="2" />
+            <Separator order="3" />
+            <Item ID="rptHistSPGudangRpt" WinID="winHistSPGudangRpt"
+                Title="History Surat Pesanan Gudang (SPG)" Text="Gudang" icon="Report"
+                Center="false" Width="640" Height="355"
+                Resizeable="false" Url="~/reporting/history/Default.aspx?mode=spgudang"
+                short="/web/reporting/history/Default.aspx" query="mode=spgudang" order="4" />
+          </Items>
+          <Items text="Memo" icon="Folder" order="6">
+            <Item ID="rptHistSTTRpt" WinID="winHistSTTRpt"
+                Title="History Surat Tanda Terima (STT)" Text="Surat Tanda Terima (STT)" icon="Report"
+                Center="false" Width="640" Height="325"
+                Resizeable="false" Url="~/reporting/history/Default.aspx?mode=memostt"
+                short="/web/reporting/history/Default.aspx" query="mode=memostt" order="1" />
+            <Separator order="2" />
+            <Item ID="rptHistComboRpt" WinID="winHistComboRpt"
+                Title="History Combo" Text="Combo" icon="Report"
+                Center="false" Width="640" Height="300"
+                Resizeable="false" Url="~/reporting/history/Default.aspx?mode=memocombo"
+                short="/web/reporting/history/Default.aspx" query="mode=memocombo" order="3" />
+          </Items>
+          <Item ID="rtpHistItemBlockRpt" WinID="winHistItemBlockRpt"
+                Title="History Status Produk" Text="Status Produk" icon="Report"
+                Center="false" Width="640" Height="330"
+                Resizeable="false" Url="~/reporting/history/Default.aspx?mode=itemblock"
+                short="/web/reporting/history/Default.aspx" query="mode=itemblock" order="6" />
+          <Items text="Item-Batch" icon="Folder" order="7">
+            <Item ID="rptHistIBGudangRpt" WinID="winHistIBGudangRpt"
+                Title="History Item-Batch Gudang" Text="Gudang" icon="Report"
+                Center="false" Width="640" Height="335"
+                Resizeable="false" Url="~/reporting/history/Default.aspx?mode=itembatchgudang"
+                short="/web/reporting/history/Default.aspx" query="mode=itembatchgudang" order="1" />
+            <Separator order="2" />
+            <Item ID="rptHistIBNasionalRpt" WinID="winHistIBNasionalRpt"
+                Title="History Item-Batch Nasional" Text="Nasional" icon="Report"
+                Center="false" Width="640" Height="310"
+                Resizeable="false" Url="~/reporting/history/Default.aspx?mode=itembatchnasional"
+                short="/web/reporting/history/Default.aspx" query="mode=itembatchnasional" order="3" />
+          </Items>
+          <Items text="Query" icon="Folder" order="9">
+            <Item ID="rptHistQryBeliRpt" WinID="winHistQryBeliRpt"
+                Title="History Query Pembelian" Text="Pembelian" icon="Report"
+                Center="false" Width="640" Height="550"
+                Resizeable="false" Url="~/reporting/history/Default.aspx?mode=querypembelian"
+                short="/web/reporting/history/Default.aspx" query="mode=querypembelian" order="1" />
+            <Item ID="rptHistQryJualRpt" WinID="winHistQryJualRpt"
+                Title="History Query Penjualan" Text="Penjualan" icon="Report"
+                Center="false" Width="640" Height="565"
+                Resizeable="false" Url="~/reporting/history/Default.aspx?mode=querypenjualan"
+                short="/web/reporting/history/Default.aspx" query="mode=querypenjualan" order="2" />
+            <Separator order="3" />
+            <Item ID="rptHistQrySaldoRpt" WinID="winHistQrySaldoRpt"
+                Title="History Query Saldo" Text="Saldo" icon="Report"
+                Center="false" Width="640" Height="275"
+                Resizeable="false" Url="~/reporting/history/Default.aspx?mode=querysaldo"
+                short="/web/reporting/history/Default.aspx" query="mode=querysaldo" order="4" />
+            <Separator order="5" />
+            <Item ID="rptHistQryRincBeliRpt" WinID="winHistQryRincBeliRpt"
+                Title="History Query Rincian Pembelian" Text="Rincian Pembelian" icon="Report"
+                Center="false" Width="640" Height="370"
+                Resizeable="false" Url="~/reporting/history/Default.aspx?mode=querypurchase"
+                short="/web/reporting/history/Default.aspx" query="mode=querypurchase" order="6" />
+            <Item ID="rptHistQryRincJualRpt" WinID="winHistQryRincJualRpt"
+                Title="History Query Rincian Penjualan" Text="Rincian Penjualan" icon="Report"
+                Center="false" Width="640" Height="395"
+                Resizeable="false" Url="~/reporting/history/Default.aspx?mode=querysales"
+                short="/web/reporting/history/Default.aspx" query="mode=querysales" order="7" />
+            <Separator order="8" />
+            <Item ID="rptHistQryClaimRpt" WinID="winHistQryClaimRpt"
+                Title="History Query Claim" Text="Claim" icon="Report"
+                Center="false" Width="640" Height="400"
+                Resizeable="false" Url="~/reporting/history/Default.aspx?mode=queryclaim"
+                short="/web/reporting/history/Default.aspx" query="mode=queryclaim" order="9" />
+          </Items>
+          <Item ID="rtpHistRNCabangRpt" WinID="winHistRNCabangRpt"
+                Title="History RN Cabang" Text="RN Cabang" icon="Report"
+                Center="false" Width="640" Height="370"
+                Resizeable="false" Url="~/reporting/history/Default.aspx?mode=rncabang"
+                short="/web/reporting/history/Default.aspx" query="mode=rncabang" order="10" />
+          <Item ID="rtpHistPemusnahanRpt" WinID="winHistPemusnahanRpt"
+                Title="History Pemusnahan" Text="Pemusnahan" icon="Report"
+                Center="false" Width="640" Height="360"
+                Resizeable="false" Url="~/reporting/history/Default.aspx?mode=pemusnahan"
+                short="/web/reporting/history/Default.aspx" query="mode=pemusnahan" order="11" />
+
+          <Item ID="rtpHistReturSupplierRpt" WinID="rtpHistReturSupplierRpt"
+                Title="History RS" Text="Retur Supplier" icon="Report"
+                Center="false" Width="640" Height="250"
+                Resizeable="false" Url="~/reporting/history/Default.aspx?mode=historyretursupplier"
+                short="/web/reporting/history/Default.aspx" query="mode=historyretursupplier" order="12" />
+          <Item ID="rtpHistRecallRpt" WinID="winHistRecallRpt"
+                Title="History Recall" Text="Recall" icon="Report"
+                Center="false" Width="1100" Height="610"
+                Resizeable="false" Url="~/reporting/recall/Default.aspx?mode=recall"
+                short="/web/reporting/recall/Default.aspx" query="mode=recall" order="13" />
+        </Launcher>
+      </Module>
+      <Module id="reportingKonsolidasi" autoRun="false" order="1020">
+        <Launcher id="rptKonsolidasiLnch" text="Konsolidasi" icon="Folder">
+          <Items text="Dalam Perjalanan" icon="Folder" order="1">
+            <Item ID="rptKonslBDPRpt" WinID="winKonslBDPRpt"
+                Title="Konsolidasi Barang Dalam Perjalanan (BDP)" Text="Barang Dalam Perjalanan (BDP)"  icon="Report"
+                Center="false" Width="640" Height="440"
+                Resizeable="false" Url="~/reporting/konsolidasi/Default.aspx?mode=bdp"
+                short="/web/reporting/konsolidasi/Default.aspx" query="mode=bdp" order="1" />
+            <Separator order="2" />
+            <Item ID="rptKonslRDPRpt" WinID="winKonslRDPRpt"
+                Title="Konsolidasi Retur Dalam Perjalanan (RDP)" Text="Retur Dalam Perjalanan (RDP)" icon="Report"
+                Center="false" Width="640" Height="435"
+                Resizeable="false" Url="~/reporting/konsolidasi/Default.aspx?mode=rdp"
+                short="/web/reporting/konsolidasi/Default.aspx" query="mode=rdp" order="3" />
+            <Separator order="4" />
+            <Item ID="rptKonslBDPPIRpt" WinID="winKonslBDPPIRpt"
+                Title="Konsolidasi Barang Dalam Perjalanan (BDP) Pharos Group" Text="Barang Dalam Perjalanan (BDP) Pharos Group" icon="Report"
+                Center="false" Width="640" Height="285"
+                Resizeable="false" Url="~/reporting/konsolidasi/Default.aspx?mode=bdppharos"
+                short="/web/reporting/konsolidasi/Default.aspx" query="mode=bdppharos" order="5" />
+          </Items>
+          <Items text="Stok" icon="Folder" order="2">
+            <Item ID="rtpKonslNasionalRpt" WinID="winKonslNasionalRpt"
+                  Title="Konsolidasi Nasional" Text="Nasional" icon="Report"
+                  Center="false" Width="640" Height="335"
+                  Resizeable="false" Url="~/reporting/konsolidasi/Default.aspx?mode=stoknasional"
+                  short="/web/reporting/konsolidasi/Default.aspx" query="mode=stoknasional" order="1" />
+          </Items>
+        </Launcher>
+      </Module>
+      <Module id="reportingWaktuPelayanan" autoRun="false" order="1030">
+        <Launcher id="rptWktPelayananLnch" text="Waktu Pelayanan" icon="Folder">
+          <Items text="Cabang" icon="Folder" order="1">
+            <Item ID="rptWktPelyCabRpt" WinID="winWktPelyCabRpt"
+                Title="Waktu Pelayanan Cabang" Text="Cabang" icon="Report"
+                Center="false" Width="640" Height="435"
+                Resizeable="false" Url="~/reporting/waktupelayanan/Default.aspx?mode=cabang"
+                short="/web/reporting/waktupelayanan/Default.aspx" query="mode=cabang" order="1" />
+          </Items>
+          <Items text="Pemasok" icon="Folder" order="2">
+            <Item ID="rptWktPelySuplRpt" WinID="winWktPelySuplRpt"
+                Title="Waktu Pelayanan Pemasok" Text="Pemasok" icon="Report"
+                Center="false" Width="640" Height="475"
+                Resizeable="false" Url="~/reporting/waktupelayanan/Default.aspx?mode=suplier"
+                short="/web/reporting/waktupelayanan/Default.aspx" query="mode=suplier" order="1" />
+          </Items>
+          <Items text="Serah Terima" icon="Folder" order="3">
+            <Item ID="rptWktPelySerahTerimaRpt" WinID="winWktPelySerahTerimaRpt"
+                Title="Waktu Pelayanan Serah Terima" Text="Serah Terima" icon="Report"
+                Center="false" Width="640" Height="435"
+                Resizeable="false" Url="~/reporting/waktupelayanan/Default.aspx?mode=serahterima"
+                short="/web/reporting/waktupelayanan/Default.aspx" query="mode=serahterima" order="1" />
+            <Separator order="2" />
+            <Item ID="rptWPSTGdgReturRpt" WinID="winWPSTGdgReturRpt"
+                Title="Waktu Pelayanan Serah Terima Gudang Retur" Text="Serah Terima Gudang Retur" icon="Report"
+                Center="false" Width="640" Height="340"
+                Resizeable="false" Url="~/reporting/waktupelayanan/Default.aspx?mode=gdgretur"
+                short="/web/reporting/waktupelayanan/Default.aspx" query="mode=gdgretur" order="3" />
+          </Items>
+          <Items text="Lainnya" icon="Folder" order="4">
+            <Item ID="rptWktPelySuplCabRpt" WinID="winWktPelySuplCabRpt"
+                Title="Waktu Pelayanan Pemasok - Cabang" Text="Pemasok - Cabang" icon="Report"
+                Center="false" Width="640" Height="265"
+                Resizeable="false" Url="~/reporting/waktupelayanan/Default.aspx?mode=supliercabang"
+                short="/web/reporting/waktupelayanan/Default.aspx" query="mode=supliercabang" order="1" />
+            <Item ID="rptWktPelySPPLConfirm" WinID="winWktPelySPPLConfirm"
+                Title="Waktu Pelayanan SP - PL Confirm" Text="SP - PL Confirm" icon="Report"
+                Center="false" Width="640" Height="300"
+                Resizeable="false" Url="~/reporting/waktupelayanan/Default.aspx?mode=spplconfirm"
+                short="/web/reporting/waktupelayanan/Default.aspx" query="mode=spplconfirm" order="2" />
+          </Items>
+        </Launcher>
+      </Module>
+      <Module id="reportingPending" autoRun="false" order="1030">
+        <Launcher id="rptPendingLnch" text="Pending" icon="Folder">
+          <Items text="Logistik" icon="Folder" order="1">
+            <Item ID="rptPendSuratPesananRpt" WinID="winPendSuratPesananRpt"
+                Title="Pending Surat Pesanan" Text="Surat Pesanan" icon="Report"
+                Center="false" Width="640" Height="465"
+                Resizeable="false" Url="~/reporting/pending/Default.aspx?mode=sptransaksi"
+                short="/web/reporting/pending/Default.aspx" query="mode=sptransaksi" order="1" />
+            <Item ID="rptPendSuratPesananGudangRpt" WinID="winPendSuratPesananGudangRpt"
+                Title="Pending Surat Pesanan Gudang" Text="Surat Pesanan Gudang" icon="Report"
+                Center="false" Width="640" Height="285"
+                Resizeable="false" Url="~/reporting/pending/Default.aspx?mode=spgudang"
+                short="/web/reporting/pending/Default.aspx" query="mode=spgudang" order="2" />
+            <Item ID="rptPendSPvsPORpt" WinID="winPendSPvsPORpt"
+                Title="Pending Surat Pesanan vs Purchase Order" Text="Surat Pesanan vs Purchase Order" icon="Report"
+                Center="false" Width="640" Height="285"
+                Resizeable="false" Url="~/reporting/pending/Default.aspx?mode=sptransaksipo"
+                short="/web/reporting/pending/Default.aspx" query="mode=sptransaksipo" order="3" />
+            <Item ID="rptPendPOPeriodik" WinID="winPendPOPeriodik"
+                Title="Pending PO Periodik" Text="PO Periodik" icon="Report"
+                Center="false" Width="640" Height="305"
+                Resizeable="false" Url="~/reporting/pending/Default.aspx?mode=poperiodik"
+                short="/web/reporting/pending/Default.aspx" query="mode=poperiodik" order="4" />
+            <Separator order="5" />
+            <Item ID="rptPendPOLogRpt" WinID="winPendPOLogRpt"
+                Title="Pending Purchase Order" Text="Purchase Order" icon="Report"
+                Center="false" Width="640" Height="335"
+                Resizeable="false" Url="~/reporting/pending/Default.aspx?mode=potransaksilog"
+                short="/web/reporting/pending/Default.aspx" query="mode=potransaksilog" order="6" />
+            <Separator order="7" />
+            <Item ID="rptPendDelOrderRpt" WinID="winPendDelOrderRpt"
+                Title="Pending Delivery Order" Text="Delivery Order" icon="Report"
+                Center="false" Width="650" Height="307"
+                Resizeable="false" Url="~/reporting/pending/Default.aspx?mode=dotransaksi"
+                short="/web/reporting/pending/Default.aspx" query="mode=dotransaksi" order="8" />
+            <Separator order="9" />
+            <Item ID="rptPendRCRpt" WinID="winPendRCRpt"
+                Title="Pending Retur Cabang" Text="Retur Cabang" icon="Report"
+                Center="false" Width="640" Height="350"
+                Resizeable="false" Url="~/reporting/pending/Default.aspx?mode=rctransaksi"
+                short="/web/reporting/pending/Default.aspx" query="mode=rctransaksi" order="10" />
+            <Separator order="11" />
+            <Item ID="rptPendRNRpt" WinID="winPendRNRpt"
+                Title="Pending Receive Note" Text="Receive Note" icon="Report"
+                Center="false" Width="640" Height="415"
+                Resizeable="false" Url="~/reporting/pending/Default.aspx?mode=rntransaksi"
+                short="/web/reporting/pending/Default.aspx" query="mode=rntransaksi" order="12" />
+            <Separator order="13" />
+            <Item ID="rptPendRSRpt" WinID="winPendRSRpt"
+                Title="Pending Retur Suplier" Text="Retur Suplier" icon="Report"
+                Center="false" Width="640" Height="380"
+                Resizeable="false" Url="~/reporting/pending/Default.aspx?mode=rstransaksi"
+                short="/web/reporting/pending/Default.aspx" query="mode=rstransaksi" order="14" />
+            <Separator order="15" />
+            <Item ID="rptPendMemoSTTRpt" WinID="winPendMemoSTTRpt"
+                Title="Pending Memo Surat Tanda Terima (STT)" Text="Memo Surat Tanda Terima (STT)" icon="Report"
+                Center="false" Width="640" Height="265"
+                Resizeable="false" Url="~/reporting/pending/Default.aspx?mode=memostttransaksi"
+                short="/web/reporting/pending/Default.aspx" query="mode=memostttransaksi" order="16" />
+            <Separator order="17" />
+            <Item ID="rptPendPackListRpt" WinID="winPendPackListRpt"
+                Title="Pending Packing List" Text="Packing List" icon="Report"
+                Center="false" Width="640" Height="445"
+                Resizeable="false" Url="~/reporting/pending/Default.aspx?mode=pltransaksi"
+                short="/web/reporting/pending/Default.aspx" query="mode=pltransaksi" order="18" />
+            <Separator order="19" />
+            <Item ID="rptPendComboRpt" WinID="winPendComboRpt"
+                Title="Pending Combo" Text="Combo" icon="Report"
+                Center="false" Width="640" Height="280"
+                Resizeable="false" Url="~/reporting/pending/Default.aspx?mode=combotransaksi"
+                short="/web/reporting/pending/Default.aspx" query="mode=combotransaksi" order="20" />
+            <Separator order="21" />
+            <Item ID="rptPendSJRpt" WinID="winPendSJRpt"
+                Title="Pending Surat Jalan" Text="Surat Jalan" icon="Report"
+                Center="false" Width="640" Height="415"
+                Resizeable="false" Url="~/reporting/pending/Default.aspx?mode=sjtransaksi"
+                short="/web/reporting/pending/Default.aspx" query="mode=sjtransaksi" order="22" />
+            <Separator order="23" /> <!--Fix Bug Indra 20170711-->
+            <!--Indra D. 20170312-->
+            <Item ID="rptDoBlmRNRpt" WinID="winDoBlmRNRpt"
+                Title="DO Principle Belum RN" Text="DO Principle Belum RN" icon="Report"
+                Center="false" Width="640" Height="225"
+                Resizeable="false" Url="~/reporting/pending/Default.aspx?mode=dobelumrn"
+                short="/web/reporting/pending/Default.aspx" query="mode=dobelumrn" order="24" /> <!--Fix Bug Indra 20170711-->
+          </Items>
+          <Items text="Finance" icon="Folder" order="2">
+            <Item ID="rptPendPOFARpt" WinID="winPendPOFARpt"
+                Title="Pending Purchase Order" Text="Purchase Order" icon="Report"
+                Center="false" Width="640" Height="360"
+                Resizeable="false" Url="~/reporting/pending/Default.aspx?mode=potransaksifa"
+                short="/web/reporting/pending/Default.aspx" query="mode=potransaksifa" order="1" />
+            <Separator order="20" />
+          </Items>
+        </Launcher>
+      </Module>
+      <Module id="reportingFinance" autoRun="false" order="1040">
+        <Launcher id="rptFinanceLnch" text="Finance" icon="Folder">
+          <Items text="AP" icon="Folder" order="1">
+            <Item ID="finAPFakturPendRpt" WinID="winFinAPFakturPendRpt"
+										Title="Faktur Pending" Text="Faktur Pending AP" icon="Report"
+										Center="false" Width="640" Height="375"
+										Resizeable="false" Url="~/reporting/financial/Default.aspx?mode=apfakturpending"
+										short="/web/reporting/financial/Default.aspx" query="mode=apfakturpending" order="1" />
+            <Item ID="finAPGLRpt" WinID="winFinAPGLRpt"
+										Title="General Ledger AP" Text="General Ledger AP" icon="Report"
+										Center="false" Width="640" Height="275"
+										Resizeable="false" Url="~/reporting/financial/Default.aspx?mode=apgl"
+										short="/web/reporting/financial/Default.aspx" query="mode=apgl" order="2" />
+            <Item ID="finAPListRpt" WinID="winFinAPListRpt"
+										Title="List" Text="List AP" icon="Report"
+										Center="false" Width="640" Height="375"
+										Resizeable="false" Url="~/reporting/financial/Default.aspx?mode=aplist"
+										short="/web/reporting/financial/Default.aspx" query="mode=aplist" order="3" />
+            <Item ID="finAPListBayarRpt" WinID="winFinAPListBayarRpt"
+										Title="List Bayar" Text="List Bayar AP" icon="Report"
+										Center="false" Width="640" Height="375"
+										Resizeable="false" Url="~/reporting/financial/Default.aspx?mode=aplistbayar"
+										short="/web/reporting/financial/Default.aspx" query="mode=aplistbayar" order="4" />
+          </Items>
+          <Items text="AR" icon="Folder" order="2">
+            <Item ID="finARFakturPendRpt" WinID="winFinARFakturPendRpt"
+										Title="Faktur Pending" Text="Faktur Pending AR" icon="Report"
+										Center="false" Width="640" Height="375"
+										Resizeable="false" Url="~/reporting/financial/Default.aspx?mode=arfakturpending"
+										short="/web/reporting/financial/Default.aspx" query="mode=arfakturpending" order="1" />
+            <Item ID="finARGLRpt" WinID="winFinARGLRpt"
+										Title="General Ledger" Text="General Ledger AR" icon="Report"
+										Center="false" Width="640" Height="300"
+										Resizeable="false" Url="~/reporting/financial/Default.aspx?mode=argl"
+										short="/web/reporting/financial/Default.aspx" query="mode=argl" order="2" />
+            <Item ID="finARListRpt" WinID="winFinARListRpt"
+										Title="List" Text="List AR" icon="Report"
+										Center="false" Width="640" Height="375"
+										Resizeable="false" Url="~/reporting/financial/Default.aspx?mode=arlist"
+										short="/web/reporting/financial/Default.aspx" query="mode=arlist" order="3" />
+            <Item ID="finARListBayarRpt" WinID="winFinARListBayarRpt"
+										Title="List Bayar" Text="List Bayar AR" icon="Report"
+										Center="false" Width="640" Height="375"
+										Resizeable="false" Url="~/reporting/financial/Default.aspx?mode=arlistbayar"
+										short="/web/reporting/financial/Default.aspx" query="mode=arlistbayar" order="4" />
+          </Items>
+          <Item ID="finBEARpt" WinID="winBEARpt"
+										Title="Bea Kirim" Text="Bea Kirim" icon="Report"
+										Center="false" Width="640" Height="375"
+										Resizeable="false" Url="~/reporting/financial/Default.aspx?mode=beakirim"
+										short="/web/reporting/financial/Default.aspx" query="mode=beakirim" order="3" />
+          <Items text="HPP" icon="Folder" order="4">
+            <Item ID="finHPPDivAMSRpt" WinID="winHPPDivAMSRpt"
+										Title="HPP Divisi AMS" Text="HPP Divisi AMS" icon="Report"
+										Center="false" Width="640" Height="410"
+										Resizeable="false" Url="~/reporting/financial/Default.aspx?mode=hppdivams"
+										short="/web/reporting/financial/Default.aspx" query="mode=hppdivams" order="1" />
+            <Item ID="finHPPDivPrinsRpt" WinID="winHPPDivPrinsRpt"
+										Title="HPP Divisi Prinsipal" Text="HPP Divisi Prinsipal" icon="Report"
+										Center="false" Width="640" Height="395"
+										Resizeable="false" Url="~/reporting/financial/Default.aspx?mode=hppdivprins"
+										short="/web/reporting/financial/Default.aspx" query="mode=hppdivprins" order="2" />
+            <Item ID="finHPPDivAMSExtDiscRpt" WinID="winHPPDivAMSExtDiscRpt"
+										Title="HPP Divisi AMS (Extra Discount)" Text="HPP Divisi AMS (Extra Discount)" icon="Report"
+										Center="false" Width="640" Height="410"
+										Resizeable="false" Url="~/reporting/financial/Default.aspx?mode=hppdivamsextdisc"
+										short="/web/reporting/financial/Default.aspx" query="mode=hppdivamsextdisc" order="3" />
+          </Items>
+          <Items text="Pembayaran" icon="Folder" order="5">
+            <Item ID="finByrJTempoRpt" WinID="winByrJTempoRpt"
+										Title="Finance - Pembayaran - Jatuh Tempo" Text="Jatuh Tempo" icon="Report"
+										Center="false" Width="640" Height="225"
+										Resizeable="false" Url="~/reporting/financial/Default.aspx?mode=jtempo"
+										short="/web/reporting/financial/Default.aspx" query="mode=jtempo" order="1" />
+            <Item ID="finByrPembayaranRpt" WinID="winByrPembayaranRpt"
+										Title="Finance - Pembayaran - Pembayaran" Text="Pembayaran" icon="Report"
+										Center="false" Width="640" Height="225"
+										Resizeable="false" Url="~/reporting/financial/Default.aspx?mode=pembayaran"
+										short="/web/reporting/financial/Default.aspx" query="mode=pembayaran" order="2" />
+          </Items>
+          <Items text="Claim" icon="Folder" order="6">
+                    <Item ID="finClaimRpt" WinID="winClaimRpt"
+                    Title="Claim" Text="Claim" icon="Report"
+                    Center="false" Width="640" Height="375"
+                    Resizeable="false" Url="~/reporting/financial/Default.aspx?mode=claim"
+                    short="/web/reporting/financial/Default.aspx" query="mode=claim" order="1" />
+            <Item ID="finClaimAccRpt" WinID="winfinClaimAccRpt"
+										Title="Claim Acc" Text="Claim Acc" icon="Report"
+										Center="false" Width="640" Height="375"
+										Resizeable="false" Url="~/reporting/financial/Default.aspx?mode=claimacc"
+										short="/web/reporting/financial/Default.aspx" query="mode=claimacc" order="2" />
+          </Items>
+          <Item ID="finFakturRpt" WinID="winFakturRpt"
+										Title="E-Faktur" Text="E-Faktur" icon="Report"
+										Center="false" Width="640" Height="300"
+										Resizeable="false" Url="~/reporting/financial/Default.aspx?mode=efaktur"
+										short="/web/reporting/financial/Default.aspx" query="mode=efaktur" order="7" />
+          <Item ID="finFakturManualRpt" WinID="winFakturManualRpt"
+                    Title="Faktur Manual" Text="Faktur Manual" icon="Report"
+                    Center="false" Width="640" Height="225"
+                    Resizeable="false" Url="~/reporting/financial/Default.aspx?mode=fakturmanual"
+                    short="/web/reporting/financial/Default.aspx" query="mode=fakturmanual" order="8" />
+        </Launcher>
+      </Module>
+      <Module id="reportingTransaksi" autoRun="false" order="1050">
+        <Launcher id="rptTransaksiLnch" text="Transaksi" icon="Folder">
+          <Item ID="tranPORpt" WinID="winPORpt"
+										Title="Purchase Order" Text="Purchase Order" icon="Report"
+										Center="false" Width="640" Height="485"
+										Resizeable="false" Url="~/reporting/Transaksi/Default.aspx?mode=purchaseorder"
+										short="/web/reporting/Transaksi/Default.aspx" query="mode=purchaseorder" order="1" />
+          <Separator order="2" />
+          <Items text="Surat Pesanan" icon="Folder" order="3">
+            <Item ID="tranListSPRpt" WinID="winListSPRpt"
+										Title="List Transaksi SP" Text="List Transaksi SP" icon="Report"
+										Center="false" Width="640" Height="475"
+										Resizeable="false" Url="~/reporting/Transaksi/Default.aspx?mode=listsp"
+										short="/web/reporting/Transaksi/Default.aspx" query="mode=listsp" order="1" />
+            <Separator order="2" />
+            <Item ID="tranPOKRpt" WinID="winPOKRpt"
+										Title="SP - Po Khusus" Text="SP - Po Khusus" icon="Report"
+										Center="false" Width="640" Height="275"
+										Resizeable="false" Url="~/reporting/Transaksi/Default.aspx?mode=pokhusus"
+										short="/web/reporting/Transaksi/Default.aspx" query="mode=pokhusus" order="3" />
+            <Separator order="4" />
+            <Item ID="tranSPPackingRpt" WinID="winSPPackingRpt"
+										Title="SP - Packing List" Text="SP - Packing List" icon="Report"
+										Center="false" Width="640" Height="500"
+										Resizeable="false" Url="~/reporting/Transaksi/Default.aspx?mode=sppackinglist"
+										short="/web/reporting/Transaksi/Default.aspx" query="mode=sppackinglist" order="5" />
+            <Separator order="6" />
+            <Item ID="tranSPExpRpt" WinID="winSPExpRpt"
+										Title="SP - Expedisi" Text="SP - Expedisi" icon="Report"
+										Center="false" Width="640" Height="230"
+										Resizeable="false" Url="~/reporting/Transaksi/Default.aspx?mode=spekspedisi"
+										short="/web/reporting/Transaksi/Default.aspx" query="mode=spekspedisi" order="7" />
+          </Items>
+          <Separator order="4" />
+          <Items text="Penerimaan" icon="Folder" order="5">
+            <Item ID="tranFloatingRpt" WinID="winFloatingRpt"
+										Title="Floating" Text="Floating" icon="Report"
+										Center="false" Width="640" Height="330"
+										Resizeable="false" Url="~/reporting/Transaksi/Default.aspx?mode=floating"
+										short="/web/reporting/Transaksi/Default.aspx" query="mode=floating" order="1" />
+            <Separator order="2" />
+            <Item ID="tranRNRpt" WinID="winRNRpt"
+										Title="Receive Note" Text="Receive Note" icon="Report"
+										Center="false" Width="640" Height="400"
+										Resizeable="false" Url="~/reporting/Transaksi/Default.aspx?mode=receivenote"
+										short="/web/reporting/Transaksi/Default.aspx" query="mode=receivenote" order="3" />
+          </Items>
+          <Separator order="6" />
+          <Items text="Retur" icon="Folder" order="7">
+            <Item ID="tranRSRpt" WinID="winRSRpt"
+										Title="Retur Supplier" Text="Retur Supplier" icon="Report"
+										Center="false" Width="640" Height="425"
+										Resizeable="false" Url="~/reporting/Transaksi/Default.aspx?mode=retursupplier"
+										short="/web/reporting/Transaksi/Default.aspx" query="mode=retursupplier" order="1" />
+            <Separator order="2" />
+            <Item ID="tranRCRpt" WinID="winRCRpt"
+										Title="Retur Customer" Text="Retur Customer" icon="Report"
+										Center="false" Width="640" Height="375"
+										Resizeable="false" Url="~/reporting/Transaksi/Default.aspx?mode=returcustomer"
+										short="/web/reporting/Transaksi/Default.aspx" query="mode=returcustomer" order="3" />
+          </Items>
+          <Separator order="8" />
+          <Items text="Penjualan" icon="Folder" order="9">
+            <Item ID="tranPenjualanRpt" WinID="winPenjualanRpt"
+										Title="Penjualan" Text="Penjualan" icon="Report"
+										Center="false" Width="640" Height="450"
+										Resizeable="false" Url="~/reporting/Transaksi/Default.aspx?mode=penjualan"
+										short="/web/reporting/Transaksi/Default.aspx" query="mode=penjualan" order="1" />
+            <Separator order="2" />
+            <!--Indra 20170803 tambah return DO-->
+            <Item ID="tranReturnDORpt" WinID="winReturnDORpt"
+										Title="Return DO" Text="Return DO" icon="Report"
+										Center="false" Width="640" Height="320"
+										Resizeable="false" Url="~/reporting/Transaksi/Default.aspx?mode=returndo"
+										short="/web/reporting/Transaksi/Default.aspx" query="mode=returndo" order="3" />
+          </Items>
+          <Separator order="10" />
+          <Items text="Transfer" icon="Folder" order="11">
+            <Item ID="tranTransferRpt" WinID="winTransferRpt"
+											Title="Transfer Gudang" Text="Transfer Gudang" icon="Report"
+											Center="false" Width="640" Height="470"
+											Resizeable="false" Url="~/reporting/Transaksi/Default.aspx?mode=suratjalan"
+											short="/web/reporting/Transaksi/Default.aspx" query="mode=suratjalan" order="1" />
+          </Items>
+          <Separator order="12" />
+          <Items text="Adjustment" icon="Folder" order="13">
+            <Item ID="tranAdjStockRpt" WinID="winAdjStockRpt"
+										Title="Adjust Stock" Text="Adjust Stock" icon="Report"
+										Center="false" Width="640" Height="375"
+										Resizeable="false" Url="~/reporting/Transaksi/Default.aspx?mode=adjuststock"
+										short="/web/reporting/Transaksi/Default.aspx" query="mode=adjuststock" order="1" />
+            <Separator order="2" />
+            <Item ID="tranAdjSPRpt" WinID="winAdjSPRpt"
+										Title="Adjust Surat Pesanan" Text="Adjust Surat Pesanan" icon="Report"
+										Center="false" Width="640" Height="375"
+										Resizeable="false" Url="~/reporting/Transaksi/Default.aspx?mode=adjustsp"
+										short="/web/reporting/Transaksi/Default.aspx" query="mode=adjustsp" order="3" />
+            <Separator order="4" />
+            <Item ID="tranAdjPORpt" WinID="winAdjPORpt"
+										Title="Adjust Purchase Order" Text="Adjust Purchase Order" icon="Report"
+										Center="false" Width="640" Height="285"
+										Resizeable="false" Url="~/reporting/Transaksi/Default.aspx?mode=adjustpo"
+										short="/web/reporting/Transaksi/Default.aspx" query="mode=adjustpo" order="5" />
+            <Separator order="6" />
+            <Item ID="tranAdjSTTRpt" WinID="winAdjSTTRpt"
+										Title="Adjust Surat Tanda Terima (STT)" Text="Adjust Surat Tanda Terima (STT)" icon="Report"
+										Center="false" Width="640" Height="325"
+										Resizeable="false" Url="~/reporting/Transaksi/Default.aspx?mode=adjuststt"
+										short="/web/reporting/Transaksi/Default.aspx" query="mode=adjuststt" order="7" />
+            <Separator order="8" />
+            <Item ID="tranAdjComboRpt" WinID="winAdjComboRpt"
+										Title="Adjust Combo" Text="Adjust Combo" icon="Report"
+										Center="false" Width="640" Height="375"
+										Resizeable="false" Url="~/reporting/Transaksi/Default.aspx?mode=adjustcombo"
+										short="/web/reporting/Transaksi/Default.aspx" query="mode=adjustcombo" order="9" />
+            <Separator order="10" />
+            <Item ID="tranAdjFBRpt" WinID="winAdjFBRpt"
+										Title="Adjust Faktur Beli" Text="Adjust Faktur Beli" icon="Report"
+										Center="false" Width="640" Height="375"
+										Resizeable="false" Url="~/reporting/Transaksi/Default.aspx?mode=adjustfb"
+										short="/web/reporting/Transaksi/Default.aspx" query="mode=adjustfb" order="11" />
+            <Separator order="12" />
+            <Item ID="tranAdjFJRpt" WinID="winAdjFJRpt"
+										Title="Adjust Faktur Jual" Text="Adjust Faktur Jual" icon="Report"
+										Center="false" Width="640" Height="375"
+										Resizeable="false" Url="~/reporting/Transaksi/Default.aspx?mode=adjustfj"
+										short="/web/reporting/Transaksi/Default.aspx" query="mode=adjustfj" order="13" />
+          </Items>
+          <Separator order="14" />
+          <Item ID="tranFarmasiPBFRpt" WinID="winFarmasiPBFRpt"
+                  Title="Transaksi PBF" Text="PBF" icon="Report"
+                  Center="false" Width="400" Height="272"
+                  Resizeable="false" Url="~/reporting/Transaksi/Default.aspx?mode=pbf"
+                  short="/web/reporting/Transaksi/Default.aspx" query="mode=pbf" order="14" />
+          <!--hafizh--> 
+          <Separator order="14" />
+          <Item ID="tranFarmasiPBFRptNew" WinID="winFarmasiPBFRptNew"
+                  Title="Transaksi PBF OKT,Prekursor,OOT" Text="PBF OKT,Prekursor,OOT" icon="Report"
+                  Center="false" Width="400" Height="272"
+                  Resizeable="false" Url="~/reporting/Transaksi/Default.aspx?mode=pbfnew"
+                  short="/web/reporting/Transaksi/Default.aspx" query="mode=pbfnew" order="15" />
+          <!--hafizhend-->
+          <!--Indra 20170404-->
+          <Item ID="tranFarmasiPBFRptBPOM" WinID="tranFarmasiPBFRptBPOM"
+                  Title="Transaksi PBF - BPOM" Text="PBF - BPOM" icon="Report"
+                  Center="false" Width="400" Height="272"
+                  Resizeable="false" Url="~/reporting/Transaksi/Default.aspx?mode=pbfbpom"
+                  short="/web/reporting/Transaksi/Default.aspx" query="mode=pbfbpom" order="16" />
+          <!--Indraend-->
+          <Separator order="15" />
+          <Item ID="tranSTTRpt" WinID="winSTTRpt"
+                  Title="Transaksi STT" Text="STT" icon="Report"
+                  Center="false" Width="640" Height="400"
+                  Resizeable="false" Url="~/reporting/Transaksi/Default.aspx?mode=liststt"
+                  short="/web/reporting/Transaksi/Default.aspx" query="mode=liststt" order="17" />
+          <Separator order="16" />
+          <Item ID="tranComboRpt" WinID="winComboRpt"
+                  Title="Transaksi Combo" Text="Combo" icon="Report"
+                  Center="false" Width="640" Height="270"
+                  Resizeable="false" Url="~/reporting/Transaksi/Default.aspx?mode=combo"
+                  short="/web/reporting/Transaksi/Default.aspx" query="mode=combo" order="18" />
+          <Separator order="17" />
+          <Item ID="tranPembelianRpt" WinID="winPembelianRpt"
+                  Title="List Transaksi (Pembelian)" Text="Pembelian" icon="Report"
+                  Center="false" Width="640" Height="380"
+                  Resizeable="false" Url="~/reporting/Transaksi/Default.aspx?mode=listpembelian"
+                  short="/web/reporting/Transaksi/Default.aspx" query="mode=listpembelian" order="19" />
+          <Separator order="18" />
+          <Items text="APJ" icon="Folder" order="19">
+            <Item ID="RptBulananOktPrekursor" WinID="winRptBulananOktPrekursor"
+										Title="Report Bulanan Okt dan Prekursor" Text="Okt dan Prekursor" icon="Report"
+										Center="false" Width="640" Height="275"
+										Resizeable="false" Url="~/reporting/Transaksi/Default.aspx?mode=oktprekursor"
+										short="/web/reporting/Transaksi/Default.aspx" query="mode=oktprekursor" order="20" />
+            <!--Indra 20170529 ubah Height 250 - 270 - 295-->
+            <Item ID="RptEnapza" WinID="winRptEnapza"
+										Title="Report E-Napza" Text="E-Napza" icon="Report"
+										Center="false" Width="640" Height="315"
+										Resizeable="false" Url="~/reporting/Transaksi/Default.aspx?mode=enapza"
+										short="/web/reporting/Transaksi/Default.aspx" query="mode=enapza" order="21" />
+            <Item ID="RptOkt" WinID="winRptOkt"
+                    Title="Report Okt" Text="Report Okt" icon="Report"
+                    Center="false" Width="640" Height="275"
+                    Resizeable="false" Url="~/reporting/Transaksi/Default.aspx?mode=okt"
+                    short="/web/reporting/Transaksi/Default.aspx" query="mode=okt" order="22" />
+            <Item ID="RptEalkes" WinID="winRptEalkes"
+										Title="Report E-Alkes" Text="E-Alkes" icon="Report"
+										Center="false" Width="640" Height="290"
+										Resizeable="false" Url="~/reporting/Transaksi/Default.aspx?mode=ealkes"
+										short="/web/reporting/Transaksi/Default.aspx" query="mode=ealkes" order="23" />
+            <Item ID="tranFarmasiPBFRpt" WinID="winFarmasiPBFRpt"
+                    Title="Report PBF" Text="PBF" icon="Report"
+                    Center="false" Width="640" Height="285"
+                    Resizeable="false" Url="~/reporting/Transaksi/Default.aspx?mode=pbf"
+                    short="/web/reporting/Transaksi/Default.aspx" query="mode=pbf" order="24" />
+          </Items>
+          <Separator order="19" />
+          <Item ID="tranCSLRpt" WinID="winCSLRpt"
+                  Title="Customer Service Level" Text="Customer Service Level" icon="Report"
+                  Center="false" Width="640" Height="330"
+                  Resizeable="false" Url="~/reporting/Transaksi/Default.aspx?mode=csl"
+                  short="/web/reporting/Transaksi/Default.aspx" query="mode=csl" order="17" />
+          
+        </Launcher>
+      </Module>
+      
+      <Module id="reportingMonitoring" autoRun="false" order="1060">
+        <Launcher id="rptMonitoringExpGC" text="Monitoring" icon="Folder">
+          <Items text="Logistik" icon="Folder" order="1">
+            <Item ID="rptMonExpGJ" WinID="winMonExpGC"
+                Title="Monitoring Pengiriman Gudang - Cabang" Text="Pengiriman Gudang - Cabang" icon="Package"
+                Center="false" Width="640" Height="480"
+                Url="~/reporting/monitoring/EkspedisiView.aspx"
+                short="/web/reporting/monitoring/EkspedisiView.aspx" query="" order="1" />
+            <!--<Separator order="2" />-->
+            <Item ID="rptMonExpAG" WinID="winMonExpAG"
+                Title="Monitoring Pengiriman Antar Gudang" Text="Pengiriman Antar Gudang" icon="Package"
+                Center="false" Width="640" Height="480"
+                Url="~/reporting/monitoring/EkspedisiGudangView.aspx"
+                short="/web/reporting/monitoring/EkspedisiGudangView.aspx" query="" order="3" />
+            <!--<Separator order="4" />-->
+            <Item ID="rptMonExpPend" WinID="winMonExpPend"
+                Title="Monitoring Ekspedisi Pending DO/SJ" Text="Ekspedisi Pending DO/SJ" icon="Package"
+                Center="false" Width="640" Height="480"
+                Url="~/reporting/monitoring/DOPendingEkspedisi.aspx"
+                short="/web/reporting/monitoring/DOPendingEkspedisi.aspx" query="" order="5" />
+            <!--<Separator order="6" />-->
+            <Item ID="rptMonPL" WinID="winMonPL"
+                Title="Monitoring Packing List Print" Text="Packing List Print" icon="Package"
+                Center="false" Width="640" Height="375"
+                Resizeable="false" Url="~/reporting/monitoring/Default.aspx?mode=pl"
+                short="/web/reporting/monitoring/Default.aspx" query="mode=pl" order="7" />
+            <!--<Separator order="8" />-->
+            <Item ID="rptMonPO" WinID="winMonPO"
+                Title="Monitoring Penerimaan PO" Text="Monitoring Penerimaan PO" icon="Package"
+                Center="false" Width="640" Height="400"
+                Url="~/transaksi/wp/MonitoringPO.aspx"
+                short="/web/transaksi/wp/MonitoringPO.aspx" order="9" />
+            <!--<Separator order="10" />-->
+            <Item ID="rptSalesNas" WinID="winSalesNas"
+                Title="Sales dan Stok Nasional" Text="Sales dan Stok Nasional" icon="Package"
+                Center="false" Width="640" Height="215"
+                Url="~/reporting/monitoring/Default.aspx?mode=salesnasional"
+                short="/web/reporting/monitoring/Default.aspx" query="mode=salesnasional" order="11" />
+            <!--<Separator order="12" />-->
+            <Item ID="rptMonPI" WinID="winMonPI"
+                Title="Monitoring Pending Integrity DC" Text="Monitoring Pending Integrity" icon="Package"
+                Center="false" Width="640" Height="400"
+                Url="~/reporting/monitoring/Default.aspx?mode=pendingintegrity"
+                short="/web/reporting/monitoring/Default.aspx" query="mode=pendingintegrity" order="13" />
+            <!--Hafizh-->
+            <!--<Separator order="14" />-->
+            <Item ID="rptMonPDC" WinID="winMonDC"
+                Title="Monitoring Produktifitas DC " Text="Monitoring Produktifitas DC" icon="Package"
+                Center="false" Width="640" Height="230"
+                Url="~/reporting/monitoring/Default.aspx?mode=produktifitasdc"
+                short="/web/reporting/monitoring/Default.aspx" query="mode=produktifitasdc"  order="15" />
+            <!--<Separator order="16"/>-->
+            <Item ID="rptForecast" WinID="winMonFC"
+                    Title="Monitoring Forecast" Text="Monitoring Forecast" icon="Package"
+                    Center ="false" Width="600" Height="300"
+                    Url="~/reporting/monitoring/Default.aspx?mode=forecast"
+                    short="/web/reporting/monitoring/Default.aspx" query="mode=forecast" order="17"/>
+            <!--Indra Monitoring Process 20180523FM-->
+            <Separator order="16" />
+            <Item ID="rptMonProcPL" WinID="winMonProcPL"
+                Title="Process Monitoring" Text="Process Monitoring" icon="Package"
+                Center="false" Width="640" Height="400"
+                Url="~/transaksi/wp/MonitoringPL.aspx"
+                short="/web/transaksi/wp/MonitoringPL.aspx" order="19" />
+          </Items>
+            </Launcher>
+      </Module>
+      <!--service_level-->
+
+      <Module id="reportingService" autoRun="false" order="1070">
+        <Launcher id="rptHistoryLnch" text="Service Level" icon="Folder">
+          <Item ID="rtpSLPORpt" WinID="winSLPORpt"
+                Title="Service Level Supplier" Text="Supplier" icon="Report"
+                Center="false" Width="1080" Height="500"
+                Url="~/reporting/ServiceLevel/Default.aspx?mode=servicelevelpo"
+                short="/web/reporting/ServiceLevel/Default.aspx" query="mode=servicelevelpo" order="1" />
+
+
+          <Item ID="rtpSLCbgRpt" WinID="winSLCbgRpt"
+                  Title="Service Level Cabang" Text="Cabang" icon="Report"
+                  Center="false" Width="1080" Height="500"
+                  Resizeable="false" Url="~/reporting/ServiceLevel/Default.aspx?mode=servicelevelcbg"
+                  short="/web/reporting/ServiceLevel/Default.aspx" query="mode=servicelevelcbg" order="2" />
+
+
+
+        </Launcher>
+      </Module>
+      
+    </Application>
+  </Items>
+</Config>

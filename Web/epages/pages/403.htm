@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0075)http://www.jremick.com/templates/sleekerrorpages/full/403-full-example.html -->
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>403 Forbidden - Full Example</title>
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <link href="../styles/others/reset.css" rel="stylesheet" type="text/css" />
+  <link href="../styles/others/styles.css" rel="stylesheet" type="text/css" />
+  <!--[if LTE IE 8]>
+		<link href="../styles/ie/ie.css" rel="stylesheet" type="text/css">
+	<![endif]-->
+  <!--[if IE 6]>
+		<script type="text/javascript" src="../js/DD_belatedPNG_0.0.8a-min.js"></script>
+		<script type="text/javascript">
+			DD_belatedPNG.fix('#bg-top, #bg-bottom, #logo, #nav ul, #contentWrap, #content, #leftColumn');
+		</script>
+	<![endif]-->
+
+  <script type="text/javascript" src="../../scripts/jquery.min.js"></script>
+
+  <script type="text/javascript">
+		$(document).ready(function(){
+			// Removes Search text on focus, changes text to #9d9d9d and back to #666 out of focus
+			var inputs = document.getElementsByTagName("input");
+			for (var i = 0; i < inputs.length; i++) {
+				if (inputs[i].name == "search") {
+					inputs[i].style.color = "#9d9d9d";
+					inputs[i].onfocus = function() {
+						if (this.value == "search...") {
+		            		this.value = "";
+		        		}
+		        		this.style.color = "#666";
+		        	}
+					inputs[i].onblur = function() {
+		        		if (this.value == "") {
+		            		this.value = "search...";
+		        		}
+		        		this.style.color = "#9d9d9d";
+		        	}            
+		     	}
+		  	}
+		});
+  </script>
+
+</head>
+<body>
+  <div id="wrapper">
+    <div id="bg-top">
+    </div>
+    <div id="contentWrap">
+      <div id="content">
+        <!-- BEGIN LEFT COLUMN -->
+        <div id="leftColumn">
+          <!-- YOUR LOGO GOES HERE -->
+          <img id="logo" src="../images/logo.png" alt="Logo Sample"
+              width="222" height="44" />
+          <!--<a href="http://www.jremick.com/templates/sleekerrorpages/full/index.html">
+            <img id="logo" src="../images/logo.png" alt="Logo Sample"
+              width="222" height="44" /></a>-->
+          <!-- BEGIN MENU -->
+          
+          
+          <!--<div id="nav">
+            <span>menu</span>
+            <ul>
+              <li class="home"><a href="http://www.jremick.com/templates/sleekerrorpages/full/403-full-example.html#">
+                Home</a></li>
+              <li class="about"><a href="http://www.jremick.com/templates/sleekerrorpages/full/403-full-example.html#">
+                About Us</a></li>
+              <li class="contact"><a href="http://www.jremick.com/templates/sleekerrorpages/full/403-full-example.html#">
+                Conact Us</a></li>
+            </ul>
+          </div>-->
+          
+          
+          <!-- end div #nav -->
+          <!-- ERROR CODE HERE -->
+          <h1>
+            403<span>Forbidden</span></h1>
+        </div>
+        <!-- end div #leftColumn -->
+        <!-- END LEFT COLUMN -->
+        <!-- BEGIN RIGHT COLUMN -->
+        <div id="rightColumn">
+          <h2>
+            Oops! Request forbidden...</h2>
+          <p>
+            Sorry, it appears the page you were looking for is forbidden and not accessible.
+            The site administrator has been notified.</p>
+          <br />
+          <br />
+          <br />
+          <h4 class="regular">
+            <strong>Lost? We suggest...</strong></h4>
+          <ol>
+            <li><span>checking the web address for typos.</span></li>
+            <li><span>visiting the home page (link to the left).</span></li>
+            <!--<li><span>visiting our full website <a href="http://www.jremick.com/templates/sleekerrorpages/full/403-full-example.html#">
+              sitemap here</a>.</span></li>-->
+            <li><span>make sure you have access to that page.</span></li>
+          </ol>
+          <!-- Close Button For AJAX Included Version
+					<a id="close" href="#">close</a>
+					-->
+        </div>
+        <!-- end div #rightColumn -->
+        <!-- END RIGHT COLUMN -->
+        <div class="clear">
+        </div>
+      </div>
+      <!-- end div #content -->
+    </div>
+    <!-- end div #contentWrap -->
+    <div id="bg-bottom">
+    </div>
+  </div>
+  <!-- end div #wrapper -->
+</body>
+</html>

@@ -1,0 +1,18 @@
+#contentWrap {
+	
+}
+INPUT[type='text'] {
+	PADDING-TOP: 6px
+}
+H1 {
+	FILTER: alpha(opacity=04); TOP: 245px
+}
+H1:hover {
+	FILTER: alpha(opacity=10)
+}
+H1 SPAN {
+	MARGIN-TOP: 4px
+}
+#nav LI A {
+	_letter-spacing: -1px
+}
