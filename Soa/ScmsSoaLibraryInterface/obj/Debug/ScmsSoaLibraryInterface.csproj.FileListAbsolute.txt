@@ -106,3 +106,8 @@ D:\Projects\Scms\ScmsSoaLibraryInterface\bin\Debug\Ext.Net.Utilities.xml
 D:\Projects\Scms\ScmsSoaLibraryInterface\obj\Debug\ResolveAssemblyReference.cache
 D:\Projects\Scms\ScmsSoaLibraryInterface\obj\Debug\ScmsSoaLibraryInterface.dll
 D:\Projects\Scms\ScmsSoaLibraryInterface\obj\Debug\ScmsSoaLibraryInterface.pdb
+\\VBOXSVR\Scms\Soa\ScmsSoaLibraryInterface\bin\Debug\ScmsSoaLibraryInterface.dll
+\\VBOXSVR\Scms\Soa\ScmsSoaLibraryInterface\bin\Debug\ScmsSoaLibraryInterface.pdb
+\\VBOXSVR\Scms\Soa\ScmsSoaLibraryInterface\obj\Debug\ResolveAssemblyReference.cache
+\\VBOXSVR\Scms\Soa\ScmsSoaLibraryInterface\obj\Debug\ScmsSoaLibraryInterface.dll
+\\VBOXSVR\Scms\Soa\ScmsSoaLibraryInterface\obj\Debug\ScmsSoaLibraryInterface.pdb

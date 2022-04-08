@@ -58,3 +58,9 @@ D:\Projects\Scms\ScmsModel\bin\Debug\ScmsModel.pdb
 D:\Projects\Scms\ScmsModel\obj\Debug\ResolveAssemblyReference.cache
 D:\Projects\Scms\ScmsModel\obj\Debug\ScmsModel.dll
 D:\Projects\Scms\ScmsModel\obj\Debug\ScmsModel.pdb
+\\VBOXSVR\Scms\Soa\ScmsModel\bin\Debug\ScmsModel.dll.config
+\\VBOXSVR\Scms\Soa\ScmsModel\bin\Debug\ScmsModel.dll
+\\VBOXSVR\Scms\Soa\ScmsModel\bin\Debug\ScmsModel.pdb
+\\VBOXSVR\Scms\Soa\ScmsModel\obj\Debug\ResolveAssemblyReference.cache
+\\VBOXSVR\Scms\Soa\ScmsModel\obj\Debug\ScmsModel.dll
+\\VBOXSVR\Scms\Soa\ScmsModel\obj\Debug\ScmsModel.pdb
